@@ -18,11 +18,11 @@ const ExploreSchemes = (props) => {
                         Obcaecati, autem.
                     </p>
 
-                    <div className="mb-4 lg:mb-6 xl:mb-28 mt-12"> {/* Responsive margin */}
+                    <div className="mb-4 lg:mb-24 xl:mb-28 mt-12"> {/* Responsive margin */}
                         <a
                             href="#"
                             onClick={() => setIsModalOpen(true)}
-                            className="inline-flex items-center justify-center space-x-2 rounded-lg border border-iceland_poppy-500 bg-iceland_poppy-500 px-6 py-3 leading-6 text-white transition hover:border-iceland_poppy-600 hover:bg-iceland_poppy-700 hover:text-white focus:ring focus:ring-iceland_poppy-400 focus:ring-opacity-50 active:border-iceland_poppy-700 active:bg-iceland_poppy-700 dark:focus:ring-iceland_poppy-400 dark:focus:ring-opacity-90"
+                            className="inline-flex w-full lg:w-auto items-center justify-center space-x-2 rounded-lg border border-iceland_poppy-500 bg-iceland_poppy-500 px-6 py-3 text-white transition hover:border-iceland_poppy-600 hover:bg-iceland_poppy-700"
                         >
                             <span style={{ fontWeight: "bold" }}>Find Schemes for You</span>
                             <IconArrowRight />
