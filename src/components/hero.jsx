@@ -1,29 +1,38 @@
 import { useState } from "react";
 import FindSchemeModal from "./find_scheme_modal";
 import IconArrowRight from "./icons/right_arrow";
+import ResourceIcon from "./icons/resources";
+import CompensationIcon from "./icons/compensation";
+import DisabilityIcon from "./icons/disability";
+import EssentialDocsIcon from "./icons/essential_docs";
+
 
 const Hero = (props) => {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const ctaData = [
     {
-      title: "Healthy Delhi Initiative",
-      subtitle: "Explore comprehensive health and nutrition programs for a healthier Delhi.",
-      link: "#"
+      title: "Resources",
+      subtitle: "Information on schemes, policies, and services for children and families.",
+      link: "#",
+      icon: <ResourceIcon style={{ width: 40, height: 40 }} />
     },
     {
-      title: "Delhi Employment Hub",
-      subtitle: "Connect with opportunities for sustainable livelihood and career growth.",
-      link: "#"
+      title: "Compensation",
+      subtitle: "Learn about compensation schemes for victims of crime and abuse.",
+      link: "#",
+      icon: <CompensationIcon style={{ width: 40, height: 40 }} />
     },
     {
-      title: "Educate Delhi",
-      subtitle: "Discover educational schemes promoting quality learning for all ages.",
-      link: "#"
+      title: "Essential Docs",
+      subtitle: "Access essential documents for children and families.",
+      link: "#",
+      icon: <EssentialDocsIcon style={{ width: 40, height: 40 }} />
     },
     {
-      title: "Women and Child Welfare",
-      subtitle: "Access dedicated support and resources for the empowerment of women and children.",
-      link: "#"
+      title: "Disability Information",
+      subtitle: "Learn about disability schemes and services for children and families.",
+      link: "#",
+      icon: <DisabilityIcon style={{ width: 40, height: 40 }} />
     }
   ];
   return (
@@ -68,27 +77,23 @@ const Hero = (props) => {
                 {/* END Action */}
 
                 {/* Horizontal Line */}
-                <hr className="border-gray-500 mb-12" />
+                <hr className="border-white mb-12 opacity-20" />
 
                 {/* Additional CTAs in a Grid */}
                 <div className="grid grid-cols-1 gap-6 lg:grid-cols-4">
                   {ctaData.map((cta, index) => (
                     <div key={index} className="text-left" style={{ display: 'flex', flexDirection: 'column', justifyContent: 'space-between', alignItems: 'flex-start' }}>
+                      {cta.icon ? <div className="mb-4" style={{ padding: 12, borderRadius: 8, border: "#e4750c solid 1px" }}>{cta.icon}</div> : null}
                       <div className="mb-8">
                         <h4 className="text-lg font-semibold text-white">{cta.title}</h4>
-                        <p className="text-sm text-gray-300">{cta.subtitle}</p>
+                        <p className="text-sm text-gray-400">{cta.subtitle}</p>
                       </div>
                       <a
                         href={cta.link}
-                        className="inline-flex items-center text-white hover:text-white"
-                        style={{
-                          background: 'rgba(255, 255, 255, 0.4)', // White color with lower opacity
-                          borderRadius: '12px', // Border radius for rounded corners
-                          padding: '6px 16px', // Padding for top/bottom and left/right
-                          textDecoration: 'none', // Optional: removes underline from link
-                        }}
+                        className="inline-flex items-center"
+                        style={{ color: "#ff9d3e" }}
                       >
-                        <span style={{ marginRight: '4px', fontSize: '14px' }}>Learn More</span>
+                        <span style={{ marginRight: '4px', fontSize: '14px', fontWeight: "bold" }}>Learn More</span>
                         <IconArrowRight />
                       </a>
                     </div>
