@@ -83,7 +83,7 @@ const Hero = (props) => {
                 <div className="grid grid-cols-1 gap-6 lg:grid-cols-4">
                   {ctaData.map((cta, index) => (
                     <div key={index} className="text-left" style={{ display: 'flex', flexDirection: 'column', justifyContent: 'space-between', alignItems: 'flex-start' }}>
-                      {cta.icon ? <div className="mb-4" style={{ padding: 12, borderRadius: 8, border: "#e4750c solid 1px" }}>{cta.icon}</div> : null}
+                      {cta.icon ? <div className="mb-4" style={{ padding: 12, borderRadius: 8, border: "#ff9d3e solid 1px" }}>{cta.icon}</div> : null}
                       <div className="mb-8">
                         <h4 className="text-lg font-semibold text-white">{cta.title}</h4>
                         <p className="text-sm text-gray-400">{cta.subtitle}</p>

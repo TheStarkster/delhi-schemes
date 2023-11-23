@@ -6,6 +6,7 @@ const Navbar = () => {
   const [top, setTop] = useState(true);
   const [language, setLanguage] = useState("English"); // Default language
   const [showDropdown, setShowDropdown] = useState(false);
+  const [isOpen, setIsOpen] = useState(false); // For hamburger menu
 
   useEffect(() => {
     const scrollHandler = () => {
@@ -19,16 +20,12 @@ const Navbar = () => {
     <div
       className="mx-auto justify-between flex h-28 max-w-screen-xl items-center gap-2 px-4 sm:px-6 lg:px-8"
     >
-      <a className="block text-blue-500 flex items-center" href="/">
+      <a className="flex items-center text-blue-500" href="/">
         <span className="sr-only">Home</span>
-        <img
-          src="./logo.jpeg"
-          alt="logo"
-          className="w-full max-w-[90px] object-contain mr-4"
-        />
+        <img src="./logo.jpeg" alt="logo" className="object-contain mr-4 w-full max-w-[90px]" />
         <div className="ml-2">
           <div className="text-2xl font-bold" style={{ letterSpacing: '2px' }}>DCPCR</div>
-          <div className="text-xs italic">
+          <div className="text-xs italic hidden md:block">
             Delhi Commission for
             <br />
             Protection of Child Rights
@@ -36,10 +33,10 @@ const Navbar = () => {
         </div>
       </a>
 
-      <div className="flex items-center justify-end md:justify-between">
-        <nav aria-label="Global" className="flex items-center gap-4">
-          <ul className="flex items-center gap-6 text-md">
-            <li className="hidden md:flex">
+      <div className="flex items-center">
+        <nav className={`${isOpen ? 'block' : 'hidden'} absolute bg-white top-full left-0 w-full md:static md:w-auto md:block`}>
+          <ul className="flex flex-col md:flex-row md:items-center gap-6 md:gap-4 p-4 md:p-0">
+            <li className="hidden md:block">
               <div className="flex items-center border-2 border-gray-300 rounded-md overflow-hidden">
                 <SearchIcon className="text-gray-500 ml-4" />
                 <input
@@ -74,12 +71,12 @@ const Navbar = () => {
             </div>
           </ul>
         </nav>
-        <div className="flex items-center gap-4">
-          <button
-            className="block rounded bg-gray-100 p-2.5 text-gray-600 transition hover:text-gray-600/75 md:hidden"
-          >
-            <span className="sr-only">Toggle menu</span>
-            <svg
+        <button
+          onClick={() => setIsOpen(!isOpen)}
+          className="rounded bg-gray-100 p-2.5 text-gray-600 transition hover:text-gray-600/75 md:hidden"
+        >
+          <span className="sr-only">Toggle menu</span>
+          <svg
               xmlns="http://www.w3.org/2000/svg"
               className="h-5 w-5"
               fill="none"
@@ -93,8 +90,7 @@ const Navbar = () => {
                 d="M4 6h16M4 12h16M4 18h16"
               />
             </svg>
-          </button>
-        </div>
+        </button>
       </div>
     </div>
   </header>
