@@ -1,7 +1,10 @@
 import { useEffect, useState } from "react";
+import IconLanguage from "./icons/change_language";
 
 const Navbar = () => {
   const [top, setTop] = useState(true);
+  const [language, setLanguage] = useState("English"); // Default language
+  const [showDropdown, setShowDropdown] = useState(false);
 
   useEffect(() => {
     const scrollHandler = () => {
@@ -10,6 +13,10 @@ const Navbar = () => {
     window.addEventListener('scroll', scrollHandler);
     return () => window.removeEventListener('scroll', scrollHandler);
   }, [top]);
+
+  const toggleDropdown = () => {
+    setShowDropdown(!showDropdown);
+  };
 
   return <header className={`bg-white sticky left-0 top-0 right-0 z-20 ${!top && `bg-white shadow-lg`}`}>
     <div
@@ -64,7 +71,22 @@ const Navbar = () => {
                 Essential Docs
               </a>
             </li>
+
+            <div className="relative">
+              <button style={{ color: "#e4750a" }} onClick={() => setShowDropdown(!showDropdown)} className="flex items-center gap-2 text-gray-500 hover:text-blue-500">
+                <IconLanguage className="h-5 w-5" />
+                <span>{language}</span>
+              </button>
+              {showDropdown && (<div className="absolute right-0 mt-2 w-40 bg-white border rounded shadow-xl">
+                <ul>
+                  <li className="p-2 hover:bg-gray-100 cursor-pointer" onClick={() => handleLanguageChange("English")}>English</li>
+                  <li className="p-2 hover:bg-gray-100 cursor-pointer" onClick={() => handleLanguageChange("Hindi")}>हिन्दी</li>
+                </ul>
+              </div>)}
+            </div>
           </ul>
+
+
         </nav>
 
         <div className="flex items-center gap-4">
