@@ -163,7 +163,7 @@ export default function SchemePage({ schemeData }) {
             <section style={{ marginBottom: 64 }} key={index} ref={contentSectionRefs.current[index]}>
               <div className="flex items-center">
                 <h2 className="text-2xl font-bold mb-4">{section}</h2>
-                <LinkIcon className="h-6 w-6 mb-4 ml-2 cursor-pointer hover:fill-gray-500 fill-blue-200 transition" onClick={() => copyToClipboard(section)} />
+                <LinkIcon className="h-6 w-6 mb-4 ml-2 cursor-pointer hover:fill-gray-500 fill-blue-600 transition" onClick={() => copyToClipboard(section)} />
               </div>
               <div dangerouslySetInnerHTML={{ __html: schemeData[`${section.toLowerCase().replace(' ', '_')}_html`] }} />
             </section>
