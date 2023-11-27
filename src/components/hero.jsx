@@ -1,4 +1,4 @@
-import { useState } from "react";
+import React, { useState } from "react";
 import FindSchemeModal from "./find_scheme_modal";
 import IconArrowRight from "./icons/right_arrow";
 import ResourceIcon from "./icons/resources";

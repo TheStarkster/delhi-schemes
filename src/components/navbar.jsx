@@ -1,3 +1,4 @@
+"use client"
 import { useEffect, useState } from "react";
 import IconLanguage from "./icons/change_language";
 import SearchIcon from "./icons/search";
@@ -22,7 +23,7 @@ const Navbar = () => {
     >
       <a className="flex items-center text-blue-500" href="/">
         <span className="sr-only">Home</span>
-        <img src="./logo.jpeg" alt="logo" className="object-contain mr-4 w-full max-w-[90px]" />
+        <img src="/logo.jpeg" alt="logo" className="object-contain mr-4 w-full max-w-[90px]" />
         <div className="ml-2">
           <div className="text-2xl font-bold" style={{ letterSpacing: '2px' }}>DCPCR</div>
           <div className="text-xs italic hidden md:block">

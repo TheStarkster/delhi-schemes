@@ -1,5 +1,6 @@
-import Hero from '../../components/hero';
-import ExploreSchemes from '../../components/explore_schemes';
+"use client"
+import Hero from '../components/hero';
+import ExploreSchemes from '../components/explore_schemes';
 
 const HomePage = (props) => {
     return <>
