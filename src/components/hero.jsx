@@ -46,7 +46,7 @@ const Hero = (props) => {
         ></div>
 
         {/* Overlay */}
-        <div className="absolute inset-0 opacity-90 md:opacity-80" style={{ backgroundColor: "#072248" }}></div>
+        <div className="absolute inset-0 opacity-90" style={{ backgroundColor: "#072248" }}></div>
 
         <div className="relative">
           <div className="container mx-auto grid grid-cols-1 gap-12 px-4 py-16 lg:px-8 lg:py-48 xl:max-w-7xl">
@@ -102,7 +102,6 @@ const Hero = (props) => {
                     </div>
                   ))}
                 </div>
-
               </div>
             </div>
           </div>

@@ -3,6 +3,8 @@ import RootLayout from "@/app/layout";
 import { fetchSchemeData } from "@/lib/api";
 import { useState, useRef, createRef, useEffect } from 'react';
 import LinkIcon from "../../components/icons/link";
+import Navbar from "@/components/navbar";
+import Footer from "@/components/footer";
 
 export async function getServerSideProps(context) {
   // Fetch data based on the scheme name from the context params
@@ -129,14 +131,15 @@ export default function SchemePage({ schemeData }) {
 
 
   return (
-    <RootLayout>
+    <>
       {/* Scheme heading */}
+      <Navbar />
       <div className="bg-iceland_poppy-500 text-white py-12">
         <div className="container mx-auto px-4 lg:px-0 max-w-7xl">
           <h1 className="text-4xl text-white font-bold">{schemeData.title}</h1>
           <div className="flex flex-wrap mt-4" style={{ display: "flex", alignContent: 'center' }}>
             {schemeData.residence != null && <div className="bg-white text-iceland_poppy-500 rounded-full px-4 py-1 mr-2 mb-2">
-              {schemeData.residence == "Out of Delhi" ? "Applicable for people from both Delhi and Out of Delhi" : "Applicable for people from Delhi only"}
+              {schemeData.residence == null ? "Applicable for people from both Delhi and Out of Delhi" : "Applicable for people from Delhi only"}
             </div>}
           </div>
         </div>
@@ -170,6 +173,7 @@ export default function SchemePage({ schemeData }) {
           ))}
         </div>
       </div>
-    </RootLayout>
+      <Footer />
+    </>
   );
 }

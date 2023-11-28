@@ -66,17 +66,40 @@ const Navbar = () => {
               </li>
             )}
             <li>
-              <a className="text-gray-500 transition hover:bg-iceland_poppy-500 hover:text-white rounded-md px-3 py-2 text-sm font-medium" href="/home">
+              <a className="text-gray-500 transition hover:bg-iceland_poppy-500 hover:text-white rounded-md px-3 py-2 text-sm font-medium" href="/">
                 Home
               </a>
             </li>
-
+            {
+              usePathname() === '/search' && <>
+                <li>
+                  <a className="text-gray-500 transition hover:bg-iceland_poppy-500 hover:text-white rounded-md px-3 py-2 text-sm font-medium" href="/">
+                    Resources
+                  </a>
+                </li>
+                <li>
+                  <a className="text-gray-500 transition hover:bg-iceland_poppy-500 hover:text-white rounded-md px-3 py-2 text-sm font-medium" href="/">
+                    Compensation
+                  </a>
+                </li>
+                <li>
+                  <a className="text-gray-500 transition hover:bg-iceland_poppy-500 hover:text-white rounded-md px-3 py-2 text-sm font-medium" href="/">
+                    Essential Docs
+                  </a>
+                </li>
+                <li>
+                  <a className="text-gray-500 transition hover:bg-iceland_poppy-500 hover:text-white rounded-md px-3 py-2 text-sm font-medium" href="/">
+                    Disability Information
+                  </a>
+                </li>
+              </>
+            }
             <li>
               <a className="text-gray-500 transition hover:bg-iceland_poppy-500 hover:text-white rounded-md px-3 py-2 text-sm font-medium" href="/">
                 About
               </a>
             </li>
-            <div className="relative">
+            {/* <div className="relative">
               <button style={{ color: "#e4750a" }} onClick={() => setShowDropdown(!showDropdown)} className="flex items-center gap-2 text-gray-500 hover:text-blue-500">
                 <IconLanguage className="h-5 w-5" />
                 <span>{language}</span>
@@ -87,7 +110,7 @@ const Navbar = () => {
                   <li className="p-2 hover:bg-gray-100 cursor-pointer" onClick={() => handleLanguageChange("Hindi")}>हिन्दी</li>
                 </ul>
               </div>)}
-            </div>
+            </div> */}
           </ul>
         </nav>
         <button
