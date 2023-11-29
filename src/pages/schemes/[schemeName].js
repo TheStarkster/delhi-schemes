@@ -162,7 +162,7 @@ export default function SchemePage({ schemeData }) {
           </div>
         </div>
 
-        <div className="col-span-3 mx-0 lg:mx-24 md:mx-12 md:my-12">
+        <div className="col-span-3 mx-4 my-12 xl:my-0 lg:my-0 sm:mx-12 lg:mx-18 md:mx-12 md:my-12">
           {sections.map((section, index) => (
             <section style={{ marginBottom: 64 }} key={index} ref={contentSectionRefs.current[index]}>
               <div className="flex items-center">
