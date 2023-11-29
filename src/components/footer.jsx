@@ -7,8 +7,7 @@ const Footer = (props) => {
             <img src="/delhi_gov_logo.png" className="w-32 sm:w-48 lg:w-60" />
 
             <p className="mt-4 text-xs sm:text-sm md:max-w-xs lg:text-base text-gray-500">
-              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Esse non
-              cupiditate quae nam molestias.
+              Empowering Delhi's citizens with diverse government schemes for a brighter future.
             </p>
 
             <ul className="mt-4 flex gap-4">
