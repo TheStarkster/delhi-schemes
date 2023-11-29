@@ -1,3 +1,66 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* Initial state when filter is hidden */
+.hiddenFilter {
+    visibility: hidden;
+    position: absolute;
+    width: 100%;
+    left: 0;
+    bottom: 0;
+    transform: translateY(100%);
+    z-index: -1;
+}
+
+/* State when filter is shown */
+.showFilter {
+    visibility: visible;
+    position: fixed; /* Change to fixed */
+    top: 120px; /* Adjust as needed */
+    left: 0; /* Adjust as needed */
+    width: 100%; /* Or specific width if needed */
+    z-index: 0; /* Ensure it's above other content */
+    animation: slideUp 0.5s ease forwards;
+    overflow-y: auto; /* Allows scrolling within the filter section if needed */
+    height: 100vh;
+}
+
+.showFilter > div {
+    overflow-y: auto; /* Allows scrolling within the filter section if needed */
+    height: 90vh;
+
+}
+
+.noScroll {
+    overflow: hidden; /* Prevents scrolling */
+    height: 100%; /* Maintains the height */
+}
+
+@media (min-width: 1024px) { /* Adjust based on your breakpoints */
+    .noScroll {
+        overflow: visible; /* Allows scrolling on larger screens */
+    }
+}
+
+
+@media (min-width: 1024px) { /* Adjust based on your breakpoints */
+    .hiddenFilter, .showFilter {
+        position: relative;
+        visibility: visible;
+        transform: translateY(0);
+        animation: none;
+    }
+}
+
+
+/* Styles for sm and xs screens */
+@media (max-width: 1024px) { /* Adjust the value if your breakpoints are different */
+    .reset-button {
+        width: 100%; /* Full width */
+        background-color: white; /* White background */
+        border: 2px solid #e4750a; /* Border outline, adjust color as needed */
+        color: #e4750a;
+        box-sizing: border-box; /* Ensures padding doesn't affect width */
+    }
+}

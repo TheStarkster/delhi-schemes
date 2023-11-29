@@ -136,16 +136,17 @@ export default function SchemePage({ schemeData }) {
       <Navbar />
       <div className="bg-iceland_poppy-500 text-white py-12">
         <div className="container mx-auto px-4 lg:px-0 max-w-7xl">
-          <h1 className="text-4xl text-white font-bold">{schemeData.title}</h1>
-          <div className="flex flex-wrap mt-4" style={{ display: "flex", alignContent: 'center' }}>
-            {schemeData.residence != null && <div className="bg-white text-iceland_poppy-500 rounded-full px-4 py-1 mr-2 mb-2">
-              {schemeData.residence == null ? "Applicable for people from both Delhi and Out of Delhi" : "Applicable for people from Delhi only"}
-            </div>}
+          <h1 className="text-2xl md:text-3xl lg:mx-12 lg:text-4xl text-white font-bold">{schemeData.title}</h1>
+          <div className="flex flex-wrap mt-4 items-center md:flex-row sm:flex-col">
+            {schemeData.residence != null &&
+              <div className="bg-white lg:mx-12 text-iceland_poppy-500 rounded-full px-4 py-1 mr-2 mb-2">
+                {schemeData.residence == null ? "Applicable for people from both Delhi and Out of Delhi" : "Applicable for people from Delhi only"}
+              </div>}
           </div>
         </div>
       </div>
-      <div className="container mx-auto lg:py-20 max-w-7xl grid grid-cols-4">
-        <div className="flex-1">
+      <div className="container mx-auto lg:py-20 max-w-7xl grid lg:grid-cols-4 md:grid-cols-3 sm:grid-cols-1">
+        <div className="lg:flex-1 xl:flex-1 md:w-1/3 xl:block hidden sm:hidden xl:block">
           <div className="sticky w-64 top-32">
             <div ref={highlightRef} className="absolute left-0 w-full bg-iceland_poppy-500 transition-transform duration-300 ease-in-out" style={{ zIndex: -99, borderRadius: 8 }}></div>
             {sections.map((section, index) => (
@@ -161,7 +162,7 @@ export default function SchemePage({ schemeData }) {
           </div>
         </div>
 
-        <div className="col-span-3">
+        <div className="col-span-3 mx-0 lg:mx-24 md:mx-12 md:my-12">
           {sections.map((section, index) => (
             <section style={{ marginBottom: 64 }} key={index} ref={contentSectionRefs.current[index]}>
               <div className="flex items-center">

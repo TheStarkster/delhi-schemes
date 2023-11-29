@@ -9,7 +9,7 @@ const ExploreSchemes = (props) => {
                 <div
                     className="mx-auto max-w-lg lg:mx-0 ltr:lg:text-left rtl:lg:text-right"
                 >
-                    <h2 className="text-3xl font-bold sm:text-4xl">Find schemes which suits best for you</h2>
+                    <h2 className="text-3xl font-bold sm:text-4xl">Find schemes by category</h2>
 
                     <p className="mt-4 text-gray-600">
                         Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut vero
@@ -18,10 +18,9 @@ const ExploreSchemes = (props) => {
                         Obcaecati, autem.
                     </p>
 
-                    <div className="mb-4 lg:mb-24 xl:mb-28 mt-12"> {/* Responsive margin */}
+                    <div className="mb-4 lg:mb-24 xl:mb-28 mt-12 opacity-0"> {/* Responsive margin */}
                         <a
-                            href="#"
-                            onClick={() => setIsModalOpen(true)}
+                            // onClick={() => setIsModalOpen(true)}
                             className="inline-flex w-full lg:w-auto items-center justify-center space-x-2 rounded-lg border border-iceland_poppy-500 bg-iceland_poppy-500 px-6 py-3 text-white transition hover:border-iceland_poppy-600 hover:bg-iceland_poppy-700"
                         >
                             <span style={{ fontWeight: "bold" }}>Find Schemes for You</span>
@@ -33,7 +32,7 @@ const ExploreSchemes = (props) => {
                 <div className="grid grid-cols-2 gap-4 sm:grid-cols-3">
                     <a
                         className="block rounded-xl border border-gray-100 p-4 shadow-sm hover:border-iceland_poppy-500 hover:ring-1 hover:ring-gray-200 focus:outline-none focus:ring"
-                        href="/accountant"
+                        href="/search?category=Livelihood"
                     >
                         <span className="inline-block rounded-lg bg-gray-50 p-3">
                             <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 576 512">
@@ -49,7 +48,7 @@ const ExploreSchemes = (props) => {
 
                     <a
                         className="block rounded-xl border border-gray-100 p-4 shadow-sm hover:border-iceland_poppy-500 hover:ring-1 hover:ring-gray-200 focus:outline-none focus:ring"
-                        href="/accountant"
+                        href="/search?category=Skills"
                     >
                         <span className="inline-block rounded-lg bg-gray-50 p-3">
                             <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 512 512">
@@ -65,7 +64,7 @@ const ExploreSchemes = (props) => {
 
                     <a
                         className="block rounded-xl border border-gray-100 p-4 shadow-sm hover:border-iceland_poppy-500 hover:ring-1 hover:ring-gray-200 focus:outline-none focus:ring"
-                        href="/accountant"
+                        href="/search?category=Health"
                     >
                         <span className="inline-block rounded-lg bg-gray-50 p-3">
                             <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 448 512">
@@ -81,7 +80,7 @@ const ExploreSchemes = (props) => {
 
                     <a
                         className="block rounded-xl border border-gray-100 p-4 shadow-sm hover:border-iceland_poppy-500 hover:ring-1 hover:ring-gray-200 focus:outline-none focus:ring"
-                        href="/accountant"
+                        href="/search?category=Education"
                     >
                         <span className="inline-block rounded-lg bg-gray-50 p-3">
                             <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 640 512">
@@ -97,7 +96,7 @@ const ExploreSchemes = (props) => {
 
                     <a
                         className="block rounded-xl border border-gray-100 p-4 shadow-sm hover:border-iceland_poppy-500 hover:ring-1 hover:ring-gray-200 focus:outline-none focus:ring"
-                        href="/accountant"
+                        href="/search?category=Woman and Child"
                     >
                         <span className="inline-block rounded-lg bg-gray-50 p-3">
                             <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 448 512">
@@ -113,7 +112,7 @@ const ExploreSchemes = (props) => {
 
                     <a
                         className="block rounded-xl border border-gray-100 p-4 shadow-sm hover:border-iceland_poppy-500 hover:ring-1 hover:ring-gray-200 focus:outline-none focus:ring"
-                        href="/accountant"
+                        href="/search?category=Scholarship"
                     >
                         <span className="inline-block rounded-lg bg-gray-50 p-3">
                             <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 640 512">
@@ -128,7 +127,7 @@ const ExploreSchemes = (props) => {
                     </a>
                     <a
                         className="block rounded-xl border border-gray-100 p-4 shadow-sm hover:border-iceland_poppy-500 hover:ring-1 hover:ring-gray-200 focus:outline-none focus:ring"
-                        href="/accountant"
+                        href="/search?category=Miscellaneous"
                     >
                         <span className="inline-block rounded-lg bg-gray-50 p-3">
                             <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 512 512">

@@ -133,11 +133,11 @@ const Footer = (props) => {
                   </a>
                 </li>
 
-                <li>
+                {/* <li>
                   <a href="#" className="text-white transition opacity-75">
                     FAQs
                   </a>
-                </li>
+                </li> */}
                 <li>
                   <a href="#" className="text-white transition opacity-75">
                     Terms & Conditions

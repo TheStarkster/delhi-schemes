@@ -1,33 +1,18 @@
 "use client"
-import React, { useEffect, useState } from 'react';
+
+import React, { useEffect, useRef, useState } from 'react';
+import { useSearchParams } from 'next/navigation'
 
 const SearchPage = (props) => {
     const [searchTerm, setSearchTerm] = useState('');
-    const [schemes, setSchemes] = useState([]);
-    const [loading, setLoading] = useState(true);
+    const [schemes, setSchemes] = useState();
+    // const [loading, setLoading] = useState(true);
     const [showScrollTopButton, setShowScrollTopButton] = useState(false);
+    const [showFilters, setShowFilters] = useState(false);
 
-    // Function to scroll to the top of the page
-    const scrollToTop = () => {
-        window.scrollTo({ top: 0, behavior: 'smooth' });
+    const toggleFilters = () => {
+        setShowFilters(!showFilters);
     };
-
-    // Function to toggle the visibility of the scroll-to-top button
-    const checkScrollTop = () => {
-        if (!showScrollTopButton && window.pageYOffset > 400){
-            setShowScrollTopButton(true);
-        } else if (showScrollTopButton && window.pageYOffset <= 400){
-            setShowScrollTopButton(false);
-        }
-    };
-
-    // Adding scroll event listener
-    useEffect(() => {
-        window.addEventListener('scroll', checkScrollTop);
-        return () => {
-            window.removeEventListener('scroll', checkScrollTop);
-        };
-    }, [showScrollTopButton]);
 
     const [filters, setFilters] = useState({
         gender: '',
@@ -38,25 +23,89 @@ const SearchPage = (props) => {
         reservation: '',
         maxFamilyIncome: '',
     });
+    const searchParams = useSearchParams();
+    const abortController = useRef(new AbortController());
+
+    // Function to scroll to the top of the page
+    const scrollToTop = () => {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    };
+
+    // Function to toggle the visibility of the scroll-to-top button
+    const checkScrollTop = () => {
+        if (!showScrollTopButton && window.pageYOffset > 400) {
+            setShowScrollTopButton(true);
+        } else if (showScrollTopButton && window.pageYOffset <= 400) {
+            setShowScrollTopButton(false);
+        }
+    };
+
+    function cleanObject(obj) {
+        return Object.entries(obj)
+            .filter(([_, value]) => value != null)
+            .reduce((acc, [key, value]) => ({ ...acc, [key]: value }), {});
+    }
+
+    useEffect(() => {
+        const reconstructedObject = {
+            gender: searchParams.get('gender'),
+            resident: searchParams.get('resident'),
+            category: searchParams.get('category'),
+            disability: searchParams.get('differentlyAbled') === 'true' ? 'yes' : searchParams.get('differentlyAbled') === 'false' ? 'no' : null,
+            maxFamilyIncome: searchParams.get('annualIncome') ? Number(searchParams.get('annualIncome')) : null,
+            age: searchParams.get('age') ? Number(searchParams.get('age')) : null
+        };
+
+        if (Object.keys(cleanObject(reconstructedObject)).length > 0) {
+            setFilters(cleanObject(reconstructedObject));
+        }
+    }, [])
+
+    // Adding scroll event listener
+    useEffect(() => {
+        window.addEventListener('scroll', checkScrollTop);
+        return () => {
+            window.removeEventListener('scroll', checkScrollTop);
+        };
+    }, [showScrollTopButton]);
+
+
 
     // Function to fetch data with filters and search term
     const fetchData = async () => {
-        setLoading(true);
+
+        // Abort previous request
+        abortController.current.abort();
+        abortController.current = new AbortController();
+
         try {
             const response = await fetch('http://20.193.132.230:3000/schemes/get_schemes', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'
                 },
-                body: JSON.stringify({ searchTerm, filters })
+                body: JSON.stringify({
+                    searchTerm, filters: {
+                        ...filters,
+                        disability: filters.disability === 'yes' ? true : filters.disability === 'no' ? false : null,
+                    }
+                }),
+                signal: abortController.current.signal
             });
             const data = await response.json();
             setSchemes(data);
         } catch (error) {
-            console.error("Error fetching data: ", error);
+            if (error.name !== 'AbortError') {
+                console.error("Error fetching data: ", error);
+            }
         }
-        setLoading(false);
     };
+
+    useEffect(() => {
+        return () => {
+            abortController.current.abort();
+        };
+    }, []);
 
     // useEffect to call fetchData on component mount and when search term or filters change
     useEffect(() => {
@@ -101,12 +150,21 @@ const SearchPage = (props) => {
         });
     };
 
+    useEffect(() => {
+        if (showFilters) {
+            document.body.classList.add('noScroll');
+        } else {
+            document.body.classList.remove('noScroll');
+        }
+    }, [showFilters]);
+    
+
     return (
         <div className="container mx-auto my-20 px-4">
-            <div className="grid grid-cols-1 md:grid-cols-4 gap-4">
-                <div className="col-span-1">
+            <div className="grid grid-cols-1 md:grid-cols-4 lg:grid-cols-8 xl:grid-cols-4 gap-4">
+            <div className={`col-span-1 xl:col-span-1 lg:col-span-3 lg:block ${showFilters ? 'showFilter' : 'hiddenFilter'}`}>
                     {/* Filter Section */}
-                    <div className="p-4 bg-white">
+                    <div className="p-4 py-12 lg:py-0 xl:py-0 bg-white">
                         {/* Gender Filter */}
                         <div className="mb-6">
                             <h3 className="font-semibold flex justify-between text-lg mb-3"><p>Gender</p><button onClick={() => resetFilter('gender')} className="text-sm text-iceland_poppy-500">Reset</button></h3>
@@ -229,13 +287,13 @@ const SearchPage = (props) => {
 
                         {/* Reset All Filters Button */}
                         <div className="mt-4">
-                            <button onClick={resetAllFilters} className="bg-iceland_poppy-500 hover:bg-iceland_poppy-700 text-white font-bold py-2 px-4 rounded">
+                            <button onClick={resetAllFilters} className="reset-button bg-iceland_poppy-500 hover:bg-iceland_poppy-700 text-white font-bold py-2 px-4 rounded">
                                 Reset All Filters
                             </button>
                         </div>
                     </div>
                 </div>
-                <div className="md:col-span-3 ml-12">
+                <div className="col-span-1 md:col-span-3 md:col-span-4 xl:col-span-3 lg:col-span-5 xl:ml-12 lg:ml-12">
                     {/* Content area */}
                     <div className="mb-6">
                         <div className="flex border border-gray-200 rounded-lg overflow-hidden">
@@ -257,10 +315,10 @@ const SearchPage = (props) => {
                     <div>
                         <div>
                             <p className="text-gray-500 mb-4">
-                                Showing {schemes.length} schemes
+                                Showing {schemes?.length || 0} schemes
                             </p>
                         </div>
-                        {loading
+                        {schemes == null
                             ? <>
                                 {[1, 2, 3, 4, 5].map((item, index) => (<div key={index} className="max-w-full mx-auto mt-10">
                                     <div className="bg-white p-6 rounded-lg shadow-md">
@@ -272,31 +330,39 @@ const SearchPage = (props) => {
                                 </div>))}
                             </>
                             : schemes.map((scheme, index) => (
-                                <a className='cursor-pointer' href={`http://localhost:3000/schemes/${scheme.title.replace(/[^a-zA-Z0-9]+/g, '-').toLowerCase()}`}>
+                                <a key={index} className='cursor-pointer' href={`http://localhost:3000/schemes/${scheme.title.replace(/[^a-zA-Z0-9]+/g, '-').toLowerCase()}`}>
                                     <div key={index} className="max-w-full mx-auto mt-10">
-                                    <div className="bg-white p-6 rounded-lg shadow-md">
-                                        <h2 className='text-xl font-bold mb-1'>{scheme.title}</h2>
-                                        <p className='mb-4 text-blue-500'>{scheme.residence == null ? "Applicable for people from both Delhi and Out of Delhi" : "Applicable for people from Delhi only"}</p>
-                                        <p className='mb-4 line-clamp-3 overflow-hidden text-ellipsis text-gray-500'>
-                                            {scheme.benefits}
-                                        </p>
-                                        <div style={{ display: 'flex' }}>
-                                            {scheme.reservations != null && scheme.reservations[0].name != 'N/A' && scheme.reservations.map((reservation, index) => (<div className='rounded-md bg-iceland_poppy-500 text-white mx-1 px-2'>{reservation.name}</div>))}
+                                        <div className="bg-white p-6 rounded-lg shadow-md">
+                                            <h2 className='text-xl font-bold mb-1'>{scheme.title}</h2>
+                                            <p className='mb-4 text-blue-500'>{scheme.residence == null ? "Applicable for people from both Delhi and Out of Delhi" : "Applicable for people from Delhi only"}</p>
+                                            <p className='mb-4 line-clamp-3 overflow-hidden text-ellipsis text-gray-500'>
+                                                {scheme.benefits}
+                                            </p>
+                                            <div style={{ display: 'flex', flexWrap: 'wrap' }}>
+                                                {scheme.reservations != null && scheme.reservations[0].name != 'N/A' && scheme.reservations.map((reservation, index) => (<div className='rounded-md bg-iceland_poppy-500 text-white mx-1 my-1 px-2'>{reservation.name}</div>))}
+                                            </div>
                                         </div>
                                     </div>
-                                </div>
                                 </a>
                             ))
                         }
                     </div>
                 </div>
             </div>
+            <div className="fixed bottom-0 left-0 right-0 bg-white p-4 xl:hidden lg:hidden">
+                <button
+                    onClick={toggleFilters}
+                    className="w-full bg-iceland_poppy-500 text-white py-2 rounded"
+                >
+                    {showFilters ? 'Hide Filters' : 'Show Filters'}
+                </button>
+            </div>
             {/* Floating Action Button */}
             {showScrollTopButton && (
                 <button
                     onClick={scrollToTop}
-                    style={{ position: 'fixed', bottom: '40px', right: '40px', zIndex: 1000 }}
-                    className="bg-iceland_poppy-500 hover:bg-iceland_poppy-700 text-white font-bold py-2 px-4 rounded-full shadow-md"
+                    style={{ position: 'fixed', right: '40px', zIndex: 1000 }}
+                    className="bg-iceland_poppy-500 bottom-[90px] lg:bottom-[40px] xl:bottom-[40px] md:bottom-[90px] hover:bg-iceland_poppy-700 text-white font-bold py-2 px-4 rounded-full shadow-md"
                 >
                     Go to Top
                 </button>
