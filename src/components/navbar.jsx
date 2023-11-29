@@ -73,17 +73,17 @@ const Navbar = () => {
             {
               usePathname() === '/search' && <>
                 <li>
-                  <a className="text-gray-500 transition hover:bg-iceland_poppy-500 hover:text-white rounded-md px-3 py-2 text-sm font-medium" href="/">
+                  <a className="text-gray-500 transition hover:bg-iceland_poppy-500 hover:text-white rounded-md px-3 py-2 text-sm font-medium" href="/resources">
                     Resources
                   </a>
                 </li>
                 <li>
-                  <a className="text-gray-500 transition hover:bg-iceland_poppy-500 hover:text-white rounded-md px-3 py-2 text-sm font-medium" href="/">
+                  <a className="text-gray-500 transition hover:bg-iceland_poppy-500 hover:text-white rounded-md px-3 py-2 text-sm font-medium" href="/compensation">
                     Compensation
                   </a>
                 </li>
                 <li>
-                  <a className="text-gray-500 transition hover:bg-iceland_poppy-500 hover:text-white rounded-md px-3 py-2 text-sm font-medium" href="/">
+                  <a className="text-gray-500 transition hover:bg-iceland_poppy-500 hover:text-white rounded-md px-3 py-2 text-sm font-medium" href="/essential-docs">
                     Essential Docs
                   </a>
                 </li>
@@ -95,8 +95,8 @@ const Navbar = () => {
               </>
             }
             <li>
-              <a className="text-gray-500 transition hover:bg-iceland_poppy-500 hover:text-white rounded-md px-3 py-2 text-sm font-medium" href="/">
-                About
+              <a className="text-gray-500 transition hover:bg-iceland_poppy-500 hover:text-white rounded-md px-3 py-2 text-sm font-medium" href="/about-us">
+                About Us
               </a>
             </li>
             {/* <div className="relative">

@@ -90,60 +90,43 @@ const Footer = (props) => {
             </ul>
           </div>
 
-          <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 md:grid-cols-2 lg:col-span-2 lg:grid-cols-3">
+          <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 md:grid-cols-2 lg:col-span-2 lg:grid-cols-2">
             <div>
               <p className="font-medium text-white" style={{ fontSize: '18px' }}>Quick Links</p>
 
               <ul className="mt-4 space-y-3 text-sm">
                 <li>
-                  <a href="#" className="text-white transition opacity-75">
+                  <a href="/about-us" className="text-white transition opacity-75">
                     About Us
                   </a>
                 </li>
-
                 <li>
-                  <a href="#" className="text-white transition opacity-75">
-                    Sitemap
+                  <a href="/contact-us" className="text-white transition opacity-75">
+                    Contact Us
                   </a>
                 </li>
-
                 <li>
-                  <a href="#" className="text-white transition opacity-75">
+                  <a href="/disclaimer" className="text-white transition opacity-75">
                     Disclaimer
                   </a>
                 </li>
-
                 <li>
-                  <a href="#" className="text-white transition opacity-75">
-                    Accessibility
+                  <a href="/privacy-policy" className="text-white transition opacity-75">
+                    Privacy policy
+                  </a>
+                </li>
+                <li>
+                  <a href="https://dcpcr.delhi.gov.in" target="_blank" className="text-white transition opacity-75">
+                    DCPCR
+                  </a>
+                </li>
+                <li>
+                  <a href="https://delhi.gov.in" target="_blank" className="text-white transition opacity-75">
+                    Delhi Government
                   </a>
                 </li>
               </ul>
             </div>
-
-            <div>
-              <p className="font-medium text-white" style={{ fontSize: '18px' }}>Helpful Links</p>
-
-              <ul className="mt-4 space-y-3 text-sm">
-                <li>
-                  <a href="#" className="text-white transition opacity-75">
-                    Contact
-                  </a>
-                </li>
-
-                {/* <li>
-                  <a href="#" className="text-white transition opacity-75">
-                    FAQs
-                  </a>
-                </li> */}
-                <li>
-                  <a href="#" className="text-white transition opacity-75">
-                    Terms & Conditions
-                  </a>
-                </li>
-              </ul>
-            </div>
-
             <div>
               <h2 className="font-medium text-white text-lg mb-4">Get in Touch</h2>
               <div className="border border-gray-300 overflow-hidden">
