@@ -86,3 +86,41 @@
         box-sizing: border-box; /* Ensures padding doesn't affect width */
     }
 }
+
+
+.font-normal {
+  font-size: 1em; /* Default size */
+}
+
+.font-large {
+  font-size: 1.25em; /* Larger size */
+}
+
+.font-x-large {
+  font-size: 1.5em; /* Extra-large size */
+}
+
+/* High Contrast Mode Styles */
+.high-contrast-mode {
+  --high-contrast-bg: #000000; /* High contrast background */
+  --high-contrast-text: #ffffff; /* High contrast text */
+  --high-contrast-border: #ffffff; /* High contrast borders */
+  --high-contrast-link: #ffdd00; /* High contrast links */
+}
+
+/* Applying high contrast styles to specific elements */
+.high-contrast-mode .contrast-bg {
+  background-color: var(--high-contrast-bg);
+}
+
+.high-contrast-mode .contrast-text {
+  color: var(--high-contrast-text);
+}
+
+.high-contrast-mode .contrast-border {
+  border-color: var(--high-contrast-border);
+}
+
+.high-contrast-mode .contrast-link {
+  color: var(--high-contrast-link);
+}
