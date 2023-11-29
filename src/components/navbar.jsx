@@ -50,9 +50,9 @@ const Navbar = () => {
       </a>
 
       <div className="flex items-center">
-        <nav className={`${isOpen ? 'block' : 'hidden'} absolute bg-white top-full left-0 w-full md:static md:w-auto md:block`}>
-          <ul className="flex flex-col md:flex-row md:items-center gap-6 md:gap-4 p-4 md:p-0">
-            {usePathname() !== '/search' && (
+      <nav className={`${isOpen ? 'block' : 'hidden'} absolute bg-white top-full left-0 w-full lg:static lg:w-auto lg:block`}>
+      <ul className="flex flex-col lg:flex-row lg:items-center gap-6 lg:gap-4 p-4 lg:p-0">
+            {usePathname() === '/' && (
               <li className="hidden md:block" onClick={() => router.push('/search')}>
                 <div className="flex items-center border-2 border-gray-300 rounded-md overflow-hidden">
                   <SearchIcon className="text-gray-500 ml-4" />
@@ -65,13 +65,19 @@ const Navbar = () => {
                 </div>
               </li>
             )}
-            <li>
-              <a className="text-gray-500 transition hover:bg-iceland_poppy-500 hover:text-white rounded-md px-3 py-2 text-sm font-medium" href="/">
-                Home
-              </a>
-            </li>
+
             {
-              usePathname() === '/search' && <>
+              usePathname() !== '/' && <>
+                <li>
+                  <a className="flex items-center border-2 border-orange-500 p-2 rounded-lg rounded-md px-3 py-2 text-sm font-medium" href="/search">
+                  <SearchIcon className="h-5 w-5 text-iceland_poppy-500 mr-2" /> <p className="mr-1 text-iceland_poppy-500">Search</p>
+                  </a>
+                </li>
+                <li>
+                  <a className="text-gray-500 transition hover:bg-iceland_poppy-500 hover:text-white rounded-md px-3 py-2 text-sm font-medium" href="/">
+                    Home
+                  </a>
+                </li>
                 <li>
                   <a className="text-gray-500 transition hover:bg-iceland_poppy-500 hover:text-white rounded-md px-3 py-2 text-sm font-medium" href="/resources">
                     Resources
@@ -94,11 +100,6 @@ const Navbar = () => {
                 </li>
               </>
             }
-            <li>
-              <a className="text-gray-500 transition hover:bg-iceland_poppy-500 hover:text-white rounded-md px-3 py-2 text-sm font-medium" href="/about-us">
-                About Us
-              </a>
-            </li>
             {/* <div className="relative">
               <button style={{ color: "#e4750a" }} onClick={() => setShowDropdown(!showDropdown)} className="flex items-center gap-2 text-gray-500 hover:text-blue-500">
                 <IconLanguage className="h-5 w-5" />
@@ -115,8 +116,8 @@ const Navbar = () => {
         </nav>
         <button
           onClick={() => setIsOpen(!isOpen)}
-          className="rounded bg-gray-100 p-2.5 text-gray-600 transition hover:text-gray-600/75 md:hidden"
-        >
+          className="rounded bg-gray-100 p-2.5 text-gray-600 transition hover:text-gray-600/75 lg:hidden"
+          >
           <span className="sr-only">Toggle menu</span>
           <svg
             xmlns="http://www.w3.org/2000/svg"
