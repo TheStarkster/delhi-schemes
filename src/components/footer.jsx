@@ -19,7 +19,6 @@ const Footer = (props) => {
                   className="text-white transition opacity-75"
                 >
                   <span className="sr-only">Facebook</span>
-
                   <svg
                     className="h-6 w-6"
                     fill="currentColor"
