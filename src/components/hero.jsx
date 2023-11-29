@@ -31,7 +31,7 @@ const Hero = (props) => {
     {
       title: "Disability Information",
       subtitle: "Learn about disability schemes and services for children and families.",
-      link: "#",
+      link: "/disability-information",
       icon: <DisabilityIcon style={{ width: 40, height: 40 }} />
     }
   ];
