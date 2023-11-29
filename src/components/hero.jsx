@@ -13,7 +13,7 @@ const Hero = (props) => {
     {
       title: "Resources",
       subtitle: "Information on schemes, policies, and services for children and families.",
-      link: "#",
+      link: "/resources",
       icon: <ResourceIcon style={{ width: 40, height: 40 }} />
     },
     {
@@ -25,7 +25,7 @@ const Hero = (props) => {
     {
       title: "Essential Docs",
       subtitle: "Access essential documents for children and families.",
-      link: "#",
+      link: "/essential-docs",
       icon: <EssentialDocsIcon style={{ width: 40, height: 40 }} />
     },
     {

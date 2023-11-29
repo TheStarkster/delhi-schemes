@@ -9,7 +9,6 @@ import Footer from "@/components/footer";
 export async function getServerSideProps(context) {
   const { name } = context.params;
   const decodedTitle = decodeURIComponent(name).replace(/-/g, ' ').replace(/%26/g, '&');
-  console.log(decodedTitle);
   // Fetch the entire dataset
   const allData = compensationData; // Replace with your actual data fetching method
 
