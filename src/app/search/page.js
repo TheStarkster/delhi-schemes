@@ -330,7 +330,7 @@ const SearchPage = (props) => {
                                 </div>))}
                             </>
                             : schemes.map((scheme, index) => (
-                                <a key={index} className='cursor-pointer' href={`http://localhost:3000/schemes/${scheme.title.replace(/[^a-zA-Z0-9]+/g, '-').toLowerCase()}`}>
+                                <a key={index} className='cursor-pointer' href={`/schemes/${scheme.title.replace(/[^a-zA-Z0-9]+/g, '-').toLowerCase()}`}>
                                     <div key={index} className="max-w-full mx-auto mt-10">
                                         <div className="bg-white p-6 rounded-lg shadow-md">
                                             <h2 className='text-xl font-bold mb-1'>{scheme.title}</h2>
