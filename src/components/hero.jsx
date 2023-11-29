@@ -19,7 +19,7 @@ const Hero = (props) => {
     {
       title: "Compensation",
       subtitle: "Learn about compensation schemes for victims of crime and abuse.",
-      link: "#",
+      link: "/compensation",
       icon: <CompensationIcon style={{ width: 40, height: 40 }} />
     },
     {
