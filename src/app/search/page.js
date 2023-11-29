@@ -79,7 +79,7 @@ const SearchPage = (props) => {
         abortController.current = new AbortController();
 
         try {
-            const response = await fetch('http://20.193.132.230:3000/schemes/get_schemes', {
+            const response = await fetch('https://dcpcr-ews-api.grevity.in/schemes/get_schemes', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'
