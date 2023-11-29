@@ -6,24 +6,24 @@ const AccordionItem = ({ title, children }) => {
   const toggleOpen = () => setIsOpen(!isOpen);
 
   return (
-    <div className="border-b">
+    <div className="contrast-bg contrast-text border-b">
       <button
-        className="w-full text-left px-4 py-2 focus:outline-none"
+        className="contrast-bg contrast-text w-full text-left px-4 py-2 focus:outline-none"
         onClick={toggleOpen}
       >
-        <div className="flex justify-between items-center">
+        <div className="contrast-bg contrast-text flex justify-between items-center">
           <span className='text-2xl font-bold py-4'>{title}</span>
           <span>{isOpen ? '▲' : '▼'}</span>
         </div>
       </button>
-      {isOpen && <div className="p-4">{children}</div>}
+      {isOpen && <div className="contrast-bg contrast-text p-4">{children}</div>}
     </div>
   );
 };
 
 const Accordion = ({ data }) => {
   return (
-    <div className="container mx-auto p-4">
+    <div className="contrast-bg contrast-text container mx-auto p-4">
       {data.map((item, index) => (
         <AccordionItem key={index} title={item.resource}>
           {item.information}

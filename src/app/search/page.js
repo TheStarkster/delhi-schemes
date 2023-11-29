@@ -160,38 +160,38 @@ const SearchPage = (props) => {
     
 
     return (
-        <div className="container mx-auto my-20 px-4">
-            <div className="grid grid-cols-1 md:grid-cols-4 lg:grid-cols-8 xl:grid-cols-4 gap-4">
+        <div className="contrast-bg contrast-text container mx-auto my-20 px-4">
+            <div className="contrast-bg contrast-text grid grid-cols-1 md:grid-cols-4 lg:grid-cols-8 xl:grid-cols-4 gap-4">
             <div className={`col-span-1 xl:col-span-1 lg:col-span-3 lg:block ${showFilters ? 'showFilter' : 'hiddenFilter'}`}>
                     {/* Filter Section */}
-                    <div className="p-4 py-12 lg:py-0 xl:py-0 bg-white">
+                    <div className="contrast-bg contrast-text p-4 py-12 lg:py-0 xl:py-0 bg-white">
                         {/* Gender Filter */}
-                        <div className="mb-6">
-                            <h3 className="font-semibold flex justify-between text-lg mb-3"><p>Gender</p><button onClick={() => resetFilter('gender')} className="text-sm text-iceland_poppy-500">Reset</button></h3>
-                            <div className="flex gap-4 items-center">
-                                <label className="inline-flex items-center">
-                                    <input type="radio" className="form-radio" name="gender" value="Male" onChange={handleFilterChange} checked={filters.gender === 'Male'} />
-                                    <span className="ml-2">Male</span>
+                        <div className="contrast-bg contrast-text mb-6">
+                            <h3 className="contrast-bg contrast-text font-semibold flex justify-between text-lg mb-3"><p>Gender</p><button onClick={() => resetFilter('gender')} className="contrast-bg contrast-text text-sm text-iceland_poppy-500">Reset</button></h3>
+                            <div className="contrast-bg contrast-text flex gap-4 items-center">
+                                <label className="contrast-bg contrast-text inline-flex items-center">
+                                    <input type="radio" className="contrast-bg contrast-text form-radio" name="gender" value="Male" onChange={handleFilterChange} checked={filters.gender === 'Male'} />
+                                    <span className="contrast-bg contrast-text ml-2">Male</span>
                                 </label>
-                                <label className="inline-flex items-center">
-                                    <input type="radio" className="form-radio" name="gender" value="Female" onChange={handleFilterChange} checked={filters.gender === 'Female'} />
-                                    <span className="ml-2">Female</span>
+                                <label className="contrast-bg contrast-text inline-flex items-center">
+                                    <input type="radio" className="contrast-bg contrast-text form-radio" name="gender" value="Female" onChange={handleFilterChange} checked={filters.gender === 'Female'} />
+                                    <span className="contrast-bg contrast-text ml-2">Female</span>
                                 </label>
-                                <label className="inline-flex items-center">
-                                    <input type="radio" className="form-radio" name="gender" value="Others" onChange={handleFilterChange} checked={filters.gender === 'Others'} />
-                                    <span className="ml-2">Others</span>
+                                <label className="contrast-bg contrast-text inline-flex items-center">
+                                    <input type="radio" className="contrast-bg contrast-text form-radio" name="gender" value="Others" onChange={handleFilterChange} checked={filters.gender === 'Others'} />
+                                    <span className="contrast-bg contrast-text ml-2">Others</span>
                                 </label>
 
                             </div>
                         </div>
 
                         {/* Category Filter */}
-                        <div className="mb-6">
-                            <h3 className="font-semibold flex justify-between text-lg mb-3">
+                        <div className="contrast-bg contrast-text mb-6">
+                            <h3 className="contrast-bg contrast-text font-semibold flex justify-between text-lg mb-3">
                                 <p>Category</p>
-                                <button onClick={() => resetFilter('category')} className="mt-2 text-sm text-iceland_poppy-500">Reset</button>
+                                <button onClick={() => resetFilter('category')} className="contrast-bg contrast-text mt-2 text-sm text-iceland_poppy-500">Reset</button>
                             </h3>
-                            <select name="category" className="form-select block w-full mt-1" onChange={handleFilterChange} value={filters.category}>
+                            <select name="category" className="contrast-bg contrast-text form-select block w-full mt-1" onChange={handleFilterChange} value={filters.category}>
                                 <option value="">Select Category</option>
                                 <option value="Livelihood">Livelihood</option>
                                 <option value="Skills">Skills</option>
@@ -203,12 +203,12 @@ const SearchPage = (props) => {
                         </div>
 
                         {/* Residence Filter */}
-                        <div className="mb-6">
-                            <h3 className="font-semibold flex justify-between text-lg mb-3">
+                        <div className="contrast-bg contrast-text mb-6">
+                            <h3 className="contrast-bg contrast-text font-semibold flex justify-between text-lg mb-3">
                                 <p>Residence</p>
-                                <button onClick={() => resetFilter('residence')} className="mt-2 text-sm text-iceland_poppy-500">Reset</button>
+                                <button onClick={() => resetFilter('residence')} className="contrast-bg contrast-text mt-2 text-sm text-iceland_poppy-500">Reset</button>
                             </h3>
-                            <select name="residence" className="form-select block w-full mt-1" onChange={handleFilterChange} value={filters.residence}>
+                            <select name="residence" className="contrast-bg contrast-text form-select block w-full mt-1" onChange={handleFilterChange} value={filters.residence}>
                                 <option value="">Select Residence</option>
                                 <option value="delhi">Delhi</option>
                                 <option value="out_of_delhi">Out of Delhi</option>
@@ -216,12 +216,12 @@ const SearchPage = (props) => {
                         </div>
 
                         {/* Reservation Filter */}
-                        <div className="mb-6">
-                            <h3 className="font-semibold flex justify-between text-lg mb-3">
+                        <div className="contrast-bg contrast-text mb-6">
+                            <h3 className="contrast-bg contrast-text font-semibold flex justify-between text-lg mb-3">
                                 <p>Reservation</p>
-                                <button onClick={() => resetFilter('reservation')} className="mt-2 text-sm text-iceland_poppy-500">Reset</button>
+                                <button onClick={() => resetFilter('reservation')} className="contrast-bg contrast-text mt-2 text-sm text-iceland_poppy-500">Reset</button>
                             </h3>
-                            <select name="reservation" className="form-select block w-full mt-1" onChange={handleFilterChange} value={filters.reservation}>
+                            <select name="reservation" className="contrast-bg contrast-text form-select block w-full mt-1" onChange={handleFilterChange} value={filters.reservation}>
                                 <option value="">Select Reservation</option>
                                 <option value="SC">SC</option>
                                 <option value="OBC">OBC</option>
@@ -236,31 +236,31 @@ const SearchPage = (props) => {
                         </div>
 
                         {/* Disability Filter */}
-                        <div className="mb-6">
-                            <h3 className="font-semibold flex justify-between text-lg mb-3">
+                        <div className="contrast-bg contrast-text mb-6">
+                            <h3 className="contrast-bg contrast-text font-semibold flex justify-between text-lg mb-3">
                                 <p>Disability</p>
-                                <button onClick={() => resetFilter('disability')} className="text-sm text-iceland_poppy-500">Reset</button>
+                                <button onClick={() => resetFilter('disability')} className="contrast-bg contrast-text text-sm text-iceland_poppy-500">Reset</button>
                             </h3>
-                            <div className="flex gap-4 items-center">
-                                <label className="inline-flex items-center">
-                                    <input type="radio" className="form-radio" name="disability" value="yes" onChange={handleFilterChange} checked={filters.disability === 'yes'} />
-                                    <span className="ml-2">Yes</span>
+                            <div className="contrast-bg contrast-text flex gap-4 items-center">
+                                <label className="contrast-bg contrast-text inline-flex items-center">
+                                    <input type="radio" className="contrast-bg contrast-text form-radio" name="disability" value="yes" onChange={handleFilterChange} checked={filters.disability === 'yes'} />
+                                    <span className="contrast-bg contrast-text ml-2">Yes</span>
                                 </label>
-                                <label className="inline-flex items-center">
-                                    <input type="radio" className="form-radio" name="disability" value="no" onChange={handleFilterChange} checked={filters.disability === 'no'} />
-                                    <span className="ml-2">No</span>
+                                <label className="contrast-bg contrast-text inline-flex items-center">
+                                    <input type="radio" className="contrast-bg contrast-text form-radio" name="disability" value="no" onChange={handleFilterChange} checked={filters.disability === 'no'} />
+                                    <span className="contrast-bg contrast-text ml-2">No</span>
                                 </label>
                             </div>
                         </div>
 
-                        <div className="mb-6">
-                            <h3 className="font-semibold flex justify-between text-lg mb-3">
+                        <div className="contrast-bg contrast-text mb-6">
+                            <h3 className="contrast-bg contrast-text font-semibold flex justify-between text-lg mb-3">
                                 <p>Age <span className='ml-2'>{filters.age}</span></p>
-                                <button onClick={() => resetAgeFilter()} className="text-sm text-iceland_poppy-500">Reset</button>
+                                <button onClick={() => resetAgeFilter()} className="contrast-bg contrast-text text-sm text-iceland_poppy-500">Reset</button>
                             </h3>
                             <input
                                 type="range"
-                                className="form-range w-full"
+                                className="contrast-bg contrast-text form-range w-full"
                                 name="age"
                                 min="0"
                                 max="90"
@@ -270,14 +270,14 @@ const SearchPage = (props) => {
                         </div>
 
                         {/* Maximum Family Income Filter */}
-                        <div className="mb-6">
-                            <h3 className="font-semibold flex justify-between text-lg mb-3">
+                        <div className="contrast-bg contrast-text mb-6">
+                            <h3 className="contrast-bg contrast-text font-semibold flex justify-between text-lg mb-3">
                                 <p>Maximum Family Income</p>
-                                <button onClick={() => resetFilter('maxFamilyIncome')} className="text-sm text-iceland_poppy-500">Reset</button>
+                                <button onClick={() => resetFilter('maxFamilyIncome')} className="contrast-bg contrast-text text-sm text-iceland_poppy-500">Reset</button>
                             </h3>
                             <input
                                 type="text"
-                                className="form-input block w-full mt-1"
+                                className="contrast-bg contrast-text form-input block w-full mt-1"
                                 name="maxFamilyIncome"
                                 placeholder="Enter Maximum Family Income"
                                 value={filters.maxFamilyIncome}
@@ -286,27 +286,27 @@ const SearchPage = (props) => {
                         </div>
 
                         {/* Reset All Filters Button */}
-                        <div className="mt-4">
-                            <button onClick={resetAllFilters} className="reset-button bg-iceland_poppy-500 hover:bg-iceland_poppy-700 text-white font-bold py-2 px-4 rounded">
+                        <div className="contrast-bg contrast-text mt-4">
+                            <button onClick={resetAllFilters} className="contrast-bg contrast-text reset-button bg-iceland_poppy-500 hover:bg-iceland_poppy-700 text-white font-bold py-2 px-4 rounded">
                                 Reset All Filters
                             </button>
                         </div>
                     </div>
                 </div>
-                <div className="col-span-1 md:col-span-3 md:col-span-4 xl:col-span-3 lg:col-span-5 xl:ml-12 lg:ml-12">
+                <div className="contrast-bg contrast-text col-span-1 md:col-span-3 md:col-span-4 xl:col-span-3 lg:col-span-5 xl:ml-12 lg:ml-12">
                     {/* Content area */}
-                    <div className="mb-6">
-                        <div className="flex border border-gray-200 rounded-lg overflow-hidden">
+                    <div className="contrast-bg contrast-text mb-6">
+                        <div className="contrast-bg contrast-text flex border border-gray-200 rounded-lg overflow-hidden">
                             <input
                                 type="text"
-                                className="px-4 py-2 w-full"
+                                className="contrast-bg contrast-text px-4 py-2 w-full"
                                 placeholder="Search..."
                                 value={searchTerm}
                                 onChange={handleSearchChange}
                             />
                             <button
                                 onClick={handleSearch}
-                                className="bg-iceland_poppy-500 text-white px-4 hover:bg-iceland_poppy-600"
+                                className="contrast-bg contrast-text bg-iceland_poppy-500 text-white px-4 hover:bg-iceland_poppy-600"
                             >
                                 Search
                             </button>
@@ -314,25 +314,25 @@ const SearchPage = (props) => {
                     </div>
                     <div>
                         <div>
-                            <p className="text-gray-500 mb-4">
+                            <p className="contrast-bg contrast-text text-gray-500 mb-4">
                                 Showing {schemes?.length || 0} schemes
                             </p>
                         </div>
                         {schemes == null
                             ? <>
-                                {[1, 2, 3, 4, 5].map((item, index) => (<div key={index} className="max-w-full mx-auto mt-10">
-                                    <div className="bg-white p-6 rounded-lg shadow-md">
-                                        <div className="h-4 bg-gray-300 rounded pulse-animation"></div>
-                                        <div className="mt-4 h-4 bg-gray-300 rounded pulse-animation"></div>
-                                        <div className="mt-2 h-4 bg-gray-300 rounded pulse-animation"></div>
-                                        <div className="mt-2 h-4 bg-gray-300 rounded pulse-animation"></div>
+                                {[1, 2, 3, 4, 5].map((item, index) => (<div key={index} className="contrast-bg contrast-text max-w-full mx-auto mt-10">
+                                    <div className="contrast-bg contrast-text bg-white p-6 rounded-lg shadow-md">
+                                        <div className="contrast-bg contrast-text h-4 bg-gray-300 rounded pulse-animation"></div>
+                                        <div className="contrast-bg contrast-text mt-4 h-4 bg-gray-300 rounded pulse-animation"></div>
+                                        <div className="contrast-bg contrast-text mt-2 h-4 bg-gray-300 rounded pulse-animation"></div>
+                                        <div className="contrast-bg contrast-text mt-2 h-4 bg-gray-300 rounded pulse-animation"></div>
                                     </div>
                                 </div>))}
                             </>
                             : schemes.map((scheme, index) => (
                                 <a key={index} className='cursor-pointer' href={`/schemes/${scheme.title.replace(/[^a-zA-Z0-9]+/g, '-').toLowerCase()}`}>
-                                    <div key={index} className="max-w-full mx-auto mt-10">
-                                        <div className="bg-white p-6 rounded-lg shadow-md">
+                                    <div key={index} className="contrast-bg contrast-text max-w-full mx-auto mt-10">
+                                        <div className="contrast-bg contrast-text bg-white p-6 rounded-lg shadow-md">
                                             <h2 className='text-xl font-bold mb-1'>{scheme.title}</h2>
                                             <p className='mb-4 text-blue-500'>{scheme.residence == null ? "Applicable for people from both Delhi and Out of Delhi" : "Applicable for people from Delhi only"}</p>
                                             <p className='mb-4 line-clamp-3 overflow-hidden text-ellipsis text-gray-500'>
@@ -349,10 +349,10 @@ const SearchPage = (props) => {
                     </div>
                 </div>
             </div>
-            <div className="fixed bottom-0 left-0 right-0 bg-white p-4 xl:hidden lg:hidden">
+            <div className="contrast-bg contrast-text fixed bottom-0 left-0 right-0 bg-white p-4 xl:hidden lg:hidden">
                 <button
                     onClick={toggleFilters}
-                    className="w-full bg-iceland_poppy-500 text-white py-2 rounded"
+                    className="contrast-bg contrast-text w-full bg-iceland_poppy-500 text-white py-2 rounded"
                 >
                     {showFilters ? 'Hide Filters' : 'Show Filters'}
                 </button>
@@ -362,7 +362,7 @@ const SearchPage = (props) => {
                 <button
                     onClick={scrollToTop}
                     style={{ position: 'fixed', right: '40px', zIndex: 1000 }}
-                    className="bg-iceland_poppy-500 bottom-[90px] lg:bottom-[40px] xl:bottom-[40px] md:bottom-[90px] hover:bg-iceland_poppy-700 text-white font-bold py-2 px-4 rounded-full shadow-md"
+                    className="contrast-bg contrast-text bg-iceland_poppy-500 bottom-[90px] lg:bottom-[40px] xl:bottom-[40px] md:bottom-[90px] hover:bg-iceland_poppy-700 text-white font-bold py-2 px-4 rounded-full shadow-md"
                 >
                     Go to Top
                 </button>

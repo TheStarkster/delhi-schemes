@@ -134,21 +134,21 @@ export default function SchemePage({ schemeData }) {
     <>
       {/* Scheme heading */}
       <Navbar />
-      <div className="bg-gradient-to-r from-iceland_poppy-500 to-pink-500 text-white py-12">
-        <div className="container mx-auto px-4 lg:px-0 max-w-7xl">
-          <h1 className="text-2xl md:text-3xl lg:mx-12 lg:text-4xl text-white font-bold">{schemeData.title}</h1>
-          <div className="flex flex-wrap mt-4 items-center md:flex-row sm:flex-col">
+      <div className="contrast-bg contrast-text bg-gradient-to-r from-iceland_poppy-500 to-pink-500 text-white py-12">
+        <div className="contrast-bg contrast-text container mx-auto px-4 lg:px-0 max-w-7xl">
+          <h1 className="contrast-bg contrast-text text-2xl md:text-3xl lg:mx-12 lg:text-4xl text-white font-bold">{schemeData.title}</h1>
+          <div className="contrast-bg contrast-text flex flex-wrap mt-4 items-center md:flex-row sm:flex-col">
             {schemeData.residence != null &&
-              <div className="bg-white lg:mx-12 text-iceland_poppy-500 rounded-full px-4 py-1 mr-2 mb-2">
+              <div className="contrast-bg contrast-text bg-white lg:mx-12 text-iceland_poppy-500 rounded-full px-4 py-1 mr-2 mb-2">
                 {schemeData.residence == null ? "Applicable for people from both Delhi and Out of Delhi" : "Applicable for people from Delhi only"}
               </div>}
           </div>
         </div>
       </div>
-      <div className="container mx-auto lg:py-20 max-w-7xl grid lg:grid-cols-4 md:grid-cols-3 sm:grid-cols-1">
-        <div className="lg:flex-1 xl:flex-1 md:w-1/3 xl:block hidden sm:hidden xl:block">
-          <div className="sticky w-64 top-32">
-            <div ref={highlightRef} className="absolute left-0 w-full bg-iceland_poppy-500 transition-transform duration-300 ease-in-out" style={{ zIndex: -99, borderRadius: 8 }}></div>
+      <div className="contrast-bg contrast-text container mx-auto lg:py-20 max-w-7xl grid lg:grid-cols-4 md:grid-cols-3 sm:grid-cols-1">
+        <div className="contrast-bg contrast-text lg:flex-1 xl:flex-1 md:w-1/3 xl:block hidden sm:hidden xl:block">
+          <div className="contrast-bg contrast-text sticky w-64 top-32">
+            <div ref={highlightRef} className="contrast-bg contrast-text absolute left-0 w-full bg-iceland_poppy-500 transition-transform duration-300 ease-in-out" style={{ zIndex: -99, borderRadius: 8 }}></div>
             {sections.map((section, index) => (
               <div
                 ref={sectionRefs.current[index]}
@@ -162,12 +162,12 @@ export default function SchemePage({ schemeData }) {
           </div>
         </div>
 
-        <div className="col-span-3 mx-4 my-12 xl:my-0 lg:my-0 sm:mx-12 lg:mx-18 md:mx-12 md:my-12">
+        <div className="contrast-bg contrast-text col-span-3 mx-4 my-12 xl:my-0 lg:my-0 sm:mx-12 lg:mx-18 md:mx-12 md:my-12">
           {sections.map((section, index) => (
             <section style={{ marginBottom: 64 }} key={index} ref={contentSectionRefs.current[index]}>
-              <div className="flex items-center">
-                <h2 className="text-2xl font-bold mb-4">{section}</h2>
-                <LinkIcon className="h-6 w-6 mb-4 ml-2 cursor-pointer hover:fill-gray-500 fill-blue-600 transition" onClick={() => copyToClipboard(section)} />
+              <div className="contrast-bg contrast-text flex items-center">
+                <h2 className="contrast-bg contrast-text text-2xl font-bold mb-4">{section}</h2>
+                <LinkIcon className="contrast-bg contrast-text h-6 w-6 mb-4 ml-2 cursor-pointer hover:fill-gray-500 fill-blue-600 transition" onClick={() => copyToClipboard(section)} />
               </div>
               <div dangerouslySetInnerHTML={{ __html: schemeData[`${section.toLowerCase().replace(' ', '_')}_html`] }} />
             </section>

@@ -33,39 +33,39 @@ const EssentialDocsPage = () => {
 
     return (
         <>
-            <div className="banner relative bg-cover bg-center" style={{ backgroundImage: `url('/resources.png')`, height: '300px' }}>
+            <div className="contrast-bg contrast-text banner relative bg-cover bg-center" style={{ backgroundImage: `url('/resources.png')`, height: '300px' }}>
                 {/* Overlay */}
-                <div className="overlay absolute inset-0" style={{ backgroundColor: "#072248", opacity: 0.9 }}></div>
+                <div className="contrast-bg contrast-text overlay absolute inset-0" style={{ backgroundColor: "#072248", opacity: 0.9 }}></div>
 
                 {/* Text over Overlay */}
-                <div className="relative z-10 px-12">
-                    <div className="mx-auto max-w-7xl text-left">
-                        <h1 className="text-2xl sm:text-2xl xl:text-4xl lg:text-4xl md:text-2xl font-bold text-white mb-4 pt-12">Essential Documents</h1>
-                        <p className="text-white">Explore essential documents for scheme applications and learn step-by-step how to acquire any missing documents. Simplified guides for a hassle-free application process at your fingertips.</p>
+                <div className="contrast-bg contrast-text relative z-10 px-12">
+                    <div className="contrast-bg contrast-text mx-auto max-w-7xl text-left">
+                        <h1 className="contrast-bg contrast-text text-2xl sm:text-2xl xl:text-4xl lg:text-4xl md:text-2xl font-bold text-white mb-4 pt-12">Essential Documents</h1>
+                        <p className="contrast-bg contrast-text text-white">Explore essential documents for scheme applications and learn step-by-step how to acquire any missing documents. Simplified guides for a hassle-free application process at your fingertips.</p>
                     </div>
                 </div>
             </div>
-            <div className="grid px-12 xl:px-0 lg:px-12 md:px-12 max-w-7xl mx-auto my-12 md:grid-cols-1 lg:grid-cols-1 gap-6">
-                <div className="grid grid-cols-12">
-                    <div className="relative col-span-12">
+            <div className="contrast-bg contrast-text grid px-12 xl:px-0 lg:px-12 md:px-12 max-w-7xl mx-auto my-12 md:grid-cols-1 lg:grid-cols-1 gap-6">
+                <div className="contrast-bg contrast-text grid grid-cols-12">
+                    <div className="contrast-bg contrast-text relative col-span-12">
                         <input
                             type="text"
                             value={searchTerm}
                             onChange={handleSearchChange}
                             placeholder="Search documents..."
-                            className="pl-10 w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
+                            className="contrast-bg contrast-text pl-10 w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
                         />
-                        <span className="absolute inset-y-0 left-0 flex items-center pl-2">
+                        <span className="contrast-bg contrast-text absolute inset-y-0 left-0 flex items-center pl-2">
                             {/* Replace with your search icon component */}
-                            <IconSearch className="h-4 w-4 text-gray-500" />
+                            <IconSearch className="contrast-bg contrast-text h-4 w-4 text-gray-500" />
                         </span>
                         {searchTerm && (
                             <button
                                 onClick={clearSearch}
-                                className="absolute inset-y-0 right-0 flex items-center pr-2"
+                                className="contrast-bg contrast-text absolute inset-y-0 right-0 flex items-center pr-2"
                             >
                                 {/* Replace with your clear icon component */}
-                                <CrossFilledRight style={{ fill: "#e4750a" }} className="h-4 w-4 text-gray-500" />
+                                <CrossFilledRight style={{ fill: "#e4750a" }} className="contrast-bg contrast-text h-4 w-4 text-gray-500" />
                             </button>
                         )}
                     </div>

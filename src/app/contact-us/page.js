@@ -1,24 +1,24 @@
 // pages/contact.js
 export default function Contact() {
     return (
-      <div className="container mx-auto px-4">
-        <header className="text-center py-10">
-          <h1 className="text-4xl font-bold">Contact Us</h1>
-          <p className="mt-4 text-xl">Get in touch with us</p>
+      <div className="contrast-bg contrast-text container mx-auto px-4">
+        <header className="contrast-bg contrast-text text-center py-10">
+          <h1 className="contrast-bg contrast-text text-4xl font-bold">Contact Us</h1>
+          <p className="contrast-bg contrast-text mt-4 text-xl">Get in touch with us</p>
         </header>
   
-        <div className="grid md:grid-cols-2 gap-10">
+        <div className="contrast-bg contrast-text grid md:grid-cols-2 gap-10">
           <div>
-            <h2 className="text-3xl font-semibold">Our Address</h2>
-            <p className="mt-4 text-lg">5th Floor, ISBT Building, Kashmere Gate, Near, Yudhister Setu, Inter State Bus Terminal, Kashmere Gate, New Delhi, Delhi 110006</p>
-            <p className="mt-2 text-lg">Phone: 011 2386 2685</p>
-            <p className="mt-2 text-lg">Email: dcpcr[at]hotmail[dot]com / delhichildrightscommission[at]gmail[dot]com</p>
+            <h2 className="contrast-bg contrast-text text-3xl font-semibold">Our Address</h2>
+            <p className="contrast-bg contrast-text mt-4 text-lg">5th Floor, ISBT Building, Kashmere Gate, Near, Yudhister Setu, Inter State Bus Terminal, Kashmere Gate, New Delhi, Delhi 110006</p>
+            <p className="contrast-bg contrast-text mt-2 text-lg">Phone: 011 2386 2685</p>
+            <p className="contrast-bg contrast-text mt-2 text-lg">Email: dcpcr[at]hotmail[dot]com / delhichildrightscommission[at]gmail[dot]com</p>
             {/* Add more contact details if necessary */}
           </div>
   
-          <div className="md:col-span-2">
+          <div className="contrast-bg contrast-text md:col-span-2">
             <iframe
-              className="w-full h-96"
+              className="contrast-bg contrast-text w-full h-96"
               loading="lazy"
               allowFullScreen
               referrerPolicy="no-referrer-when-downgrade"
@@ -28,7 +28,7 @@ export default function Contact() {
           </div>
         </div>
   
-        <footer className="text-center py-10">
+        <footer className="contrast-bg contrast-text text-center py-10">
           <p>© 2023 Your Company Name. All rights reserved.</p>
         </footer>
       </div>

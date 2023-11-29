@@ -1,7 +1,7 @@
 export default function PrivacyPolicy() {
     return (
-        <div className="container mx-auto max-w-7xl px-4">
-            <section className="my-10">
+        <div className="contrast-bg contrast-text container mx-auto max-w-7xl px-4">
+            <section className="contrast-bg contrast-text my-10">
                 <p><span style={{ fontSize: 24 }}><strong>Introduction</strong></span></p>
 
                 <p style={{ marginBottom: "24px" }}>Welcome to DCPCR&#39;s Schemes website, a developed and maintained the Delhi Commission for Protection of Child Rights, Govt of NCT of Delhi, and the British Asian Trust. This privacy policy aims to inform you about how we handle any personal information you might provide while using our website.&nbsp;</p>

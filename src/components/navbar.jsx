@@ -44,57 +44,61 @@ const Navbar = () => {
   };
 
   const handleContrastChange = (contrastLevel) => {
-    setContrast(contrastLevel);
-    // Apply the contrast change to the body or a specific container
-    document.body.className = `contrast-${contrastLevel}`;
+    if (contrastLevel === 'high') {
+      document.body.classList.add('high-contrast-mode');
+    } else {
+      document.body.classList.remove('high-contrast-mode');
+    }
   };
+  
 
   return <>
-    <div className="flex justify-end items-center space-x-2 p-2 bg-white border-b max-w-7xl mx-auto">
+    <div className="contrast-bg contrast-text flex justify-end items-center space-x-2 p-2 bg-white border-b max-w-7xl mx-auto">
       {/* Font Size Controls */}
+      <p className="text-gray-500 text-sm">Accessibility Controls: </p>
       <button
         onClick={() => handleFontSizeChange('normal')}
-        className="px-2 py-1 text-sm font-medium text-gray-700 bg-gray-200 rounded hover:bg-gray-300"
+        className="contrast-bg contrast-text px-2 py-1 text-sm font-medium text-gray-700 bg-gray-200 rounded hover:bg-gray-300"
       >
         A
       </button>
       <button
         onClick={() => handleFontSizeChange('large')}
-        className="px-2 py-1 text-base font-medium text-gray-700 bg-gray-200 rounded hover:bg-gray-300"
+        className="contrast-bg contrast-text px-2 py-1 text-base font-medium text-gray-700 bg-gray-200 rounded hover:bg-gray-300"
       >
         A
       </button>
       <button
         onClick={() => handleFontSizeChange('x-large')}
-        className="px-2 py-1 text-lg font-medium text-gray-700 bg-gray-200 rounded hover:bg-gray-300"
+        className="contrast-bg contrast-text px-2 py-1 text-lg font-medium text-gray-700 bg-gray-200 rounded hover:bg-gray-300"
       >
         A
       </button>
 
       {/* Contrast Controls */}
-      <button
+      {/* <button
         onClick={() => handleContrastChange('normal')}
-        className="px-2 py-1 text-sm font-medium text-gray-700 bg-gray-200 rounded hover:bg-gray-300"
+        className="contrast-bg contrast-text px-2 py-1 text-sm font-medium text-gray-700 bg-gray-200 rounded hover:bg-gray-300"
       >
         Normal Contrast
       </button>
       <button
         onClick={() => handleContrastChange('high')}
-        className="px-2 py-1 text-sm font-medium text-gray-700 bg-gray-200 rounded hover:bg-gray-300"
+        className="contrast-bg contrast-text px-2 py-1 text-sm font-medium text-gray-700 bg-gray-200 rounded hover:bg-gray-300"
       >
         High Contrast
-      </button>
+      </button> */}
     </div>
     <header className={`bg-white sticky left-0 top-0 right-0 z-20 ${!top && `bg-white shadow-lg`}`}>
       <div
-        className="mx-auto justify-between flex h-28 max-w-screen-xl items-center gap-2 px-4 sm:px-6 lg:px-8"
+        className="contrast-bg contrast-text mx-auto justify-between flex h-28 max-w-screen-xl items-center gap-2 px-4 sm:px-6 lg:px-8"
       >
-        <a className="flex items-center text-blue-500" href="/">
-          <span className="sr-only">Home</span>
-          <img src="/logo.jpeg" alt="logo" className="object-contain mr-4 w-full max-w-[90px]" />
-          <div className="ml-2">
-            <div className="text-2xl font-bold" style={{ letterSpacing: '2px' }}>DCPCR</div>
-            <div className="text-xs italic hidden md:block">
+        <a className="contrast-bg contrast-text flex items-center text-blue-500" href="/">
+          <span className="contrast-bg contrast-text sr-only">Home</span>
+          <img src="/logo.jpeg" alt="logo" className="contrast-bg contrast-text object-contain mr-4 w-full max-w-[90px]" />
+          <div className="contrast-bg contrast-text ml-2">
+            <div className="contrast-bg contrast-text text-2xl font-bold" style={{ letterSpacing: '2px' }}>DCPCR</div>
+            <div className="contrast-bg contrast-text text-xs italic hidden md:block">
               Delhi Commission for
               <br />
               Protection of Child Rights
@@ -102,17 +106,17 @@ const Navbar = () => {
           </div>
         </a>
 
-        <div className="flex items-center">
+        <div className="contrast-bg contrast-text flex items-center">
           <nav className={`${isOpen ? 'block' : 'hidden'} absolute bg-white top-full left-0 w-full lg:static lg:w-auto lg:block`}>
-            <ul className="flex flex-col lg:flex-row lg:items-center gap-6 lg:gap-4 p-4 lg:p-0">
+            <ul className="contrast-bg contrast-text flex flex-col lg:flex-row lg:items-center gap-6 lg:gap-4 p-4 lg:p-0">
               {usePathname() === '/' && (
-                <li className="hidden md:block" onClick={() => router.push('/search')}>
-                  <div className="flex items-center border-2 border-gray-300 rounded-md overflow-hidden">
-                    <SearchIcon className="text-gray-500 ml-4" />
+                <li className="contrast-bg contrast-text hidden md:block" onClick={() => router.push('/search')}>
+                  <div className="contrast-bg contrast-text flex items-center border-2 border-gray-300 rounded-md overflow-hidden">
+                    <SearchIcon className="contrast-bg contrast-text text-gray-500 ml-4" />
                     <input
                       type="text"
                       placeholder="Search..."
-                      className="py-2 px-4 focus:outline-none"
+                      className="contrast-bg contrast-text py-2 px-4 focus:outline-none"
                       readOnly
                     />
                   </div>
@@ -123,47 +127,47 @@ const Navbar = () => {
                 usePathname() !== '/' && <>
                   {
                     usePathname() !== '/search' && (<li>
-                      <a className="flex items-center border-2 border-orange-500 p-2 rounded-lg rounded-md px-3 py-2 text-sm font-medium" href="/search">
-                        <SearchIcon className="h-5 w-5 text-iceland_poppy-500 mr-2" /> <p className="mr-1 text-iceland_poppy-500">Search</p>
+                      <a className="contrast-bg contrast-text flex items-center border-2 border-orange-500 p-2 rounded-lg rounded-md px-3 py-2 text-sm font-medium" href="/search">
+                        <SearchIcon className="contrast-bg contrast-text h-5 w-5 text-iceland_poppy-500 mr-2" /> <p className="contrast-bg contrast-text mr-1 text-iceland_poppy-500">Search</p>
                       </a>
                     </li>)
                   }
                   <li>
-                    <a className="text-gray-500 transition hover:bg-iceland_poppy-500 hover:text-white rounded-md px-3 py-2 text-sm font-medium" href="/">
+                    <a className="contrast-bg contrast-text text-gray-500 transition hover:bg-iceland_poppy-500 hover:text-white rounded-md px-3 py-2 text-sm font-medium" href="/">
                       Home
                     </a>
                   </li>
                   <li>
-                    <a className="text-gray-500 transition hover:bg-iceland_poppy-500 hover:text-white rounded-md px-3 py-2 text-sm font-medium" href="/resources">
+                    <a className="contrast-bg contrast-text text-gray-500 transition hover:bg-iceland_poppy-500 hover:text-white rounded-md px-3 py-2 text-sm font-medium" href="/resources">
                       Resources
                     </a>
                   </li>
                   <li>
-                    <a className="text-gray-500 transition hover:bg-iceland_poppy-500 hover:text-white rounded-md px-3 py-2 text-sm font-medium" href="/compensation">
+                    <a className="contrast-bg contrast-text text-gray-500 transition hover:bg-iceland_poppy-500 hover:text-white rounded-md px-3 py-2 text-sm font-medium" href="/compensation">
                       Compensation
                     </a>
                   </li>
                   <li>
-                    <a className="text-gray-500 transition hover:bg-iceland_poppy-500 hover:text-white rounded-md px-3 py-2 text-sm font-medium" href="/essential-docs">
+                    <a className="contrast-bg contrast-text text-gray-500 transition hover:bg-iceland_poppy-500 hover:text-white rounded-md px-3 py-2 text-sm font-medium" href="/essential-docs">
                       Essential Docs
                     </a>
                   </li>
                   <li>
-                    <a className="text-gray-500 transition hover:bg-iceland_poppy-500 hover:text-white rounded-md px-3 py-2 text-sm font-medium" href="/">
+                    <a className="contrast-bg contrast-text text-gray-500 transition hover:bg-iceland_poppy-500 hover:text-white rounded-md px-3 py-2 text-sm font-medium" href="/">
                       Disability Information
                     </a>
                   </li>
                 </>
               }
-              {/* <div className="relative">
-              <button style={{ color: "#e4750a" }} onClick={() => setShowDropdown(!showDropdown)} className="flex items-center gap-2 text-gray-500 hover:text-blue-500">
-                <IconLanguage className="h-5 w-5" />
+              {/* <div className="contrast-bg contrast-text relative">
+              <button style={{ color: "#e4750a" }} onClick={() => setShowDropdown(!showDropdown)} className="contrast-bg contrast-text flex items-center gap-2 text-gray-500 hover:text-blue-500">
+                <IconLanguage className="contrast-bg contrast-text h-5 w-5" />
                 <span>{language}</span>
               </button>
-              {showDropdown && (<div className="absolute right-0 mt-2 w-40 bg-white border rounded shadow-xl">
+              {showDropdown && (<div className="contrast-bg contrast-text absolute right-0 mt-2 w-40 bg-white border rounded shadow-xl">
                 <ul>
-                  <li className="p-2 hover:bg-gray-100 cursor-pointer" onClick={() => handleLanguageChange("English")}>English</li>
-                  <li className="p-2 hover:bg-gray-100 cursor-pointer" onClick={() => handleLanguageChange("Hindi")}>हिन्दी</li>
+                  <li className="contrast-bg contrast-text p-2 hover:bg-gray-100 cursor-pointer" onClick={() => handleLanguageChange("English")}>English</li>
+                  <li className="contrast-bg contrast-text p-2 hover:bg-gray-100 cursor-pointer" onClick={() => handleLanguageChange("Hindi")}>हिन्दी</li>
                 </ul>
               </div>)}
             </div> */}
@@ -171,12 +175,12 @@ const Navbar = () => {
           </nav>
           <button
             onClick={() => setIsOpen(!isOpen)}
-            className="rounded bg-gray-100 p-2.5 text-gray-600 transition hover:text-gray-600/75 lg:hidden"
+            className="contrast-bg contrast-text rounded bg-gray-100 p-2.5 text-gray-600 transition hover:text-gray-600/75 lg:hidden"
           >
-            <span className="sr-only">Toggle menu</span>
+            <span className="contrast-bg contrast-text sr-only">Toggle menu</span>
             <svg
               xmlns="http://www.w3.org/2000/svg"
-              className="h-5 w-5"
+              className="contrast-bg contrast-text h-5 w-5"
               fill="none"
               viewBox="0 0 24 24"
               stroke="currentColor"

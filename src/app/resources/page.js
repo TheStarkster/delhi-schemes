@@ -141,19 +141,19 @@ export default function ResourcesInformatio() {
   ];
   return (
     <>
-      <div className="banner relative bg-cover bg-center" style={{ backgroundImage: `url('/resources.png')`, height: '300px' }}>
+      <div className="contrast-bg contrast-text banner relative bg-cover bg-center" style={{ backgroundImage: `url('/resources.png')`, height: '300px' }}>
         {/* Overlay */}
-        <div className="overlay absolute inset-0" style={{ backgroundColor: "#072248", opacity: 0.9 }}></div>
+        <div className="contrast-bg contrast-text overlay absolute inset-0" style={{ backgroundColor: "#072248", opacity: 0.9 }}></div>
 
         {/* Text over Overlay */}
-        <div className="relative z-10 px-12">
-          <div className="mx-auto max-w-7xl text-left">
-            <h1 className="text-2xl sm:text-2xl xl:text-4xl lg:text-4xl md:text-2xl font-bold text-white mb-4 pt-12">Essential Resources for Child Welfare and Safety</h1>
-            <p className="text-white">Access vital child protection resources — from emergency helplines to comprehensive child welfare legislation — in one concise, user-friendly platform.</p>
+        <div className="contrast-bg contrast-text relative z-10 px-12">
+          <div className="contrast-bg contrast-text mx-auto max-w-7xl text-left">
+            <h1 className="contrast-bg contrast-text text-2xl sm:text-2xl xl:text-4xl lg:text-4xl md:text-2xl font-bold text-white mb-4 pt-12">Essential Resources for Child Welfare and Safety</h1>
+            <p className="contrast-bg contrast-text text-white">Access vital child protection resources — from emergency helplines to comprehensive child welfare legislation — in one concise, user-friendly platform.</p>
           </div>
         </div>
       </div>
-      <div className="grid px-12 xl:px-0 lg:px-12 md:px-12 max-w-7xl mx-auto my-12 md:grid-cols-2 lg:grid-cols-1 gap-6">
+      <div className="contrast-bg contrast-text grid px-12 xl:px-0 lg:px-12 md:px-12 max-w-7xl mx-auto my-12 md:grid-cols-2 lg:grid-cols-1 gap-6">
         <Accordion data={data} />
       </div>
     </>

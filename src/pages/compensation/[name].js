@@ -85,15 +85,15 @@ export default function AssistancePage({ assistanceData }) {
   return (
     <>
       <Navbar />
-      <div className="bg-gradient-to-r from-iceland_poppy-500 to-pink-500 text-white py-12">
-        <div className="container mx-auto px-12 md:px-12 xl:px-0 lg:px-14 max-w-7xl">
-          <h1 className="text-2xl md:text-3xl lg:text-4xl text-white font-bold">{assistanceData.title}</h1>
+      <div className="contrast-bg contrast-text bg-gradient-to-r from-iceland_poppy-500 to-pink-500 text-white py-12">
+        <div className="contrast-bg contrast-text container mx-auto px-12 md:px-12 xl:px-0 lg:px-14 max-w-7xl">
+          <h1 className="contrast-bg contrast-text text-2xl md:text-3xl lg:text-4xl text-white font-bold">{assistanceData.title}</h1>
         </div>
       </div>
-      <div className="container mx-auto lg:py-20 max-w-7xl grid lg:grid-cols-4 md:grid-cols-3 sm:grid-cols-1">
-        <div className="lg:flex-1 xl:flex-1 md:w-1/3 xl:block hidden sm:hidden xl:block">
-          <div className="sticky w-64 top-32">
-            <div ref={highlightRef} className="absolute left-0 w-full bg-iceland_poppy-500 transition-transform duration-300 ease-in-out" style={{ zIndex: -99, borderRadius: 8 }}></div>
+      <div className="contrast-bg contrast-text container mx-auto lg:py-20 max-w-7xl grid lg:grid-cols-4 md:grid-cols-3 sm:grid-cols-1">
+        <div className="contrast-bg contrast-text lg:flex-1 xl:flex-1 md:w-1/3 xl:block hidden sm:hidden xl:block">
+          <div className="contrast-bg contrast-text sticky w-64 top-32">
+            <div ref={highlightRef} className="contrast-bg contrast-text absolute left-0 w-full bg-iceland_poppy-500 transition-transform duration-300 ease-in-out" style={{ zIndex: -99, borderRadius: 8 }}></div>
             {sections.map((section, index) => (
               <div
                 ref={sectionRefs.current[index]}
@@ -107,35 +107,35 @@ export default function AssistancePage({ assistanceData }) {
           </div>
         </div>
 
-        <div className="col-span-3 mx-0 lg:mx-14 md:mx-12 xl:mx-0 md:my-0 lg:py-0 xl:py-0 md:py-4 px-12 py-12">
-          <section className="mb-12" ref={contentSectionRefs.current[0]}>
-            <div className="flex items-center">
-              <h2 className="text-2xl font-bold mb-2">Overview</h2>
-              <LinkIcon className="h-6 w-6 mb-4 ml-2 cursor-pointer hover:fill-gray-500 fill-blue-600 transition" onClick={() => copyToClipboard('Overview')} />
+        <div className="contrast-bg contrast-text col-span-3 mx-0 lg:mx-14 md:mx-12 xl:mx-0 md:my-0 lg:py-0 xl:py-0 md:py-4 px-12 py-12">
+          <section className="contrast-bg contrast-text mb-12" ref={contentSectionRefs.current[0]}>
+            <div className="contrast-bg contrast-text flex items-center">
+              <h2 className="contrast-bg contrast-text text-2xl font-bold mb-2">Overview</h2>
+              <LinkIcon className="contrast-bg contrast-text h-6 w-6 mb-4 ml-2 cursor-pointer hover:fill-gray-500 fill-blue-600 transition" onClick={() => copyToClipboard('Overview')} />
             </div>
             <div dangerouslySetInnerHTML={{ __html: assistanceData.description }} />
           </section>
 
-          <section className="mb-12" ref={contentSectionRefs.current[1]}>
-            <div className="flex items-center">
-              <h2 className="text-2xl font-bold mb-4">Legislation</h2>
-              <LinkIcon className="h-6 w-6 mb-4 ml-2 cursor-pointer hover:fill-gray-500 fill-blue-600 transition" onClick={() => copyToClipboard('Legislation')} />
+          <section className="contrast-bg contrast-text mb-12" ref={contentSectionRefs.current[1]}>
+            <div className="contrast-bg contrast-text flex items-center">
+              <h2 className="contrast-bg contrast-text text-2xl font-bold mb-4">Legislation</h2>
+              <LinkIcon className="contrast-bg contrast-text h-6 w-6 mb-4 ml-2 cursor-pointer hover:fill-gray-500 fill-blue-600 transition" onClick={() => copyToClipboard('Legislation')} />
             </div>
             <div dangerouslySetInnerHTML={{ __html: assistanceData.legislation }} />
           </section>
 
-          <section className="mb-12" ref={contentSectionRefs.current[2]}>
-            <div className="flex items-center">
-              <h2 className="text-2xl font-bold mb-4">Required Documents</h2>
-              <LinkIcon className="h-6 w-6 mb-4 ml-2 cursor-pointer hover:fill-gray-500 fill-blue-600 transition" onClick={() => copyToClipboard('Required Documents')} />
+          <section className="contrast-bg contrast-text mb-12" ref={contentSectionRefs.current[2]}>
+            <div className="contrast-bg contrast-text flex items-center">
+              <h2 className="contrast-bg contrast-text text-2xl font-bold mb-4">Required Documents</h2>
+              <LinkIcon className="contrast-bg contrast-text h-6 w-6 mb-4 ml-2 cursor-pointer hover:fill-gray-500 fill-blue-600 transition" onClick={() => copyToClipboard('Required Documents')} />
             </div>
             <div dangerouslySetInnerHTML={{ __html: assistanceData.documents_required }} />
           </section>
 
-          <section className="mb-12" ref={contentSectionRefs.current[3]}>
-            <div className="flex items-center">
-              <h2 className="text-2xl font-bold mb-4">Other Information</h2>
-              <LinkIcon className="h-6 w-6 mb-4 ml-2 cursor-pointer hover:fill-gray-500 fill-blue-600 transition" onClick={() => copyToClipboard('Other Information')} />
+          <section className="contrast-bg contrast-text mb-12" ref={contentSectionRefs.current[3]}>
+            <div className="contrast-bg contrast-text flex items-center">
+              <h2 className="contrast-bg contrast-text text-2xl font-bold mb-4">Other Information</h2>
+              <LinkIcon className="contrast-bg contrast-text h-6 w-6 mb-4 ml-2 cursor-pointer hover:fill-gray-500 fill-blue-600 transition" onClick={() => copyToClipboard('Other Information')} />
             </div>
             <div dangerouslySetInnerHTML={{ __html: assistanceData.other_info }} />
           </section>

@@ -1,26 +1,109 @@
-const Footer = (props) => {
-  return (
-    <footer className="bg-[#203a5d]">
-      <div className="mx-auto max-w-screen-xl space-y-4 px-4 py-8 sm:space-y-8 sm:py-16 sm:px-6 lg:space-y-16 lg:px-8">
-        <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
-          <div>
-            <img src="/delhi_gov_logo.png" className="w-32 sm:w-48 lg:w-60" />
+"use client";
 
-            <p className="mt-4 text-xs sm:text-sm md:max-w-xs lg:text-base text-gray-500">
+import { useState } from "react";
+
+const Footer = (props) => {
+  const [showFeedback, showFeedbackForm] = useState(false)
+
+  // Feedback modal...
+  const FeedbackModal = () => {
+    return <div class="relative z-10" aria-labelledby="modal-title" role="dialog" aria-modal="true">
+    <div class="fixed inset-0 bg-gray-500 bg-opacity-75 transition-opacity"></div>
+  
+    <div class="fixed inset-0 z-10 w-screen overflow-y-auto">
+      <div class="flex min-h-full items-end justify-center p-4 text-center sm:items-center sm:p-0">
+        <div class="relative transform overflow-hidden rounded-lg bg-white text-left shadow-xl transition-all sm:my-8 sm:w-full sm:max-w-lg">
+          <div class="bg-white px-4 pb-4 pt-5 sm:p-6 sm:pb-4">
+          <div class="px-4 py-6 bg-white sm:p-6">
+            <div class="mt-3 text-center sm:mt-0 sm:text-left">
+              <h3 class="text-lg leading-6 font-medium text-gray-900" id="modal-title">
+                Feedback
+              </h3>
+              <div class="mt-2">
+                <p class="text-sm text-gray-500">
+                  Please provide your feedback below. We will get back to you at the earliest.
+                </p>
+              </div>
+              </div>
+              <div class="mt-5">
+                <label for="name" class="block text-sm font-medium text-gray-700">
+                  Name
+                </label>
+                <div class="mt-1">
+                  <input
+                    type="text"
+                    name="name"
+                    id="name"
+                    autocomplete="given-name"
+                    class="shadow-sm focus:ring-indigo-500 focus:border-indigo-500 block w-full sm:text-sm border-gray-300 rounded-md"
+                  />
+                </div>
+              </div>
+              <div class="mt-5">
+                <label for="phone" class="block text-sm font-medium text-gray-700">
+                  Phone
+                </label>
+                <div class="mt-1">
+                  <input
+                    type="text"
+                    name="phone"
+                    id="phone"
+                    autocomplete="phone"
+                    class="shadow-sm focus:ring-indigo-500 focus:border-indigo-500 block w-full sm:text-sm border-gray-300 rounded-md"
+                  />
+                </div>
+              </div>
+              <div class="mt-5">
+                <label for="feedback" class="block text-sm font-medium text-gray-700">
+                  Feedback
+                </label>
+                <div class="mt-1">
+                  <textarea
+                    id="feedback"
+                    name="feedback"
+                    rows="3"
+                    class="shadow-sm focus:ring-indigo-500 focus:border-indigo-500 block w-full sm:text-sm border-gray-300 rounded-md"
+                    placeholder="Enter your feedback here..."
+                  ></textarea>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="bg-gray-50 px-4 py-3 sm:flex sm:flex-row-reverse sm:px-6">
+            <button type="button" class="inline-flex w-full justify-center rounded-md bg-green-600 px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-green-500 sm:ml-3 sm:w-auto" onClick={() => showFeedbackForm(false)}>Submit</button>
+            <button type="button" class="mt-3 inline-flex w-full justify-center rounded-md bg-white px-3 py-2 text-sm font-semibold text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 hover:bg-gray-50 sm:mt-0 sm:w-auto" onClick={() => showFeedbackForm(false)}>Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  }
+
+  return (
+    <>
+    {showFeedback && <FeedbackModal />}
+    <footer className="contrast-bg contrast-text bg-[#203a5d]">
+      <div className="contrast-bg contrast-text mx-auto max-w-screen-xl space-y-4 px-4 py-8 sm:space-y-8 sm:py-16 sm:px-6 lg:space-y-16 lg:px-8">
+        <div className="contrast-bg contrast-text grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
+          <div>
+            <img src="/delhi_gov_logo.png" className="contrast-bg contrast-text w-32 sm:w-48 lg:w-60" />
+
+            <p className="contrast-bg contrast-text mt-4 text-xs sm:text-sm md:max-w-xs lg:text-base text-gray-500">
               Empowering Delhi's citizens with diverse government schemes for a brighter future.
             </p>
 
-            <ul className="mt-4 flex gap-4">
+            <ul className="contrast-bg contrast-text mt-4 flex gap-4">
               <li>
                 <a
                   href="https://www.facebook.com/DCPCR/"
                   rel="noreferrer"
                   target="_blank"
-                  className="text-white transition opacity-75"
+                  className="contrast-bg contrast-text text-white transition opacity-75"
                 >
-                  <span className="sr-only">Facebook</span>
+                  <span className="contrast-bg contrast-text sr-only">Facebook</span>
                   <svg
-                    className="h-6 w-6"
+                    className="contrast-bg contrast-text h-6 w-6"
                     fill="currentColor"
                     viewBox="0 0 24 24"
                     aria-hidden="true"
@@ -39,12 +122,12 @@ const Footer = (props) => {
                   href="https://www.instagram.com/dcpcr_delhi/"
                   rel="noreferrer"
                   target="_blank"
-                  className="text-white transition opacity-75"
+                  className="contrast-bg contrast-text text-white transition opacity-75"
                 >
-                  <span className="sr-only">Instagram</span>
+                  <span className="contrast-bg contrast-text sr-only">Instagram</span>
 
                   <svg
-                    className="h-6 w-6"
+                    className="contrast-bg contrast-text h-6 w-6"
                     fill="currentColor"
                     viewBox="0 0 24 24"
                     aria-hidden="true"
@@ -63,12 +146,12 @@ const Footer = (props) => {
                   href="https://twitter.com/DCPCR"
                   rel="noreferrer"
                   target="_blank"
-                  className="text-white transition opacity-75"
+                  className="contrast-bg contrast-text text-white transition opacity-75"
                 >
-                  <span className="sr-only">https://twitter.com/DCPCR</span>
+                  <span className="contrast-bg contrast-text sr-only">https://twitter.com/DCPCR</span>
 
                   <svg
-                    className="h-6 w-6"
+                    className="contrast-bg contrast-text h-6 w-6"
                     xmlns="http://www.w3.org/2000/svg" style={{ fill: 'white' }} height="1em" viewBox="0 0 448 512">
                     <path d="M64 32C28.7 32 0 60.7 0 96V416c0 35.3 28.7 64 64 64H384c35.3 0 64-28.7 64-64V96c0-35.3-28.7-64-64-64H64zm297.1 84L257.3 234.6 379.4 396H283.8L209 298.1 123.3 396H75.8l111-126.9L69.7 116h98l67.7 89.5L313.6 116h47.5zM323.3 367.6L153.4 142.9H125.1L296.9 367.6h26.3z" /></svg>
                 </a>
@@ -78,11 +161,11 @@ const Footer = (props) => {
                   href="https://www.youtube.com/@dcpcrdelhigovernment795"
                   rel="noreferrer"
                   target="_blank"
-                  className="text-white transition opacity-75"
+                  className="contrast-bg contrast-text text-white transition opacity-75"
                 >
-                  <span className="sr-only">Youtube</span>
+                  <span className="contrast-bg contrast-text sr-only">Youtube</span>
                   <svg
-                    className="h-6 w-6"
+                    className="contrast-bg contrast-text h-6 w-6"
                     xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 576 512" style={{ fill: "white" }}>
                     <path d="M549.655 124.083c-6.281-23.65-24.787-42.276-48.284-48.597C458.781 64 288 64 288 64S117.22 64 74.629 75.486c-23.497 6.322-42.003 24.947-48.284 48.597-11.412 42.867-11.412 132.305-11.412 132.305s0 89.438 11.412 132.305c6.281 23.65 24.787 41.5 48.284 47.821C117.22 448 288 448 288 448s170.78 0 213.371-11.486c23.497-6.321 42.003-24.171 48.284-47.821 11.412-42.867 11.412-132.305 11.412-132.305s0-89.438-11.412-132.305zm-317.51 213.508V175.185l142.739 81.205-142.739 81.201z" /></svg>
                 </a>
@@ -90,46 +173,51 @@ const Footer = (props) => {
             </ul>
           </div>
 
-          <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 md:grid-cols-2 lg:col-span-2 lg:grid-cols-2">
+          <div className="contrast-bg contrast-text grid grid-cols-1 gap-6 sm:grid-cols-2 md:grid-cols-2 lg:col-span-2 lg:grid-cols-2">
             <div>
-              <p className="font-medium text-white" style={{ fontSize: '18px' }}>Quick Links</p>
+              <p className="contrast-bg contrast-text font-medium text-white" style={{ fontSize: '18px' }}>Quick Links</p>
 
-              <ul className="mt-4 space-y-3 text-sm">
+              <ul className="contrast-bg contrast-text mt-4 space-y-3 text-sm">
+              <li>
+                  <a onClick={() => showFeedbackForm(true)} className="cursor-pointer contrast-bg contrast-text text-white transition opacity-75">
+                    Give Feedback
+                  </a>
+                </li>
                 <li>
-                  <a href="/about-us" className="text-white transition opacity-75">
+                  <a href="/about-us" className="contrast-bg contrast-text text-white transition opacity-75">
                     About Us
                   </a>
                 </li>
                 <li>
-                  <a href="/contact-us" className="text-white transition opacity-75">
+                  <a href="/contact-us" className="contrast-bg contrast-text text-white transition opacity-75">
                     Contact Us
                   </a>
                 </li>
                 <li>
-                  <a href="/disclaimer" className="text-white transition opacity-75">
+                  <a href="/disclaimer" className="contrast-bg contrast-text text-white transition opacity-75">
                     Disclaimer
                   </a>
                 </li>
                 <li>
-                  <a href="/privacy-policy" className="text-white transition opacity-75">
+                  <a href="/privacy-policy" className="contrast-bg contrast-text text-white transition opacity-75">
                     Privacy policy
                   </a>
                 </li>
                 <li>
-                  <a href="https://dcpcr.delhi.gov.in" target="_blank" className="text-white transition opacity-75">
+                  <a href="https://dcpcr.delhi.gov.in" target="_blank" className="contrast-bg contrast-text text-white transition opacity-75">
                     DCPCR
                   </a>
                 </li>
                 <li>
-                  <a href="https://delhi.gov.in" target="_blank" className="text-white transition opacity-75">
+                  <a href="https://delhi.gov.in" target="_blank" className="contrast-bg contrast-text text-white transition opacity-75">
                     Delhi Government
                   </a>
                 </li>
               </ul>
             </div>
             <div>
-              <h2 className="font-medium text-white text-lg mb-4">Get in Touch</h2>
-              <div className="border border-gray-300 overflow-hidden">
+              <h2 className="contrast-bg contrast-text font-medium text-white text-lg mb-4">Get in Touch</h2>
+              <div className="contrast-bg contrast-text border border-gray-300 overflow-hidden">
                 <iframe
                   title="DCPCR Location"
                   src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3500.7167828179417!2d77.22752707550211!3d28.66819767564528!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390cfd07c8cb2179%3A0x18a0aec28fadcba7!2sDelhi%20Commission%20for%20Protection%20of%20Child%20Rights%20(DCPCR)!5e0!3m2!1sen!2sin!4v1700754622504!5m2!1sen!2sin"
@@ -144,11 +232,12 @@ const Footer = (props) => {
           </div>
         </div>
 
-        <p className="text-xs text-center text-gray-500">
+        <p className="contrast-bg contrast-text text-xs text-center text-gray-500">
           &copy; 2022. DCPCR. All rights reserved.
         </p>
       </div>
     </footer>
+    </>
   );
 };
 
