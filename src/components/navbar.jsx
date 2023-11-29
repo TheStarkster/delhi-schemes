@@ -68,11 +68,13 @@ const Navbar = () => {
 
             {
               usePathname() !== '/' && <>
-                <li>
-                  <a className="flex items-center border-2 border-orange-500 p-2 rounded-lg rounded-md px-3 py-2 text-sm font-medium" href="/search">
-                  <SearchIcon className="h-5 w-5 text-iceland_poppy-500 mr-2" /> <p className="mr-1 text-iceland_poppy-500">Search</p>
-                  </a>
-                </li>
+                {
+                  usePathname() !== '/search' && (<li>
+                    <a className="flex items-center border-2 border-orange-500 p-2 rounded-lg rounded-md px-3 py-2 text-sm font-medium" href="/search">
+                    <SearchIcon className="h-5 w-5 text-iceland_poppy-500 mr-2" /> <p className="mr-1 text-iceland_poppy-500">Search</p>
+                    </a>
+                  </li>)
+                }
                 <li>
                   <a className="text-gray-500 transition hover:bg-iceland_poppy-500 hover:text-white rounded-md px-3 py-2 text-sm font-medium" href="/">
                     Home
