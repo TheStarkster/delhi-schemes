@@ -4,26 +4,19 @@
 
 /* Initial state when filter is hidden */
 .hiddenFilter {
-    visibility: hidden;
-    position: absolute;
-    width: 100%;
-    left: 0;
-    bottom: 0;
-    transform: translateY(100%);
-    z-index: -1;
+  display: none; /* Use display instead of visibility for a clear on/off state */
 }
 
 /* State when filter is shown */
 .showFilter {
-    visibility: visible;
-    position: fixed; /* Change to fixed */
-    top: 120px; /* Adjust as needed */
-    left: 0; /* Adjust as needed */
-    width: 100%; /* Or specific width if needed */
-    z-index: 0; /* Ensure it's above other content */
-    animation: slideUp 0.5s ease forwards;
-    overflow-y: auto; /* Allows scrolling within the filter section if needed */
-    height: 100vh;
+  display: block; /* Show the filter */
+  position: fixed; /* Keep fixed if you want it to float over content */
+  top: 120px; /* Adjust as needed */
+  left: 0; /* Adjust as needed */
+  width: 100%; /* Or specific width if needed */
+  z-index: 10; /* Ensure it's above other content */
+  overflow-y: auto; /* Allows scrolling within the filter section if needed */
+  height: calc(100vh - 120px); /* Adjust height to account for fixed position */
 }
 
 .showFilter > div {
@@ -67,12 +60,18 @@
 
 
 @media (min-width: 1024px) { /* Adjust based on your breakpoints */
-    .hiddenFilter, .showFilter {
-        position: relative;
-        visibility: visible;
-        transform: translateY(0);
-        animation: none;
-    }
+  .hiddenFilter, .showFilter {
+      position: relative; /* Reset to default positioning on larger screens */
+      display: block; /* Always show on large screens */
+      width: auto; /* Adjust width as needed */
+      height: auto; /* Adjust height as needed */
+      top: auto; /* Reset top */
+      left: auto; /* Reset left */
+      z-index: 1; /* Adjust z-index as needed */
+      overflow-y: visible; /* Reset overflow */
+      transform: none; /* Remove transform */
+      animation: none; /* Remove animation */
+  }
 }
 
 

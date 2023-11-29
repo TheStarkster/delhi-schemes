@@ -349,7 +349,7 @@ const SearchPage = (props) => {
                     </div>
                 </div>
             </div>
-            <div className="contrast-bg contrast-text fixed bottom-0 left-0 right-0 bg-white p-4 xl:hidden lg:hidden">
+            <div className="contrast-bg contrast-text fixed bottom-0 left-0 right-0 bg-white p-4 xl:hidden lg:hidden" style={{ zIndex: 9999 }}>
                 <button
                     onClick={toggleFilters}
                     className="contrast-bg contrast-text w-full bg-iceland_poppy-500 text-white py-2 rounded"
