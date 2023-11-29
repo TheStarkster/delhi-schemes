@@ -134,7 +134,7 @@ export default function SchemePage({ schemeData }) {
     <>
       {/* Scheme heading */}
       <Navbar />
-      <div className="bg-iceland_poppy-500 text-white py-12">
+      <div className="bg-gradient-to-r from-iceland_poppy-500 to-pink-500 text-white py-12">
         <div className="container mx-auto px-4 lg:px-0 max-w-7xl">
           <h1 className="text-2xl md:text-3xl lg:mx-12 lg:text-4xl text-white font-bold">{schemeData.title}</h1>
           <div className="flex flex-wrap mt-4 items-center md:flex-row sm:flex-col">

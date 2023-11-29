@@ -156,7 +156,7 @@ export const compensationData = [
 ]
 
 async function fetchSchemeData(schemeName) {
-  const endpoint = 'http://20.193.132.230:3000/schemes';
+  const endpoint = 'https://dcpcr-ews-api.grevity.in/schemes';
 
   try {
     const response = await fetch(endpoint, {

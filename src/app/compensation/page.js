@@ -1,11 +1,9 @@
 // pages/AllAssistance.js
 "use client"
-import React, { useEffect, useState } from 'react';
 import Link from 'next/link';
 import { compensationData } from "@/lib/api"; // Replace with your actual data fetching function
 
 export default function AllCompensation() {
-
     return (
         <>
         <div className="banner relative bg-cover bg-center" style={{ backgroundImage: `url('/compensation.png')`, height: '300px' }}>
@@ -23,7 +21,7 @@ export default function AllCompensation() {
             <div className="grid px-12 xl:px-0 lg:px-12 md:px-12 max-w-7xl mx-auto my-12 md:grid-cols-2 lg:grid-cols-1 gap-6">
                 {compensationData.map((item, index) => (
                     <div key={index} className="border rounded-lg p-4 hover:shadow-lg transition">
-                        <Link href={`/assistance/${encodeURIComponent(item.title.replace(/\s+/g, '-').toLowerCase())}`}>
+                        <Link href={`/compensation/${encodeURIComponent(item.title.replace(/\s+/g, '-').toLowerCase())}`}>
                             <div className="text-2xl text-blue-600 font-bold hover:underline">{item.title}</div>
                         </Link>
                         <p className="text-gray-600 mt-2">{item.description.substring(0, 200)}...</p> {/* Truncate the description */}
