@@ -171,15 +171,15 @@ const SearchPage = (props) => {
                             <div className="contrast-bg contrast-text flex gap-4 items-center">
                                 <label className="contrast-bg contrast-text inline-flex items-center">
                                     <input type="radio" className="contrast-bg contrast-text form-radio" name="gender" value="Male" onChange={handleFilterChange} checked={filters.gender === 'Male'} />
-                                    <span className="contrast-bg contrast-text ml-2">Male</span>
+                                    <span className="contrast-bg contrast-text ml-2">All Genders</span>
                                 </label>
                                 <label className="contrast-bg contrast-text inline-flex items-center">
                                     <input type="radio" className="contrast-bg contrast-text form-radio" name="gender" value="Female" onChange={handleFilterChange} checked={filters.gender === 'Female'} />
-                                    <span className="contrast-bg contrast-text ml-2">Female</span>
+                                    <span className="contrast-bg contrast-text ml-2">Only females</span>
                                 </label>
                                 <label className="contrast-bg contrast-text inline-flex items-center">
                                     <input type="radio" className="contrast-bg contrast-text form-radio" name="gender" value="Others" onChange={handleFilterChange} checked={filters.gender === 'Others'} />
-                                    <span className="contrast-bg contrast-text ml-2">Others</span>
+                                    <span className="contrast-bg contrast-text ml-2">Only others</span>
                                 </label>
 
                             </div>

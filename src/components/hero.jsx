@@ -12,19 +12,19 @@ const Hero = (props) => {
   const ctaData = [
     {
       title: "Resources",
-      subtitle: "Information on schemes, policies, and services for children and families.",
+      subtitle: "Contact information of Govt agencies, hospitals, schools, etc",
       link: "/resources",
       icon: <ResourceIcon style={{ width: 40, height: 40 }} />
     },
     {
       title: "Compensation",
-      subtitle: "Learn about compensation schemes for victims of crime and abuse.",
+      subtitle: "Learn about compensation schemes for child victims of crime and abuse",
       link: "/compensation",
       icon: <CompensationIcon style={{ width: 40, height: 40 }} />
     },
     {
-      title: "Essential Docs",
-      subtitle: "Access essential documents for children and families.",
+      title: "Essential Documents",
+      subtitle: "Information on documents, registration of events, certificates, licenses, etc",
       link: "/essential-docs",
       icon: <EssentialDocsIcon style={{ width: 40, height: 40 }} />
     },
@@ -58,7 +58,7 @@ const Hero = (props) => {
                     Social Security Schemes and Resources for Children and Families
                   </h2>
                   <h3 className="contrast-bg contrast-text text-sm lg:text-xl md:text-xl font-medium mb-12 mt-4 leading-relaxed text-white">
-                    Empowering Delhi: Transforming Lives Through Government Initiatives
+                    Your one-stop search for information on government schemes in Delhi
                   </h3>
                 </div>
                 {/* END Heading */}
@@ -66,7 +66,6 @@ const Hero = (props) => {
                 {/* Action */}
                 <div className="contrast-bg contrast-text mb-4 lg:mb-24 xl:mb-28"> {/* Responsive margin */}
                   <a
-                    href="#"
                     onClick={() => setIsModalOpen(true)}
                     className="contrast-bg contrast-text inline-flex w-full lg:w-auto items-center justify-center space-x-2 rounded-lg border border-iceland_poppy-500 bg-iceland_poppy-500 px-6 py-3 text-white transition hover:border-iceland_poppy-600 hover:bg-iceland_poppy-700"
                   >
