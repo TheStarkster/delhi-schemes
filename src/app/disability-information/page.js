@@ -67,11 +67,11 @@ export default function DisabilityInformation() {
                                         <li>
                                             <strong>Locomotor Disabilities:</strong> Locomotor Disability is the disability of the bones, joints, or muscles leading to substantial restriction of the movement of the limbs or a usual form of cerebral palsy. Different types of locomotor disabilities are classified as the following-
                                             <ol className="contrast-bg contrast-text list-decimal pl-5">
-                                                <li>Leprosy cured person - Any person who has been cured of leprosy but is suffering from... (content continues)</li>
-                                                <li>Cerebral palsy - A group of non-progressive conditions... (content continues)</li>
-                                                <li>Dwarfism - Medical or genetic condition resulting in an adult height... (content continues)</li>
-                                                <li>Muscular dystrophy - A group of hereditary genetic muscle diseases... (content continues)</li>
-                                                <li>Acid attack victims - A person disfigured due to violent assaults... (content continues)</li>
+                                                <li>Leprosy cured person- Any person who has been cured of leprosy but is suffering from- loss of sensation in hands or feet as well as loss of sensation and partial paralysis in the eyelid but with no visible deformity; visible deformity and partial paralysis but having sufficient mobility in their hands and feet to enable them to engage in normal economic activity; extreme physical deformity as well as advanced age which prevents the person from undertaking any gainful occupation</li>
+                                                <li>Cerebral palsy - A group of non-progressive conditions characterised by abnormal motor control posture resulting from brain insult or injuries occurring in the perinatal, neonatal or infant period of development</li>
+                                                <li>Dwarfism - Medical or genetic condition resulting in an adult height of 4 feet 10 inches (147 centimetres) or less.</li>
+                                                <li>Muscular dystrophy - A group of hereditary genetic muscle diseases that weakens the muscles that move the human body. A person with multiple dystrophy has incorrect and missing information in their genes, which prevents them from making the proteins they need for healthy muscles. Dystrophy is a disorder in which an organ or tissue of the body wastes away.</li>
+                                                <li>Acid attack victims - A person disfigured due to violent assaults by throwing of acid or similar corrosive substance</li>
                                             </ol>
                                         </li>
                                         <li>

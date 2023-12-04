@@ -16,7 +16,7 @@ export const compensationData = [
       <p>- Order of the CWC</p>
       <p>OR</p>
       <p>- Copy of the FIR mentioning sections booked under the Child and Adolescent Labour (Prohibition and Regulation) Act, 1986</p>`,
-      other_info: null
+      other_info: "No information available"
   },
   {
       title: "Central Sector Scheme for Rehabilitation of Bonded Labour",
@@ -37,7 +37,7 @@ export const compensationData = [
       OR
       
       - Conviction order (either through a Summary Trial or Regular Trial for the full and final compensation)`,
-      other_info: null
+      other_info: "No information available"
   },
   {
       title: `Family based Sponsorship Scheme`,
@@ -177,8 +177,8 @@ export const essentialDocs = [
     "resource": "Search your name in electoral roll",
     "concerned_dept": "The application will be addressed to the Electoral Registration Officer(ERO) of the Assembly Constituency (AC)/Parliamentary Constituency(PC) in which the applicant is ordinarily residing. In case the applicant does not know or has any doubt about number and name of Assembly Constituency / Parliamentary Constituency, assistance may be extended by the Electoral Registration Officer\n\nYou can find your constituency at- <a href='https://www.ceodelhi.gov.in/SearchLocality.aspx'>link</a>\nYou can find your polling booth at- <a href='https://www.ceodelhi.gov.in/PS_ListOn15thOctn.aspx'>link</a>\nYou can find your block level officer at-  <a href='https://www.ceodelhi.gov.in/BLOn.aspx\n\nALTERNATIVELY'>link</a>, you can apply online at <a href='https://voters.eci.gov.in/'>link</a>",
     "process": "Login to the Election Commission of India website -  <a href='https://electoralsearch.eci.gov.in/'>link</a> and search for your name in the electoral poll in any of these 3 ways:\n\nSearch by personal details\nSearch by EPIC \nSearch by registered mobile number",
-    "cost_involved": "",
-    "No. of days it takes to complete process": ""
+    "cost_involved": "No information available",
+    "No. of days it takes to complete process": "No information available"
   },
   {
     "id": 4,
@@ -202,7 +202,7 @@ export const essentialDocs = [
     "concerned_dept": "One can visit and submit the prescribed application at:\n• SBS Place (Gole Market and nearby NDMC area, L.H.M.C Hospital & R.M.L Hospital,New Delhi).\n• Charak Palika Hospital, MotiBagh,New Delhi.(For Current Home & Hospital Data, Motibagh, Sardar Patel, North & South Anveue, Ashoka Hotal, Netaji Nagar etc.).\n• Palika Maternity Hospital, Lodhi Road,New Delhi.(PMH/nearby home data)Zone-8 SI office\n• Kidwai Nagar, New Delhi.(AIIMS, Kidwai Nagar, Laxmi Bai Nagar, Ansari Nagar)\n• Sarojini Nagar Center,(Shanti Aavedna Hospital & Trauma Centre A.I.I.M.S, sarojini Nagar New Delhi).\n\n\nALTERNATIVELY, submit the online application form at <a href='https://mcdonline.nic.in'>link</a>",
     "process": "1) Login to the MCD's Birth/Death registration website- <a href='https://mcdonline.nic.in'>link</a>\n2) Fill the Birth Correction form and attach the following documents:\n- Hospital correction letter (in case of institutional events) / certified letter from 2 credible person (in case of total name change) / Adoption deed or adoption order issues from court (in case of adoption)\n- Photo identity card of mother (e Ration Card/ PAN Card/ Aadhaar Card/ Passport/ Bank passbook/ Voter ID Card)\n- Photo identity card of father (optional)\n- Educational document of child in case of school going child (if child age is greater than 6 years)",
     "cost_involved": "Nil",
-    "No. of days it takes to complete process": ""
+    "No. of days it takes to complete process": "No information available"
   },
   {
     "id": 7,
@@ -218,7 +218,7 @@ export const essentialDocs = [
     "concerned_dept": "One can submit the prescribed application at:\ni) International Inoculation Centre (HQ) Birth and Death Centre, Mandir Marg.\n\nALTERNATIVELY, submit the online application form at <a href='https://mcdonline.nic.in'>link</a>",
     "process": "1) Login to the MCD's Birth/Death registration website- <a href='https://mcdonline.nic.in'>link</a> \n2) Fill all the details as per the prescribed form online.\n3)Note-down the system generated Registration Number for subsequent usage.\n4)Attach the following dcuments\n- SDM order copy\n- Copy of verification certificate issued by E-district\n- ID of informant\n- ID of deceased",
     "cost_involved": "Rs 10/-",
-    "No. of days it takes to complete process": ""
+    "No. of days it takes to complete process": "No information available"
   },
   {
     "id": 9,
@@ -226,7 +226,7 @@ export const essentialDocs = [
     "concerned_dept": "One can visit and submit the prescribed application at:\n• SBS Place (Gole Market and nearby NDMC area, L.H.M.C Hospital & R.M.L Hospital,New Delhi).\n• Charak Palika Hospital, MotiBagh,New Delhi.(For Current Home & Hospital Data, Motibagh, Sardar Patel, North & South Anveue, Ashoka Hotal, Netaji Nagar etc.).\n• Palika Maternity Hospital, Lodhi Road,New Delhi.(PMH/nearby home data)Zone-8 SI office\n• Kidwai Nagar, New Delhi.(AIIMS, Kidwai Nagar, Laxmi Bai Nagar, Ansari Nagar)\n• Sarojini Nagar Center,(Shanti Aavedna Hospital & Trauma Centre A.I.I.M.S, sarojini Nagar New Delhi).\n\n\nALTERNATIVELY, submit the online application form at <a href='https://mcdonline.nic.in'>link</a>",
     "process": "1) Login to the MCD's Birth/Death registration website- <a href='https://mcdonline.nic.in'>link</a>\n2) Fill all the details as per the prescribed form online.\n3)Note-down the system generated Registration Number for subsequent usage.\n4)Attach the following dcuments\n- ID proof of informant (e Ration Card/ PAN Card/ Aadhaar Card/ Passport/ Bank passbook/ Voter ID Card)\n- ID proof of deceased (e Ration Card/ PAN Card/ Aadhaar Card/ Passport/ Bank passbook/ Voter ID Card)\n- Hospital correction letter (in case of institutional events) / certified letter from 2 credible person (in case of total\nname change)",
     "cost_involved": "Nil",
-    "No. of days it takes to complete process": ""
+    "No. of days it takes to complete process": "No information available"
   },
   {
     "id": 10,
@@ -239,10 +239,10 @@ export const essentialDocs = [
   {
     "id": 11,
     "resource": "Caste (SC/ST) certificate - Other State",
-    "concerned_dept": "",
-    "process": "Documents for other State SC/ST Certificate\n- Application form duly self attested. (chrome-extension://efaidnbmnnnibpcajpcglclefindmkaj/https://revenue.delhi.gov.in/sites/default/files/revenue/cc/scapplicationform_1.pdf) \n- Birth Certificate or School Certificate \n- Copy of Ration Card or Other Proof of Residence.\n- Copy of SC/ST certificate of father issued by SDO/Tehsildar of the State. Original to be produced for examination\n\nIMPORTANT : All documents needs to be self attested. A local enquiry is conducted in all cases to verify applicant's residence/caste",
-    "cost_involved": "",
-    "No. of days it takes to complete process": ""
+    "concerned_dept": "No information available",
+    "process": "Documents for other State SC/ST Certificate\n- Application form duly self attested. <a href='https://revenue.delhi.gov.in/sites/default/files/revenue/cc/scapplicationform_1.pdf'>https://revenue.delhi.gov.in/sites/default/files/revenue/cc/scapplicationform_1.pdf</a> \n- Birth Certificate or School Certificate \n- Copy of Ration Card or Other Proof of Residence.\n- Copy of SC/ST certificate of father issued by SDO/Tehsildar of the State. Original to be produced for examination\n\nIMPORTANT : All documents needs to be self attested. A local enquiry is conducted in all cases to verify applicant's residence/caste",
+    "cost_involved": "No information available",
+    "No. of days it takes to complete process": "No information available"
   },
   {
     "id": 12,
@@ -257,7 +257,7 @@ export const essentialDocs = [
     "resource": "Ration Card",
     "concerned_dept": "Locate your nearest Circles Offices and their Food and Supplies Officers: <a href='https://nfs.delhigovt.nic.in/Citizen/Circle_Details.aspx?'>link</a>",
     "process": "Apply online at e-District portal <a href='https://www.edistrict.delhigovt.nic.in'>link</a> and register as per given instructions, upload the required documents and submit the same. You can also apply with the help of Mobile Sahayak or can visit your nearest circle office along with filled form and requisite documents.\n\nDocuments required:\n1.Aadhaar Card of all family members.\n2. Passport size photo of Head of Family (HoF).\n3. Electricity bill (Latest).\n4. Residence proof of address if other than Aadhaar address of Head of Family",
-    "cost_involved": "",
+    "cost_involved": "No information available",
     "No. of days it takes to complete process": "Upto 30 days"
   },
   {
@@ -265,16 +265,16 @@ export const essentialDocs = [
     "resource": "Domicile Certificate",
     "concerned_dept": "Approach the SDM of your area or the concerned office of the Deputy Commissioner during 10:00 AM to 1:00 PM on any working day.\nALTERNATIVELY, you can apply online. (<a href='https://edistrict.delhigovt.nic.in/'>link</a>)",
     "process": "Attach the given below documents along with your application form:  \n1) Identity proof including AADHAR No./ PAN/Passport/Driving Licence/Voters Card. The name and photograph of the applicant on the AADHAR card should match with Name of the Applicant \n2) Self declaration in prescribed Performa(Self declaration from the major if the children are below the 18 years).    \n3) The photograph of the applicant will be captured through web camera at the time of submission of application or at the time of verification. \n4) Supporting document for the present residential proof like Voter Card, Electricity Bill, Water Bill, Telephone Bill etc.\n5) Proof of Date of Birth (Birth certificate, School certificate or passport).    \n6) Proof of continuous stay in Delhi for the last 5 years, such as Passbook, Education certificate, Electricity bill, House tax, water bill etc.\n7) Contact No. and copy of I Card of the class I gazetted officer who has attested the form.\n\nIMPORTANT : All documents needs to be attested by Gazetted Officer at the time of submitting. No fee is required to be paid.",
-    "cost_involved": "",
+    "cost_involved": "No information available",
     "No. of days it takes to complete process": "Certificates are generally issued in 14 days."
   },
   {
     "id": 15,
     "resource": "Disability Related Information",
-    "concerned_dept": "",
+    "concerned_dept": "No information available",
     "process": "Visit THE RIGHT GUIDE- <a href='https://rpwd.dcpcr.delhi.gov.in/'>link</a> for all  information on Rights & Entitlement, Resources & Support for Person(s) with disability in Delhi.",
-    "cost_involved": "",
-    "No. of days it takes to complete process": ""
+    "cost_involved": "No information available",
+    "No. of days it takes to complete process": "No information available"
   },
   {
     "id": 16,
@@ -290,7 +290,7 @@ export const essentialDocs = [
     "concerned_dept": "Approach your school's Head of School/Principal with a a letter/application seeking the SLC.",
     "process": "Ensure that your application letter contains your full name, contact number, class and section. Upon receipt of the application letter, your school will provide you with a form which has to be submitted to the school. \nFill the form and attach the given below necessary documents.\n\n- Passport size photograph of student\n- A copy of the previous mark sheet or report card, if available\n- A copy of the birth certificate or any other identity proof.\n- Any other document or certificate as requested by the school or education board.",
     "cost_involved": "Nil",
-    "No. of days it takes to complete process": ""
+    "No. of days it takes to complete process": "No information available"
   },
   {
     "id": 18,
@@ -303,7 +303,7 @@ export const essentialDocs = [
   {
     "id": 19,
     "resource": "10/12/migration/Transfer Certificate",
-    "concerned_dept": "",
+    "concerned_dept": "No information available",
     "process": "10th/12th/Migration Certificate\n- These certificates are provided by the schools after passing the 10th/12th exams.\n- You can obtain the duplicate of 10th/12th/migration certificate by clicking on Digital Documents at <a href='https://cbseit.in/cbse/web/dads/List.aspx'>link</a> \n- Certificates issued after 2017 can also be obtained on DigiLocker <a href='https://www.digilocker.gov.in/'>link</a> \n\nTransfer Certificate (TC)\nprovided for transfer of student from one school to another.\n- The form is provided by and submitted to the school\n- DDE verifies the details in the form and the school gets the form stamped by the DDE\n- the process takes approximately 1 week",
     "cost_involved": "Information on fee is available at <a href='https://cbseit.in/cbse/web/dads/List.aspx'>link</a>",
     "No. of days it takes to complete process": "Duplicates are available instantaneously.\n\n1 week approximately for TC"
@@ -311,10 +311,10 @@ export const essentialDocs = [
   {
     "id": 20,
     "resource": "Driving Licence",
-    "concerned_dept": "",
+    "concerned_dept": "No information available",
     "process": "You can apply for the driver's licence at <a href='https://sarathi.parivahan.gov.in/sarathiservice/stateSelectBean.do'>link</a>",
     "cost_involved": "Information on fee is available at <a href='https://parivahan.gov.in/parivahan//en/content/licensing-related-fees-and-charges'>link</a>",
-    "No. of days it takes to complete process": ""
+    "No. of days it takes to complete process": "No information available"
   },
   {
     "id": 21,
@@ -330,15 +330,15 @@ export const essentialDocs = [
     "concerned_dept": "Unique Identification Authority of India- Regional Office, Delhi Ground Floor, Supreme Court Metro Station, Pragati Maidan, New Delhi-110001 Locate the Aadhaar enrollment centre nearest to you- <a href='https://appointments.uidai.gov.in/EACenterSearch.aspx?value=3'>link</a>",
     "process": "The Aadhaar updation process includes booking appointment online, visiting Enrolment Centre, filling the updation form, getting demographic and biometric data captured, submitting proof of Identity of what ever thing needs to be updated .",
     "cost_involved": "upto 21 days",
-    "No. of days it takes to complete process": ""
+    "No. of days it takes to complete process": "No information available"
   },
   {
     "id": 24,
     "resource": "Aadhar( if lost )",
     "concerned_dept": "visit the office of regional  officer for the new aadhar card .",
     "process": "aadhar number , phone number linked with aadhar card ( for otp) , thumb impression , FIR",
-    "cost_involved": "",
-    "No. of days it takes to complete process": ""
+    "cost_involved": "No information available",
+    "No. of days it takes to complete process": "No information available"
   }
 ]
 

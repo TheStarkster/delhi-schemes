@@ -167,7 +167,7 @@ const Navbar = () => {
                 </a>
               </li>
               <li>
-                <a className="contrast-bg contrast-text text-gray-500 transition hover:bg-iceland_poppy-500 hover:text-white rounded-md px-3 py-2 text-sm font-medium" href="/">
+                <a className="contrast-bg contrast-text text-gray-500 transition hover:bg-iceland_poppy-500 hover:text-white rounded-md px-3 py-2 text-sm font-medium" href="/disability-information">
                   Disability Information
                 </a>
               </li>

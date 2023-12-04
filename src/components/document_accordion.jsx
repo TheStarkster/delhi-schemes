@@ -18,10 +18,10 @@ const DocumentAccordionItem = ({ item }) => {
       </button>
       {isOpen && (
         <div className="contrast-bg contrast-text p-4">
-          <div dangerouslySetInnerHTML={{ __html: item.concerned_dept }} />
-          <div dangerouslySetInnerHTML={{ __html: item.process }} />
-          <div className="contrast-bg contrast-text mt-2"><b>Cost Involved:</b> {item.cost_involved}</div>
-          <div className="contrast-bg contrast-text mt-2"><b>Processing Time:</b> {item["No. of days it takes to complete process"]}</div>
+          <div className="contrast-bg contrast-text mt-2 mb-4"><b>Concerned Department: </b><div dangerouslySetInnerHTML={{ __html: item.concerned_dept }} /></div>
+          <div className="contrast-bg contrast-text mt-2 mb-4"><b>Process: </b><div dangerouslySetInnerHTML={{ __html: item.process }} /></div>
+          <div className="contrast-bg contrast-text mt-2 mb-4"><b>Cost Involved: </b><div dangerouslySetInnerHTML={{ __html: item.cost_involved }} /></div>
+          <div className="contrast-bg contrast-text mt-2 mb-4"><b>Processing Time: <br /></b> {item["No. of days it takes to complete process"]}</div>
         </div>
       )}
     </div>

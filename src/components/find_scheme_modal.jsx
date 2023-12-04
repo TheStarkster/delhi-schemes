@@ -64,7 +64,7 @@ const Modal = ({ isOpen, onClose }) => {
 
             {/* Form starts here */}
             <div className="contrast-bg contrast-text bg-white px-8 py-5 sm:p-6">
-              <h3 className="contrast-bg contrast-text text-lg leading-6 font-medium text-gray-900">Find the Schemes for You!</h3>
+              <h3 className="contrast-bg contrast-text text-lg leading-6 font-medium text-gray-900">Find Schemes for You!</h3>
               <div className="contrast-bg contrast-text mt-5">
                 <form onSubmit={handleSubmit} name='findSchemes'>
                   <div className="contrast-bg contrast-text mb-6">
