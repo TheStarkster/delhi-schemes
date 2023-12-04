@@ -52,31 +52,11 @@ const Navbar = () => {
 
 
   return <>
+  
     <div className="contrast-bg contrast-text flex justify-end items-center space-x-2 p-2 bg-white border-b max-w-7xl mx-auto">
       {/* Font Size Controls */}
-      <div>
-      <div>
-     <p className="text-gray-500 text-sm">Accessibility Controls: </p>
-      <button
-        onClick={() => handleFontSizeChange('normal')}
-        className="contrast-bg contrast-text px-2 py-1 text-sm font-medium text-gray-700 bg-gray-200 rounded hover:bg-gray-300"
-      >
-        A
-      </button>
-      <button
-        onClick={() => handleFontSizeChange('large')}
-        className="contrast-bg contrast-text px-2 py-1 text-base font-medium text-gray-700 bg-gray-200 rounded hover:bg-gray-300"
-      >
-        A
-      </button>
-      <button
-        onClick={() => handleFontSizeChange('x-large')}
-        className="contrast-bg contrast-text px-2 py-1 text-lg font-medium text-gray-700 bg-gray-200 rounded hover:bg-gray-300"
-      >
-        A
-      </button>
-     </div>
-      </div>
+      
+
       <div className="contrast-bg grid grid-cols-8 contrast-texth-28 max-w-screen-xl gap-4 px-4 sm:px-6 w-full">
         <a className="contrast-bg contrast-text col-span-6 text-blue-500 flex items-center" href="/">
           <img src="/logo.jpeg" alt="logo" className="contrast-bg contrast-text object-contain xl:mr-4 lg:mr-4 md:mr-4 w-full xl:max-w-[90px] lg:max-w-[90px] md:max-w-[90px] sm:max-w-[60px] max-w-[50px]" />

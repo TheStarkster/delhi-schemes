@@ -258,6 +258,15 @@ const Footer = (props) => {
               <div className="flex-1 text-right">
                 <span className="text-sm text-gray-500">Last update: 03 December 2023</span>
               </div>
+
+              <div className="max-w-7xl mx-auto flex items-center p-2">
+                <div className="flex items-center space-x-2">
+                  <p className="text-gray-500 text-sm">Accessibility Controls: </p>
+                  <button onClick={() => handleFontSizeChange('normal')} className="contrast-bg contrast-text px-2 py-1 text-sm font-medium text-gray-700 bg-gray-200 rounded hover:bg-gray-300">A</button>
+                  <button onClick={() => handleFontSizeChange('large')} className="contrast-bg contrast-text px-2 py-1 text-base font-medium text-gray-700 bg-gray-200 rounded hover:bg-gray-300">A</button>
+                  <button onClick={() => handleFontSizeChange('x-large')} className="contrast-bg contrast-text px-2 py-1 text-lg font-medium text-gray-700 bg-gray-200 rounded hover:bg-gray-300">A</button>
+                </div>
+              </div>
             </div>
           </div>
 
