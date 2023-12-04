@@ -163,7 +163,7 @@ const Navbar = () => {
               </li>
               <li>
                 <a className="contrast-bg contrast-text text-gray-500 transition hover:bg-iceland_poppy-500 hover:text-white rounded-md px-3 py-2 text-sm font-medium" href="/essential-docs">
-                  Essential Docs
+                  Essential Documents
                 </a>
               </li>
               <li>

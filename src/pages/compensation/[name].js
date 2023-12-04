@@ -113,7 +113,7 @@ export default function AssistancePage({ assistanceData }) {
               <h2 className="contrast-bg contrast-text text-2xl font-bold mb-2">Overview</h2>
               <LinkIcon className="contrast-bg contrast-text h-6 w-6 mb-4 ml-2 cursor-pointer hover:fill-gray-500 fill-blue-600 transition" onClick={() => copyToClipboard('Overview')} />
             </div>
-            <div dangerouslySetInnerHTML={{ __html: assistanceData.description }} />
+            <div dangerouslySetInnerHTML={{ __html: assistanceData.description_html }} />
           </section>
 
           <section className="contrast-bg contrast-text mb-12" ref={contentSectionRefs.current[1]}>

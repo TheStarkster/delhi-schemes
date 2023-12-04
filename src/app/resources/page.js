@@ -39,7 +39,7 @@ export default function ResourcesInformatio() {
           <div>
           <ol>
             <li><a class="text-blue-400" href="https://portal.delhi.gov.in">Delhi Government Website</a>.</li>
-            <li><a class="text-blue-400" href="http://www.wcddel.in">Department of WCD Website</a>.</li>
+            <li><a class="text-blue-400" href="https://wcd.delhi.gov.in">Department of WCD Website</a>.</li>
             <li><a class="text-blue-400" href="https://dcpcr.delhi.gov.in/">Delhi Commission for Protection of Child Rights Website</a>.</li>
             <li><a class="text-blue-400" href="http://cara.nic.in/">CARA Website</a>.</li>
             <li><a class="text-blue-400" href="http://jjcdhc.nic.in/">Juvenile Justice Committee of Delhi High Court Website</a></li>

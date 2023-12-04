@@ -6,7 +6,7 @@ export const compensationData = [
       description: `A Child Labour and Adolescent Rehabilitation Fund shall be constituted in every district or for two or more districts by the appropriate Government to which...`,
       description_html: `<p><strong>A Child Labour and Adolescent Rehabilitation Fund shall be constituted in every district or for two or more districts by the appropriate Government to which: </strong></p>
       <p>(i) fine (Section 14: atleast Rs. 20,000/- and may extend to Rs. 50,000/-) realised from the employer of the child and adolescent shall be credited</p>
-      <p>(ii) Rs 15,000/- shall be credited to the Fund for each child or adolescent by the appropriate Government (Lt Governor)</p>
+      <p>(ii) Rs 15,000/- shall be credited to the Fund for each child or adolescent by the appropriate Government</p>
       <p>&nbsp;</p>
       <p><strong>The amount credited in </strong></p>
       <p>(i) and (ii) shall be deposited in banks or invested as the appropriate Government may decide. This deposited or invested amount along with the interest shall be paid to the child or adolescenet in whose favour such amount is credited in such manner as may be prescribed.</p>`,
