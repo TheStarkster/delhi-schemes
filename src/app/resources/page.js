@@ -52,87 +52,87 @@ export default function ResourcesInformatio() {
     },
     {
       resource: "List of Police Stations",
-      information: <a href="https://www.google.com" target="_blank" rel="noopener noreferrer">View List</a>
+      information: <a href="https://lookerstudio.google.com/u/0/reporting/5b0a9fb6-9ad8-4613-8b55-059aa4ba9739/page/y6atC" target="_blank" rel="noopener noreferrer">View List</a>
     },
     {
       resource: "List of Govt. Schools",
-      information: <a href="https://www.google.com" target="_blank" rel="noopener noreferrer">View List</a>
+      information: <a href="https://lookerstudio.google.com/u/0/reporting/48c94ee6-7c2e-417b-b5e4-23382f61e69c/page/p_yllgqs6g2c" target="_blank" rel="noopener noreferrer">View List</a>
     },
     {
       resource: "List of Govt. Hospitals",
-      information: <a href="https://www.google.com" target="_blank" rel="noopener noreferrer">View List</a>
+      information: <a href="https://lookerstudio.google.com/u/0/reporting/8029cd6f-f62e-4862-98a5-f61364e11ed3/page/p_87w3odhevc" target="_blank" rel="noopener noreferrer">View List</a>
     },
     {
       resource: "List of DMs/SDMs",
-      information: <a href="https://www.google.com" target="_blank" rel="noopener noreferrer">View List</a>
+      information: <a href="https://lookerstudio.google.com/u/0/reporting/1af9f683-446c-4605-b6c2-415b97cb5f97/page/p_43rcafwxwc" target="_blank" rel="noopener noreferrer">View List</a>
     },
     {
       resource: "List of JJBs",
-      information: <a href="https://www.google.com" target="_blank" rel="noopener noreferrer">View List</a>
+      information: <a href="http://jjcdhc.nic.in/?page_id=14" target="_blank" rel="noopener noreferrer">View List</a>
     },
     {
       resource: "List of DDEs",
-      information: <a href="https://www.google.com" target="_blank" rel="noopener noreferrer">View List</a>
+      information: <a href="https://www.edudel.nic.in/mis/mismail/frmComposeMailDirectory.aspx" target="_blank" rel="noopener noreferrer">View List</a>
     },
     {
       resource: "List of CWCs",
-      information: <a href="https://www.google.com" target="_blank" rel="noopener noreferrer">View List</a>
+      information: <a href="http://jjcdhc.nic.in/?page_id=16" target="_blank" rel="noopener noreferrer">View List</a>
     },
     {
       resource: "List of DCPUs",
-      information: <a href="https://www.google.com" target="_blank" rel="noopener noreferrer">View List</a>
+      information: <a href="http://jjcdhc.nic.in/?page_id=18" target="_blank" rel="noopener noreferrer">View List</a>
     },
     {
       resource: "List of CCIs",
-      information: <a href="https://www.google.com" target="_blank" rel="noopener noreferrer">View List</a>
+      information: <a href="https://lookerstudio.google.com/u/0/reporting/7c2ac3e1-0553-4c66-852a-db398765f645/page/p_0feylzhdvc" target="_blank" rel="noopener noreferrer">View List</a>
     },
     {
       resource: "List of SJPUs",
-      information: <a href="https://www.google.com" target="_blank" rel="noopener noreferrer">View List</a>
+      information: <a href="http://jjcdhc.nic.in/?page_id=20" target="_blank" rel="noopener noreferrer">View List</a>
     },
     {
       resource: "List of Anganwadis",
-      information: <a href="https://www.google.com" target="_blank" rel="noopener noreferrer">View List</a>
+      information: <a href="https://lookerstudio.google.com/u/0/reporting/2949d73b-9129-4c32-af1a-5aa8988e6195/page/p_hmixlqwxwc" target="_blank" rel="noopener noreferrer">View List</a>
     },
     {
       resource: "MCD/NDMC/DCB Schools",
-      information: <a href="https://www.google.com" target="_blank" rel="noopener noreferrer">View List</a>
+      information: <a href="https://lookerstudio.google.com/u/0/reporting/835aec49-521b-49e4-84a0-054c2faa8249/page/p_rcbnl26g2c" target="_blank" rel="noopener noreferrer">View List</a>
     },
     {
       resource: "List of childline coordinators",
-      information: <a href="https://www.google.com" target="_blank" rel="noopener noreferrer">View List</a>
+      information: <a href="https://lookerstudio.google.com/u/0/reporting/39c0d592-8468-47f3-9f03-f7f1ddd9593a/page/p_dw1copo1vc" target="_blank" rel="noopener noreferrer">View List</a>
     },
     {
       resource: "List of District Officers (WCD)",
-      information: <a href="https://www.google.com" target="_blank" rel="noopener noreferrer">View List</a>
+      information: <a href="http://jjcdhc.nic.in/?page_id=18" target="_blank" rel="noopener noreferrer">View List</a>
     },
     {
       resource: "List of Child Development Project Officers (CDPO)",
-      information: <a href="https://www.google.com" target="_blank" rel="noopener noreferrer">View List</a>
+      information: <a href="http://wcd.delhigovt.nic.in/list-child-development-project-officer-dept-women-and-child-development" target="_blank" rel="noopener noreferrer">View List</a>
     },
     {
       resource: "List of Protection Officers",
-      information: <a href="https://www.google.com" target="_blank" rel="noopener noreferrer">View List</a>
+      information: <a href="http://wcd.delhigovt.nic.in/protection-officers" target="_blank" rel="noopener noreferrer">View List</a>
     },
     {
       resource: "List of Family Counseling Centres",
-      information: <a href="https://www.google.com" target="_blank" rel="noopener noreferrer">View List</a>
+      information: <a href="http://wcd.delhigovt.nic.in/family-counselling-centres" target="_blank" rel="noopener noreferrer">View List</a>
     },
     {
       resource: "List of MCD Offices",
-      information: <a href="https://www.google.com" target="_blank" rel="noopener noreferrer">View List</a>
+      information: <a href="https://mcdonline.nic.in/portal/zones;jsessionid=A46E2DCC30D1A98841DBBBE8911E0699.np1#home" target="_blank" rel="noopener noreferrer">View List</a>
     },
     {
       resource: "List of Tehsildars",
-      information: <a href="https://www.google.com" target="_blank" rel="noopener noreferrer">View List</a>
+      information: <a href="https://revenue.delhi.gov.in/revenue/list-tehsildar-revenue-department" target="_blank" rel="noopener noreferrer">View List</a>
     },
     {
       resource: "List of Mohalla Clinics",
-      information: <a href="https://www.google.com" target="_blank" rel="noopener noreferrer">View List</a>
+      information: <a href="https://dgehs.delhi.gov.in/dghs/aam-aadmi-mohalla-clinics" target="_blank" rel="noopener noreferrer">View List</a>
     },
     {
       resource: "List of One Stop Centres",
-      information: <a href="https://www.google.com" target="_blank" rel="noopener noreferrer">View List</a>
+      information: <a href="http://wcddel.in/pdf/OneStopCenterWEC_2021.pdf " target="_blank" rel="noopener noreferrer">View List</a>
     },
     {
       resource: "Common Service Centres",

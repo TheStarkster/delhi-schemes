@@ -54,7 +54,7 @@ const Hero = (props) => {
               <div className="contrast-bg contrast-text lg:mt-[-30px] xl:mt-[-50px]">
                 {/* Heading */}
                 <div>
-                  <h2 className="contrast-bg contrast-text text-3xl lg:text-5xl md:text-5xl font-black text-white dark:text-white lg-leading md-leading">
+                  <h2 className="contrast-bg contrast-text text-2xl lg:text-5xl md:text-5xl font-black text-white dark:text-white lg-leading md-leading">
                     Social Security Schemes and Resources for Children and Families
                   </h2>
                   <h3 className="contrast-bg contrast-text text-sm lg:text-xl md:text-xl font-medium mb-12 mt-4 leading-relaxed text-white">

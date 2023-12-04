@@ -100,12 +100,15 @@ const Modal = ({ isOpen, onClose }) => {
                     <label className="contrast-bg contrast-text block text-sm font-medium text-gray-700">What category do you belong to?</label>
                     <select onChange={handleInputChange} name='category' className="contrast-bg contrast-text mt-1 pl-2 w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6">
                       <option value="">Select Category</option>
-                      <option value="Livelihood">Livelihood</option>
-                      <option value="Skills">Skills</option>
-                      <option value="Women and Children">Women and Children</option>
-                      <option value="Health and Nutrition">Health and Nutrition</option>
-                      <option value="Education">Education</option>
-                      <option value="Scholarship">Scholarship</option>
+                      <option value="">Select Reservation</option>
+                      <option value="SC">SC</option>
+                      <option value="OBC">OBC</option>
+                      <option value="ST">ST</option>
+                      <option value="General">General</option>
+                      <option value="EBC">EBC</option>
+                      <option value="DNT">DNT</option>
+                      <option value="Minorities">Minorities</option>
+                      <option value="Economically Weaker Section (EWS)">Economically Weaker Section (EWS)</option>
                     </select>
                   </div>
 

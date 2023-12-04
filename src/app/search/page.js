@@ -50,7 +50,7 @@ const SearchPage = (props) => {
         const reconstructedObject = {
             gender: searchParams.get('gender'),
             resident: searchParams.get('resident'),
-            category: searchParams.get('category'),
+            reservation: searchParams.get('category'),
             disability: searchParams.get('differentlyAbled') === 'true' ? 'yes' : searchParams.get('differentlyAbled') === 'false' ? 'no' : null,
             maxFamilyIncome: searchParams.get('annualIncome') ? Number(searchParams.get('annualIncome')) : null,
             age: searchParams.get('age') ? Number(searchParams.get('age')) : null
@@ -171,15 +171,15 @@ const SearchPage = (props) => {
                             <div className="contrast-bg contrast-text flex gap-4 items-center">
                                 <label className="contrast-bg contrast-text inline-flex items-center">
                                     <input type="radio" className="contrast-bg contrast-text form-radio" name="gender" value="Male" onChange={handleFilterChange} checked={filters.gender === 'Male'} />
-                                    <span className="contrast-bg contrast-text ml-2">All Genders</span>
+                                    <span className="contrast-bg contrast-text text-sm ml-2">All Genders</span>
                                 </label>
                                 <label className="contrast-bg contrast-text inline-flex items-center">
                                     <input type="radio" className="contrast-bg contrast-text form-radio" name="gender" value="Female" onChange={handleFilterChange} checked={filters.gender === 'Female'} />
-                                    <span className="contrast-bg contrast-text ml-2">Only females</span>
+                                    <span className="contrast-bg contrast-text text-sm ml-2">Only females</span>
                                 </label>
                                 <label className="contrast-bg contrast-text inline-flex items-center">
                                     <input type="radio" className="contrast-bg contrast-text form-radio" name="gender" value="Others" onChange={handleFilterChange} checked={filters.gender === 'Others'} />
-                                    <span className="contrast-bg contrast-text ml-2">Only others</span>
+                                    <span className="contrast-bg contrast-text text-sm ml-2">Only others</span>
                                 </label>
 
                             </div>
@@ -228,7 +228,6 @@ const SearchPage = (props) => {
                                 <option value="ST">ST</option>
                                 <option value="General">General</option>
                                 <option value="EBC">EBC</option>
-                                <option value="NT">NT</option>
                                 <option value="DNT">DNT</option>
                                 <option value="Minorities">Minorities</option>
                                 <option value="Economically Weaker Section (EWS)">Economically Weaker Section (EWS)</option>
