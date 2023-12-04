@@ -13,7 +13,7 @@ const ExploreSchemes = (props) => {
                 </div>
 
                 <div className="contrast-bg contrast-text grid xl:grid-cols-3 lg:grid-cols-3 md:grid-cols-3 gap-4 sm:grid-cols-2">
-                    <a className="contrast-bg contrast-text block rounded-xl border border-gray-100 p-4 shadow-sm hover:border-iceland_poppy-500 hover:ring-1 hover:ring-gray-200 focus:outline-none focus:ring" href="/search?category=Livelihood">
+                    <a className="contrast-bg contrast-text block rounded-xl border border-gray-100 p-4 shadow-sm hover:border-iceland_poppy-500 hover:ring-1 hover:ring-gray-200 focus:outline-none focus:ring flex flex-col items-center" href="/search?category=Livelihood">
                         <span className="contrast-bg contrast-text inline-block rounded-lg bg-iceland_poppy-500 p-4">
                             <svg xmlns="http://www.w3.org/2000/svg" height="1.6em" fill="white" viewBox="0 0 576 512">
                                 <path d="M7.8 207.7c-13.1-17.8-9.3-42.8 8.5-55.9L142.9 58.5C166.2 41.3 194.5 32 223.5 32H384 544c17.7 0 32 14.3 32 32v64c0 17.7-14.3 32-32 32H507.2l-44.9 36c-22.7 18.2-50.9 28-80 28H304 288 224c-17.7 0-32-14.3-32-32s14.3-32 32-32h64 16c8.8 0 16-7.2 16-16s-7.2-16-16-16H183.4L63.7 216.2c-17.8 13.1-42.8 9.3-55.9-8.5zM382.4 160l0 0 .9 0c-.3 0-.6 0-.9 0zM568.2 304.3c13.1 17.8 9.3 42.8-8.5 55.9L433.1 453.5c-23.4 17.2-51.6 26.5-80.7 26.5H192 32c-17.7 0-32-14.3-32-32V384c0-17.7 14.3-32 32-32H68.8l44.9-36c22.7-18.2 50.9-28 80-28H272h16 64c17.7 0 32 14.3 32 32s-14.3 32-32 32H288 272c-8.8 0-16 7.2-16 16s7.2 16 16 16H392.6l119.7-88.2c17.8-13.1 42.8-9.3 55.9 8.5zM193.6 352l0 0-.9 0c.3 0 .6 0 .9 0z" /></svg>
@@ -21,17 +21,19 @@ const ExploreSchemes = (props) => {
 
                         <h2 className="contrast-bg contrast-text mt-4 mb-2 text-2xl font-bold">Livelihood</h2>
 
-                        <p className="contrast-bg contrast-text mb-4 line-clamp-2 overflow-hidden text-ellipsis text-gray-500">
+                        {/* <p className="contrast-bg contrast-text mb-4 line-clamp-2 overflow-hidden text-ellipsis text-gray-500">
                             Discover schemes designed to enhance your livelihood. From agricultural support to small business grants, find the resources you need to thrive in your professional life.
-                        </p>
+                        </p> */}
 
-                        <span className="inline-block rounded-xl font-bold py-1 px-3 text-iceland_poppy-500 text-sm mr-2" style={{ backgroundColor: "#e4750c17" }}>Information on Employment</span>
-                        <span className="inline-block rounded-xl font-bold py-1 px-3 text-iceland_poppy-500 text-sm mr-2 mb-2" style={{ backgroundColor: "#e4750c17" }}>Income</span>
-                        <span className="inline-block rounded-xl font-bold py-1 px-3 text-iceland_poppy-500 text-sm" style={{ backgroundColor: "#e4750c17" }}>Opportunities</span>
+                        <div className="flex flex-wrap justify-center">
+                            <span className="inline-block rounded-xl font-bold py-1 px-3 text-iceland_poppy-500 text-sm mr-2" style={{ backgroundColor: "#e4750c17" }}>Employment</span>
+                            <span className="inline-block rounded-xl font-bold py-1 px-3 text-iceland_poppy-500 text-sm mr-2" style={{ backgroundColor: "#e4750c17" }}>Income</span>
+                            <span className="inline-block rounded-xl font-bold py-1 px-3 text-iceland_poppy-500 text-sm" style={{ backgroundColor: "#e4750c17" }}>Opportunities</span>
+                        </div>
                     </a>
 
                     <a
-                        className="contrast-bg contrast-text block rounded-xl border border-gray-100 p-4 shadow-sm hover:border-iceland_poppy-500 hover:ring-1 hover:ring-gray-200 focus:outline-none focus:ring"
+                        className="contrast-bg contrast-text block rounded-xl border border-gray-100 p-4 shadow-sm hover:border-iceland_poppy-500 hover:ring-1 hover:ring-gray-200 focus:outline-none focus:ring flex flex-col items-center"
                         href="/search?category=Skills"
                     >
                         <span className="contrast-bg contrast-text inline-block rounded-lg bg-iceland_poppy-500 p-4">
@@ -41,18 +43,22 @@ const ExploreSchemes = (props) => {
 
                         <h2 className="contrast-bg contrast-text mt-4 mb-2 text-2xl font-bold">Skills</h2>
 
-                        <p className="contrast-bg contrast-text mb-4 line-clamp-2 overflow-hidden text-ellipsis text-gray-500">
+                        {/* <p className="contrast-bg contrast-text mb-4 line-clamp-2 overflow-hidden text-ellipsis text-gray-500">
                             Unleash your potential with skill development schemes. Whether it's learning new technology, acquiring a craft, or enhancing your professional skills, find programs that align with your career aspirations.
-                        </p>
-                    
-                        <span className="inline-block rounded-xl font-bold py-1 px-3 text-iceland_poppy-500 text-sm mr-2 mb-2" style={{ backgroundColor: "#e4750c17" }}>Information on events</span>
+                        </p> */}
+
+<div className="flex flex-wrap justify-center">
+                        <span className="inline-block rounded-xl font-bold py-1 px-3 text-iceland_poppy-500 text-sm mr-2 mb-2" style={{ backgroundColor: "#e4750c17" }}>events</span>
                         <span className="inline-block rounded-xl font-bold py-1 px-3 text-iceland_poppy-500 text-sm mr-2 mb-2" style={{ backgroundColor: "#e4750c17" }}>Entitlements</span>
                         <span className="inline-block rounded-xl font-bold py-1 px-3 text-iceland_poppy-500 text-sm mr-2 mb-2" style={{ backgroundColor: "#e4750c17" }}>Expertise</span>
-                    
+                        <span className="inline-block rounded-xl font-bold py-1 px-3 text-iceland_poppy-500 text-sm mr-2 mb-2" style={{ backgroundColor: "#e4750c17" }}>Skill Development</span>
+                        <span className="inline-block rounded-xl font-bold py-1 px-3 text-iceland_poppy-500 text-sm mr-2 mb-2" style={{ backgroundColor: "#e4750c17" }}>Loans</span>
+
+                        </div>
                     </a>
 
                     <a
-                        className="contrast-bg contrast-text block rounded-xl border border-gray-100 p-4 shadow-sm hover:border-iceland_poppy-500 hover:ring-1 hover:ring-gray-200 focus:outline-none focus:ring"
+                        className="contrast-bg contrast-text block rounded-xl border border-gray-100 p-4 shadow-sm hover:border-iceland_poppy-500 hover:ring-1 hover:ring-gray-200 focus:outline-none focus:ring flex flex-col items-center"
                         href="/search?category=Health"
                     >
                         <span className="contrast-bg contrast-text inline-block rounded-lg bg-iceland_poppy-500 p-4">
@@ -62,18 +68,19 @@ const ExploreSchemes = (props) => {
 
                         <h2 className="contrast-bg contrast-text mt-4 mb-2 text-2xl font-bold">Health</h2>
 
-                        <p className="contrast-bg contrast-text mb-4 line-clamp-3 overflow-hidden text-ellipsis text-gray-500">
+                        {/* <p className="contrast-bg contrast-text mb-4 line-clamp-3 overflow-hidden text-ellipsis text-gray-500">
                             Access health-related schemes that prioritize your well-being. From preventive health check-ups to medical assistance programs, explore a variety of options for maintaining your health.
-                        </p>
+                        </p> */}
 
-                        <span className="inline-block rounded-xl font-bold py-1 px-3 text-iceland_poppy-500 text-sm mr-2 mb-2" style={{ backgroundColor: "#e4750c17" }}>Information on financial assistance</span>
-                        <span className="inline-block rounded-xl font-bold py-1 px-3 text-iceland_poppy-500 text-sm mr-2 mb-2" style={{ backgroundColor: "#e4750c17" }}>Disability</span>
+<div className="flex flex-wrap justify-center">
+                       <span className="inline-block rounded-xl font-bold py-1 px-3 text-iceland_poppy-500 text-sm mr-2 mb-2" style={{ backgroundColor: "#e4750c17" }}>financial assistance</span>
                         <span className="inline-block rounded-xl font-bold py-1 px-3 text-iceland_poppy-500 text-sm mr-2 mb-2" style={{ backgroundColor: "#e4750c17" }}>Nutrition</span>
 
+                       </div>
                     </a>
 
                     <a
-                        className="contrast-bg contrast-text block rounded-xl border border-gray-100 p-4 shadow-sm hover:border-iceland_poppy-500 hover:ring-1 hover:ring-gray-200 focus:outline-none focus:ring"
+                        className="contrast-bg contrast-text block rounded-xl border border-gray-100 p-4 shadow-sm hover:border-iceland_poppy-500 hover:ring-1 hover:ring-gray-200 focus:outline-none focus:ring flex flex-col items-center"
                         href="/search?category=Education"
                     >
                         <span className="contrast-bg contrast-text inline-block rounded-lg bg-iceland_poppy-500 p-4">
@@ -83,18 +90,20 @@ const ExploreSchemes = (props) => {
 
                         <h2 className="contrast-bg contrast-text mt-4 mb-2 text-2xl font-bold">Education</h2>
 
-                        <p className="contrast-bg contrast-text mb-4 line-clamp-3 overflow-hidden text-ellipsis text-gray-500">
+                        {/* <p className="contrast-bg contrast-text mb-4 line-clamp-3 overflow-hidden text-ellipsis text-gray-500">
                             Explore educational schemes that offer scholarships, funding opportunities, and learning resources to help you achieve your academic goals.
-                        </p>
+                        </p> */}
 
-                        <span className="inline-block rounded-xl font-bold py-1 px-3 text-iceland_poppy-500 text-sm mr-2 mb-2" style={{ backgroundColor: "#e4750c17" }}>Information on loans</span>
+<div className="flex flex-wrap justify-center">
+                       <span className="inline-block rounded-xl font-bold py-1 px-3 text-iceland_poppy-500 text-sm mr-2 mb-2" style={{ backgroundColor: "#e4750c17" }}>loans</span>
                         <span className="inline-block rounded-xl font-bold py-1 px-3 text-iceland_poppy-500 text-sm mr-2 mb-2" style={{ backgroundColor: "#e4750c17" }}>Concessions</span>
                         <span className="inline-block rounded-xl font-bold py-1 px-3 text-iceland_poppy-500 text-sm mr-2 mb-2" style={{ backgroundColor: "#e4750c17" }}>Reservations</span>
 
+                       </div>
                     </a>
 
                     <a
-                        className="contrast-bg contrast-text block rounded-xl border border-gray-100 p-4 shadow-sm hover:border-iceland_poppy-500 hover:ring-1 hover:ring-gray-200 focus:outline-none focus:ring"
+                        className="contrast-bg contrast-text block rounded-xl border border-gray-100 p-4 shadow-sm hover:border-iceland_poppy-500 hover:ring-1 hover:ring-gray-200 focus:outline-none focus:ring flex flex-col items-center"
                         href="/search?category=Woman and Child"
                     >
                         <span className="contrast-bg contrast-text inline-block rounded-lg bg-iceland_poppy-500 p-4">
@@ -104,16 +113,21 @@ const ExploreSchemes = (props) => {
 
                         <h2 className="contrast-bg contrast-text mt-4 mb-2 text-2xl font-bold">Women and Child</h2>
 
-                        <p className="contrast-bg contrast-text mb-4 line-clamp-3 overflow-hidden text-ellipsis text-gray-500">
+                        {/* <p className="contrast-bg contrast-text mb-4 line-clamp-3 overflow-hidden text-ellipsis text-gray-500">
                             Empower women and children through dedicated schemes offering educational support, healthcare, and empowerment opportunities designed to uplift and strengthen communities.
-                        </p>
+                        </p> */}
 
-                        <span className="inline-block rounded-xl font-bold py-1 px-3 text-iceland_poppy-500 text-sm mr-2 mb-2" style={{ backgroundColor: "#e4750c17" }}>Information on social welfare and financial schemes</span>
+<div className="flex flex-wrap justify-center">
+                        <span className="inline-block rounded-xl font-bold py-1 px-3 text-iceland_poppy-500 text-sm mr-2 mb-2" style={{ backgroundColor: "#e4750c17" }}>Welfare</span>
+                        <span className="inline-block rounded-xl font-bold py-1 px-3 text-iceland_poppy-500 text-sm mr-2 mb-2" style={{ backgroundColor: "#e4750c17" }}>Safety</span>
+                        <span className="inline-block rounded-xl font-bold py-1 px-3 text-iceland_poppy-500 text-sm mr-2 mb-2" style={{ backgroundColor: "#e4750c17" }}>Security</span>
+                        <span className="inline-block rounded-xl font-bold py-1 px-3 text-iceland_poppy-500 text-sm mr-2 mb-2" style={{ backgroundColor: "#e4750c17" }}>Loans</span>
 
+                        </div>
                     </a>
 
                     <a
-                        className="contrast-bg contrast-text block rounded-xl border border-gray-100 p-4 shadow-sm hover:border-iceland_poppy-500 hover:ring-1 hover:ring-gray-200 focus:outline-none focus:ring"
+                        className="contrast-bg contrast-text block rounded-xl border border-gray-100 p-4 shadow-sm hover:border-iceland_poppy-500 hover:ring-1 hover:ring-gray-200 focus:outline-none focus:ring flex flex-col items-center"
                         href="/search?category=Scholarship"
                     >
                         <span className="contrast-bg contrast-text inline-block rounded-lg bg-iceland_poppy-500 p-4">
@@ -123,14 +137,39 @@ const ExploreSchemes = (props) => {
 
                         <h2 className="contrast-bg contrast-text mt-4 mb-2 text-2xl font-bold">Scholarship</h2>
 
-                        <p className="contrast-bg contrast-text mb-4 line-clamp-3 overflow-hidden text-ellipsis text-gray-500">
+                        {/* <p className="contrast-bg contrast-text mb-4 line-clamp-3 overflow-hidden text-ellipsis text-gray-500">
                             Find scholarships that open doors to new learning opportunities. Catering to various educational levels and fields, these schemes can help you pursue your dreams.
-                        </p>
+                        </p> */}
 
-                        <span className="inline-block rounded-xl font-bold py-1 px-3 text-iceland_poppy-500 text-sm mr-2 mb-2" style={{ backgroundColor: "#e4750c17" }}>Information on pre/post matric</span>
+<div className="flex flex-wrap justify-center">
+                        <span className="inline-block rounded-xl font-bold py-1 px-3 text-iceland_poppy-500 text-sm mr-2 mb-2" style={{ backgroundColor: "#e4750c17" }}>Pre/Post matric</span>
                         <span className="inline-block rounded-xl font-bold py-1 px-3 text-iceland_poppy-500 text-sm mr-2 mb-2" style={{ backgroundColor: "#e4750c17" }}>Reimbursements</span>
                         <span className="inline-block rounded-xl font-bold py-1 px-3 text-iceland_poppy-500 text-sm mr-2 mb-2" style={{ backgroundColor: "#e4750c17" }}>Coaching</span>
 
+                        </div>
+                    </a>
+                    <a
+                        className="contrast-bg contrast-text block rounded-xl border border-gray-100 p-4 shadow-sm hover:border-iceland_poppy-500 hover:ring-1 hover:ring-gray-200 focus:outline-none focus:ring flex flex-col items-center"
+                        href="/search?disability=yes"
+                    >
+                        <span className="contrast-bg contrast-text inline-block rounded-lg bg-iceland_poppy-500 p-4">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M8 6C8 3.79 9.79 2 12 2C14.21 2 16 3.79 16 6C16 8.21 14.21 10 12 10C9.79 10 8 8.21 8 6ZM17 22H18C19.1 22 20 21.1 20 20V15.22C20 14.1 19.39 13.07 18.39 12.56C17.96 12.34 17.5 12.13 17 11.94V22ZM12.34 17L15 11.33C14.07 11.12 13.07 11 12 11C9.47 11 7.29 11.7 5.61 12.56C5.12206 12.8113 4.7133 13.1929 4.4291 13.6625C4.1449 14.132 3.99637 14.6712 4 15.22V22H6.34C6.12 21.55 6 21.04 6 20.5C6 18.57 7.57 17 9.5 17H12.34ZM10 22L11.41 19H9.5C8.67 19 8 19.67 8 20.5C8 21.33 8.67 22 9.5 22H10Z" fill="white" />
+                            </svg>
+                        </span>
+
+                        <h2 className="contrast-bg contrast-text mt-4 mb-2 text-2xl font-bold">Disability</h2>
+
+                        {/* <p className="contrast-bg contrast-text mb-4 line-clamp-3 overflow-hidden text-ellipsis text-gray-500">
+                            Find scholarships that open doors to new learning opportunities. Catering to various educational levels and fields, these schemes can help you pursue your dreams.
+                        </p> */}
+
+<div className="flex flex-wrap justify-center">
+                        <span className="inline-block rounded-xl font-bold py-1 px-3 text-iceland_poppy-500 text-sm mr-2 mb-2" style={{ backgroundColor: "#e4750c17" }}>Entitlements</span>
+                        <span className="inline-block rounded-xl font-bold py-1 px-3 text-iceland_poppy-500 text-sm mr-2 mb-2" style={{ backgroundColor: "#e4750c17" }}>Reimbursements</span>
+                        <span className="inline-block rounded-xl font-bold py-1 px-3 text-iceland_poppy-500 text-sm mr-2 mb-2" style={{ backgroundColor: "#e4750c17" }}>Health</span>
+
+                        </div>
                     </a>
                 </div>
             </div>
