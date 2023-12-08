@@ -251,12 +251,12 @@ const Footer = (props) => {
           <div style={{ marginTop: 18 }}>
             <div className="flex items-center space-x-4">
               <div>
-                <span className="font-medium text-gray-500">Visit Count:</span>
+                <span className="font-medium text-gray-500">Total Visitors Count:</span>
                 <span className="ml-2 inline-block bg-green-200 text-green-800 text-xs font-bold px-2 rounded-full">{visitCount}</span>
               </div>
 
               <div className="flex-1 text-right">
-                <span className="text-sm text-gray-500">Last update: 03 December 2023</span>
+                <span className="text-sm text-gray-500">Last update: 08 December 2023</span>
               </div>
 
               <div className="max-w-7xl mx-auto flex items-center p-2">

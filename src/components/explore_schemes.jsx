@@ -17,7 +17,7 @@ const ExploreSchemes = (props) => {
                                 <path d="M7.8 207.7c-13.1-17.8-9.3-42.8 8.5-55.9L142.9 58.5C166.2 41.3 194.5 32 223.5 32H384 544c17.7 0 32 14.3 32 32v64c0 17.7-14.3 32-32 32H507.2l-44.9 36c-22.7 18.2-50.9 28-80 28H304 288 224c-17.7 0-32-14.3-32-32s14.3-32 32-32h64 16c8.8 0 16-7.2 16-16s-7.2-16-16-16H183.4L63.7 216.2c-17.8 13.1-42.8 9.3-55.9-8.5zM382.4 160l0 0 .9 0c-.3 0-.6 0-.9 0zM568.2 304.3c13.1 17.8 9.3 42.8-8.5 55.9L433.1 453.5c-23.4 17.2-51.6 26.5-80.7 26.5H192 32c-17.7 0-32-14.3-32-32V384c0-17.7 14.3-32 32-32H68.8l44.9-36c22.7-18.2 50.9-28 80-28H272h16 64c17.7 0 32 14.3 32 32s-14.3 32-32 32H288 272c-8.8 0-16 7.2-16 16s7.2 16 16 16H392.6l119.7-88.2c17.8-13.1 42.8-9.3 55.9 8.5zM193.6 352l0 0-.9 0c.3 0 .6 0 .9 0z" /></svg>
                         </span>
 
-                        <h2 className="contrast-bg contrast-text mt-4 mb-2 text-2xl font-bold">Livelihood</h2>
+                        <h2 className="contrast-bg contrast-text mt-4 mb-2 text-2xl font-bold">Livelihoods</h2>
 
                         <p className="contrast-bg contrast-text mb-4 line-clamp-2 overflow-hidden text-ellipsis text-gray-500">
                             Discover schemes designed to enhance your livelihood. From agricultural support to small business grants, find the resources you need to thrive in your professional life.
@@ -53,7 +53,7 @@ const ExploreSchemes = (props) => {
 
                     <a
                         className="contrast-bg contrast-text block rounded-xl border border-gray-100 p-4 shadow-sm hover:border-iceland_poppy-500 hover:ring-1 hover:ring-gray-200 focus:outline-none focus:ring"
-                        href="/search?category=Health"
+                        href="/search?category=Health and Nutrition"
                     >
                         <span className="contrast-bg contrast-text inline-block rounded-lg bg-iceland_poppy-500 p-4">
                             <svg xmlns="http://www.w3.org/2000/svg" height="1.6em" fill="white" viewBox="0 0 448 512">
@@ -94,14 +94,14 @@ const ExploreSchemes = (props) => {
 
                     <a
                         className="contrast-bg contrast-text block rounded-xl border border-gray-100 p-4 shadow-sm hover:border-iceland_poppy-500 hover:ring-1 hover:ring-gray-200 focus:outline-none focus:ring"
-                        href="/search?category=Woman and Child"
+                        href="/search?category=Women and Children"
                     >
                         <span className="contrast-bg contrast-text inline-block rounded-lg bg-iceland_poppy-500 p-4">
                             <svg xmlns="http://www.w3.org/2000/svg" height="1.6em" fill="white" viewBox="0 0 448 512">
                                 <path d="M224 0a80 80 0 1 1 0 160A80 80 0 1 1 224 0zM436.8 382.8L373.5 462c-16.6 20.7-46.8 24.1-67.5 7.5c-17.6-14.1-22.7-38.1-13.5-57.7l-.8-.1c-38.9-5.6-74.3-25.1-99.7-54.8V320c0-17.7-14.3-32-32-32s-32 14.3-32 32v48c0 .8 0 1.6 .1 2.4l101.4 50.7c23.7 11.9 33.3 40.7 21.5 64.4s-40.7 33.3-64.4 21.5L27.2 427.3c-1.1-.5-2.2-1.1-3.3-1.7c-4.9-2.8-9.2-6.4-12.6-10.6c-4.6-5.4-7.8-11.7-9.6-18.4c-3.3-12-1.9-25.2 4.8-36.6c.6-1.1 1.3-2.2 2-3.2L75.6 256.1c26.7-40.1 71.7-64.1 119.8-64.1h75.2c46.5 0 90.1 22.5 117.2 60.3l50.7 70.9c2.2 3 4 6.1 5.5 9.4c2.9 6.7 4.3 13.8 4 20.8c-.3 10.6-4.2 21-11.2 29.4zM320 332a44 44 0 1 0 -88 0 44 44 0 1 0 88 0z" /></svg>
                         </span>
 
-                        <h2 className="contrast-bg contrast-text mt-4 mb-2 text-2xl font-bold">Women and Child</h2>
+                        <h2 className="contrast-bg contrast-text mt-4 mb-2 text-2xl font-bold">Women and Children</h2>
 
                         <p className="contrast-bg contrast-text mb-4 line-clamp-3 overflow-hidden text-ellipsis text-gray-500">
                             Empower women and children through dedicated schemes offering educational support, healthcare, and empowerment opportunities designed to uplift and strengthen communities.

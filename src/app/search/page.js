@@ -50,7 +50,8 @@ const SearchPage = (props) => {
         const reconstructedObject = {
             gender: searchParams.get('gender'),
             resident: searchParams.get('resident'),
-            reservation: searchParams.get('category'),
+            category: searchParams.get('category'),
+            reservation: searchParams.get('reservation'),
             disability: searchParams.get('differentlyAbled') === 'true' ? 'yes' : searchParams.get('differentlyAbled') === 'false' ? 'no' : null,
             maxFamilyIncome: searchParams.get('annualIncome') ? Number(searchParams.get('annualIncome')) : null,
             age: searchParams.get('age') ? Number(searchParams.get('age')) : null
