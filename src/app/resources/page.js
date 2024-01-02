@@ -52,7 +52,7 @@ export default function ResourcesInformatio() {
     },
     {
       resource: "List of Police Stations",
-      information: <a href="https://lookerstudio.google.com/u/0/reporting/5b0a9fb6-9ad8-4613-8b55-059aa4ba9739/page/y6atC" target="_blank" rel="noopener noreferrer">View List</a>
+      information: <a href="https://delhipolice.gov.in/telephonedirectory" target="_blank" rel="noopener noreferrer">View List</a>
     },
     {
       resource: "List of Govt. Schools",
@@ -84,7 +84,7 @@ export default function ResourcesInformatio() {
     },
     {
       resource: "List of CCIs",
-      information: <a href="https://lookerstudio.google.com/u/0/reporting/7c2ac3e1-0553-4c66-852a-db398765f645/page/p_0feylzhdvc" target="_blank" rel="noopener noreferrer">View List</a>
+      information: <><a href="https://wcd.delhi.gov.in/sites/default/files/WCD/generic_multiple_files/list_of_child_care_institutions_run_by_nogs_0.pdf" target="_blank" rel="noopener noreferrer">View List 1</a><br /><a href="https://wcd.delhi.gov.in/sites/default/files/WCD/generic_multiple_files/govt_run.pdf" target="_blank" rel="noopener noreferrer">View List 2</a></>
     },
     {
       resource: "List of SJPUs",
@@ -104,7 +104,7 @@ export default function ResourcesInformatio() {
     },
     {
       resource: "List of District Officers (WCD)",
-      information: <a href="http://jjcdhc.nic.in/?page_id=18" target="_blank" rel="noopener noreferrer">View List</a>
+      information: <a href="https://wcd.delhi.gov.in/wcd/contact-us & https://jjcdhc.nic.in/?page_id=18" target="_blank" rel="noopener noreferrer">View List</a>
     },
     {
       resource: "List of Child Development Project Officers (CDPO)",
@@ -112,7 +112,7 @@ export default function ResourcesInformatio() {
     },
     {
       resource: "List of Protection Officers",
-      information: <a href="http://wcd.delhigovt.nic.in/protection-officers" target="_blank" rel="noopener noreferrer">View List</a>
+      information: <a href="​https://wcd.delhi.gov.in/wcd/list-protection-officers" target="_blank" rel="noopener noreferrer">View List</a>
     },
     {
       resource: "List of Family Counseling Centres",
