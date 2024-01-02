@@ -17,8 +17,7 @@ export default function PrivacyPolicy() {
                 <p><strong><span style={{ fontSize: 24 }}>Information We Do Not Collect</span></strong></p>
 
                 <p style={{ marginBottom: "24px" }}>1. <strong>Personal Information:</strong> We do not collect any personal information like names, addresses, phone numbers, or email addresses.<br />
-                    2. <strong>Cookies and Tracking:</strong> Our website does not use cookies or any form of tracking technologies.<br />
-                    3. <strong>Third-Party Data Sharing:</strong> We do not collect data; hence, there is no sharing of personal data with third parties.</p>
+                    2. <strong>Third-Party Data Sharing:</strong> We do not collect data; hence, there is no sharing of personal data with third parties.</p>
 
                 <p><span style={{ fontSize: 24 }}><strong>External Links</strong></span></p>
 

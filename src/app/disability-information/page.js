@@ -77,8 +77,8 @@ export default function DisabilityInformation() {
                                         <li>
                                             <strong>Visual Impairment:</strong> Visual Impairment can be further classified as the following:
                                             <ul className="contrast-bg contrast-text list-disc pl-5">
-                                                <li><strong>Blindness</strong> - A condition where a person suffers from... (content continues)</li>
-                                                <li><strong>Low-vision</strong> - A person with impairment of visual functioning... (content continues)</li>
+                                                <li><strong>Blindness</strong> - A condition where a person suffers from any of the following conditions namely: Total absence of sight; or Visual acuity not exceeding 6/60 or 20/200 (Snellen) in the better eye with correcting lenses; or Limitation of the field vision subtending an angle of 20 degrees or worse</li>
+                                                <li><strong>Low-vision</strong> - A person with impairment of visual functioning even after treatment or standard refractive correction but who uses or is potentially capable of using vision for the planning or execution of a task with appropriate assistive devices</li>
                                             </ul>
                                         </li>
                                         <li>
@@ -86,7 +86,7 @@ export default function DisabilityInformation() {
                                             <ol className="contrast-bg contrast-text list-decimal pl-5">
                                                 <li>Deaf - Persons having 70 DB hearing loss in speech frequencies in both ears.</li>
                                                 <li>Hard of hearing - Loss of sixty decibels or more in the better ear in the conversational range of frequencies.</li>
-                                                <li>Speech and Language Disability - A permanent disability arising out of conditions such as laryngectomy... (content continues)</li>
+                                                <li>Speech and Language Disability - A permanent disability arising out of conditions such as laryngectomy (Laryngectomy is the removal of part or all of the larynx (voice box) or aphasia (A language disorder caused by damage in a specific area of the brain that affects a person's ability to communicate) affecting one or more components of speech and language due to organic or neurological causes</li>
                                             </ol>
                                         </li>
                                     </ul>

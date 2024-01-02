@@ -136,7 +136,7 @@ export default function ResourcesInformatio() {
     },
     {
       resource: "Common Service Centres",
-      information: <a href="https://www.google.com" target="_blank" rel="noopener noreferrer">View List</a>
+      information: <a href="https://www.apnacsconline.in/csc-locator/delhi/delhi-672" target="_blank" rel="noopener noreferrer">View List</a>
     }
   ];
   return (
