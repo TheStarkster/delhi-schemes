@@ -23,13 +23,15 @@ const Modal = ({ isOpen, onClose }) => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
+
+    console.log(formData.resident);
     // Add age to formData
     const queryObject = {
       gender: formData.gender,
       dob: formData.dob,
-      resident: formData.resident === 'no' ? 'out_of_delhi' : 'delhi',
+      resident: formData.resident === '' ? '' : formData.resident === 'no' ? 'out_of_delhi' : 'delhi',
       category: formData.category,
-      differentlyAbled: formData.differentlyAbled === 'yes',
+      differentlyAbled: formData.differentlyAbled === 'yes' ? true : formData.differentlyAbled === 'no' ? false : '',
       annualIncome: formData.annualIncome ? Number(formData.annualIncome) : null,
       age: age
     };

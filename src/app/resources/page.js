@@ -51,6 +51,26 @@ export default function ResourcesInformatio() {
       )
     },
     {
+      resource: "List of MCD Schools",
+      information: <><a href="https://www.edudel.nic.in/mis/eis/frmSchoolList.aspx?type=t5PRKC9ILXruG7UivWYTAg==" target="_blank" rel="noopener noreferrer">View List 1</a><br /><a href="https://www.edudel.nic.in/mis/eis/frmSchoolList.aspx?type=7nt/YqWsGPyGj3AOgCiCrLYR9/hJMh+cHN5ryz9gZxQ=" target="_blank" rel="noopener noreferrer">View List 2</a></>
+    },
+    {
+      resource: "List of NDMC Schools",
+      information: <a href="https://ndmc.gov.in/departments/education_school.aspx" target="_blank" rel="noopener noreferrer">View List</a>
+    },
+    {
+      resource: "List of Government Schools",
+      information: <a href="https://www.edudel.nic.in/mis/eis/frmSchoolList.aspx?type=8v6AC39/z0ySjVIkvfDJzvxkdDvmSsz7pgALKMjL3UI=" target="_blank" rel="noopener noreferrer">View List</a>
+    },
+    {
+      resource: "List of Government Hospitals",
+      information: <a href="https://health.delhi.gov.in/health/delhi-govt-hospital" target="_blank" rel="noopener noreferrer">View List</a>
+    },
+    {
+      resource: "List of Hospitals",
+      information: <a href="https://delhi.gov.in/page/hospitals-delhi" target="_blank" rel="noopener noreferrer">View List</a>
+    },
+    {
       resource: "List of Police Stations",
       information: <a href="https://delhipolice.gov.in/telephonedirectory" target="_blank" rel="noopener noreferrer">View List</a>
     },
@@ -59,12 +79,61 @@ export default function ResourcesInformatio() {
       information: <a href="https://lookerstudio.google.com/u/0/reporting/48c94ee6-7c2e-417b-b5e4-23382f61e69c/page/p_yllgqs6g2c" target="_blank" rel="noopener noreferrer">View List</a>
     },
     {
-      resource: "List of Govt. Hospitals",
-      information: <a href="https://lookerstudio.google.com/u/0/reporting/8029cd6f-f62e-4862-98a5-f61364e11ed3/page/p_87w3odhevc" target="_blank" rel="noopener noreferrer">View List</a>
-    },
-    {
       resource: "List of DMs/SDMs",
-      information: <a href="https://lookerstudio.google.com/u/0/reporting/1af9f683-446c-4605-b6c2-415b97cb5f97/page/p_43rcafwxwc" target="_blank" rel="noopener noreferrer">View List</a>
+      information: <table class="min-w-full table-auto border-collapse border border-gray-200">
+        <thead class="bg-gray-100">
+          <tr>
+            <th class="px-4 py-2 border-b border-gray-200 text-gray-700 text-left">District</th>
+            <th class="px-4 py-2 border-b border-gray-200 text-gray-700 text-left">Link</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="px-4 py-2 border-b border-gray-200">SOUTH</td>
+            <td class="px-4 py-2 border-b border-gray-200"><a href="https://dmsouth.delhi.gov.in/about-district/contact-district/" class="text-blue-600 hover:text-blue-800">Visit</a></td>
+          </tr>
+          <tr>
+            <td class="px-4 py-2 border-b border-gray-200">CENTRAL</td>
+            <td class="px-4 py-2 border-b border-gray-200"><a href="https://dccentral.delhi.gov.in/en/dccentral/contact-us" class="text-blue-600 hover:text-blue-800">Visit</a></td>
+          </tr>
+          <tr>
+            <td class="px-4 py-2 border-b border-gray-200">NORTH</td>
+            <td class="px-4 py-2 border-b border-gray-200"><a href="https://dmnorth.delhi.gov.in/directory/" class="text-blue-600 hover:text-blue-800">Visit</a></td>
+          </tr>
+          <tr>
+            <td class="px-4 py-2 border-b border-gray-200">SOUTH WEST</td>
+            <td class="px-4 py-2 border-b border-gray-200"><a href="https://dmsouthwest.delhi.gov.in/directory/" class="text-blue-600 hover:text-blue-800">Visit</a></td>
+          </tr>
+          <tr>
+            <td class="px-4 py-2 border-b border-gray-200">NORTH WEST</td>
+            <td class="px-4 py-2 border-b border-gray-200"><a href="https://dmnorthwest.delhi.gov.in/about-district/whos-who/" class="text-blue-600 hover:text-blue-800">Visit</a></td>
+          </tr>
+          <tr>
+            <td class="px-4 py-2 border-b border-gray-200">WEST</td>
+            <td class="px-4 py-2 border-b border-gray-200"><a href="https://dcwestrev.delhi.gov.in/dcwestrev/organisational-setup" class="text-blue-600 hover:text-blue-800">Visit</a></td>
+          </tr>
+          <tr>
+            <td class="px-4 py-2 border-b border-gray-200">EAST</td>
+            <td class="px-4 py-2 border-b border-gray-200"><a href="https://dmeast.delhi.gov.in/about-district/whos-who/" class="text-blue-600 hover:text-blue-800">Visit</a></td>
+          </tr>
+          <tr>
+            <td class="px-4 py-2 border-b border-gray-200">SOUTH EAST</td>
+            <td class="px-4 py-2 border-b border-gray-200"><a href="https://dmsoutheast.delhi.gov.in/about-district/whos-who/" class="text-blue-600 hover:text-blue-800">Visit</a></td>
+          </tr>
+          <tr>
+            <td class="px-4 py-2 border-b border-gray-200">NORTH EAST</td>
+            <td class="px-4 py-2 border-b border-gray-200"><a href="https://dmnortheast.delhi.gov.in/about-district/whos-who/" class="text-blue-600 hover:text-blue-800">Visit</a></td>
+          </tr>
+          <tr>
+            <td class="px-4 py-2 border-b border-gray-200">SHAHDARA</td>
+            <td class="px-4 py-2 border-b border-gray-200"><a href="https://dmshahdara.delhi.gov.in/about-district/whos-who/" class="text-blue-600 hover:text-blue-800">Visit</a></td>
+          </tr>
+          <tr>
+            <td class="px-4 py-2">NEW DELHI</td>
+            <td class="px-4 py-2"><a href="https://dmnewdelhi.delhi.gov.in/about-district/whos-who/" class="text-blue-600 hover:text-blue-800">Visit</a></td>
+          </tr>
+        </tbody>
+      </table>
     },
     {
       resource: "List of JJBs",
@@ -95,20 +164,15 @@ export default function ResourcesInformatio() {
       information: <a href="https://lookerstudio.google.com/u/0/reporting/2949d73b-9129-4c32-af1a-5aa8988e6195/page/p_hmixlqwxwc" target="_blank" rel="noopener noreferrer">View List</a>
     },
     {
-      resource: "MCD/NDMC/DCB Schools",
-      information: <a href="https://lookerstudio.google.com/u/0/reporting/835aec49-521b-49e4-84a0-054c2faa8249/page/p_rcbnl26g2c" target="_blank" rel="noopener noreferrer">View List</a>
-    },
-    {
       resource: "List of childline coordinators",
       information: <a href="https://lookerstudio.google.com/u/0/reporting/39c0d592-8468-47f3-9f03-f7f1ddd9593a/page/p_dw1copo1vc" target="_blank" rel="noopener noreferrer">View List</a>
     },
     {
       resource: "List of District Officers (WCD)",
-      information: <a href="https://wcd.delhi.gov.in/wcd/contact-us & https://jjcdhc.nic.in/?page_id=18" target="_blank" rel="noopener noreferrer">View List</a>
-    },
-    {
-      resource: "List of Child Development Project Officers (CDPO)",
-      information: <a href="http://wcd.delhigovt.nic.in/list-child-development-project-officer-dept-women-and-child-development" target="_blank" rel="noopener noreferrer">View List</a>
+      information: <>
+        <a href="https://wcd.delhi.gov.in/wcd/contact-us" target="_blank" rel="noopener noreferrer">View List 1</a><br />
+        <a href="https://jjcdhc.nic.in/?page_id=18" target="_blank" rel="noopener noreferrer">View List 2</a>
+      </>
     },
     {
       resource: "List of Protection Officers",
@@ -116,7 +180,7 @@ export default function ResourcesInformatio() {
     },
     {
       resource: "List of Family Counseling Centres",
-      information: <a href="http://wcd.delhigovt.nic.in/family-counselling-centres" target="_blank" rel="noopener noreferrer">View List</a>
+      information: <a href="https://wcd.delhi.gov.in/wcd/list-family-counseling-centres" target="_blank" rel="noopener noreferrer">View List</a>
     },
     {
       resource: "List of MCD Offices",
@@ -132,7 +196,10 @@ export default function ResourcesInformatio() {
     },
     {
       resource: "List of One Stop Centres",
-      information: <a href="http://wcddel.in/pdf/OneStopCenterWEC_2021.pdf " target="_blank" rel="noopener noreferrer">View List</a>
+      information: <>
+        <a href="https://dslsa.org/one-stop-centres" target="_blank" rel="noopener noreferrer">View List</a><br />
+        <a href="https://jjcdhc.nic.in/?page_id=198" target="_blank" rel="noopener noreferrer">View List</a>
+      </>
     },
     {
       resource: "Common Service Centres",

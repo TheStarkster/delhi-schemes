@@ -49,7 +49,7 @@ const SearchPage = (props) => {
     useEffect(() => {
         const reconstructedObject = {
             gender: searchParams.get('gender'),
-            resident: searchParams.get('resident'),
+            residence: searchParams.get('resident'),
             category: searchParams.get('category'),
             reservation: searchParams.get('reservation'),
             disability: searchParams.get('differentlyAbled') === 'true' ? 'yes' : searchParams.get('differentlyAbled') === 'false' ? 'no' : null,
