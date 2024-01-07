@@ -51,6 +51,38 @@ export default function ResourcesInformatio() {
       )
     },
     {
+      resource: "Accessibility handbook on rights and entitlements of Person with Disabilities",
+      information: <>
+        For english version click here - <a className="dangerous-html-link" href="https://drive.google.com/file/d/11HrKH-2hXESA5Vnd8WcH9Z3unfkuWw_Z/view?usp=share_link" target="_blank" rel="noopener noreferrer">View</a>
+        <br />
+        For hindi version click here - <a className="dangerous-html-link" href="https://drive.google.com/file/d/1ULeiHbuS6H5fUFqoIAbcNLBSAqy3h2m3/view?usp=share_link" target="_blank" rel="noopener noreferrer">View</a>
+        <br />
+        For audio book click - <a className="dangerous-html-link" href="https://drive.google.com/drive/folders/1FhyfR_BivDbBuTBzBUDWAAhemc2cmc12" target="_blank" rel="noopener noreferrer">View</a>
+      </>
+    },
+    {
+      resource: "Acts & Rule for the Welfare of Persons with Disabilities",
+      information: <>
+        Act & Rule for the Welfare of Persons with Disabilities, National Trust Act, Delhi RPwD Rules - <a className="dangerous-html-link" href="https://socialwelfare.delhi.gov.in/social/acts-rule-welfare-persons-disabilities" target="_blank" rel="noopener noreferrer">View</a>
+      </>
+    },
+    {
+      resource: "Grievance Redressal Bodies",
+      information: <>
+        <a href="https://drive.google.com/file/d/1o6zX7x4lVv55O-qgXYeC8uYN9jhNZSXY/view?usp=share_link" target="_blank" rel="noopener noreferrer">View</a>
+      </>
+    },
+    {
+      resource: "Repository of Institutions for Disabled Persons",
+      information: <>
+        1. <a className="dangerous-html-link" href="https://drive.google.com/file/d/1vZBlV75VlGn1dL8884PvrNt3K50AY3D-/view?usp=share_link" target="_blank" rel="noopener noreferrer">Institutions and Special Schools for the Welfare of Persons with Disabilities (Page 43 of Handbook)</a>
+        <br />
+        2. <a className="dangerous-html-link" href="https://drive.google.com/file/d/1CXBzxu4FamL32jk_KkQNQel_sVf6aOxS/view?usp=share_link" target="_blank" rel="noopener noreferrer">Disability - wise Medical Authorities for issuance of disability certificate (Page 59 of Handbook)</a>
+        <br />
+        3. <a className="dangerous-html-link" href="https://drive.google.com/file/d/11HrKH-2hXESA5Vnd8WcH9Z3unfkuWw_Z/view?usp=drivesdk" target="_blank" rel="noopener noreferrer">List of NGOs Registered under section 52 of PWD Act 1995 (Page 85 of Handbook) Link to handbook</a>
+      </>
+    },
+    {
       resource: "List of MCD Schools",
       information: <><a href="https://www.edudel.nic.in/mis/eis/frmSchoolList.aspx?type=t5PRKC9ILXruG7UivWYTAg==" target="_blank" rel="noopener noreferrer">View List 1</a><br /><a href="https://www.edudel.nic.in/mis/eis/frmSchoolList.aspx?type=7nt/YqWsGPyGj3AOgCiCrLYR9/hJMh+cHN5ryz9gZxQ=" target="_blank" rel="noopener noreferrer">View List 2</a></>
     },

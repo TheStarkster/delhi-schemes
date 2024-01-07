@@ -123,3 +123,16 @@
 .high-contrast-mode .contrast-link {
   color: var(--high-contrast-link);
 }
+
+
+.dangerous-html-link {
+  color: #0f1bc9;
+  text-decoration: underline;
+}
+
+
+.ul_li {
+  list-style-type: upper-roman;
+  margin: 0;
+  padding: 0;
+}
