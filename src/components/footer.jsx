@@ -256,7 +256,7 @@ const Footer = (props) => {
               </div>
 
               <div className="flex-1 text-right">
-                <span className="text-sm text-gray-500">Last update: 08 December 2023</span>
+                <span className="text-sm text-gray-500">Last update: 08 January 2024</span>
               </div>
 
               <div className="max-w-7xl mx-auto flex items-center p-2">

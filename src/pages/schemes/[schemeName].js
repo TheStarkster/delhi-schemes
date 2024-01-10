@@ -29,6 +29,7 @@ export default function SchemePage({ schemeData }) {
   const sectionRefs = useRef(sections.map(() => createRef()));
   const contentSectionRefs = useRef(sections.map(() => createRef())); // New refs for content sections
   const highlightRef = useRef(null);
+  const contentRef = useRef(null);
 
   useEffect(() => {
     // Function to check URL and scroll to the section
@@ -130,8 +131,24 @@ export default function SchemePage({ schemeData }) {
   }, []);
 
 
+  useEffect(() => {
+    // Make sure the ref is current and the content has been loaded
+    console.log(contentRef.current);
+    if (contentRef.current) {
+      const anchors = contentRef.current.querySelectorAll('a');
+      anchors.forEach(anchor => {
+        // Apply styles directly
+        anchor.style.color = 'blue';
+        anchor.style.textDecoration = 'underline';
+
+        // Or add a class
+        // anchor.classList.add('my-custom-class');
+      });
+    }
+  }, []);
+
   return (
-    <>
+    <div>
       {/* Scheme heading */}
       <Navbar />
       <div className="contrast-bg contrast-text bg-gradient-to-r from-iceland_poppy-500 to-pink-500 text-white py-12">
@@ -162,7 +179,7 @@ export default function SchemePage({ schemeData }) {
           </div>
         </div>
 
-        <div className="contrast-bg contrast-text col-span-3 mx-4 my-12 xl:my-0 lg:my-0 sm:mx-12 lg:mx-18 md:mx-12 md:my-12">
+        <div ref={contentRef} className="contrast-bg contrast-text col-span-3 mx-4 my-12 xl:my-0 lg:my-0 sm:mx-12 lg:mx-18 md:mx-12 md:my-12">
           {sections.map((section, index) => (
             <section style={{ marginBottom: 64 }} key={index} ref={contentSectionRefs.current[index]}>
               <div className="contrast-bg contrast-text flex items-center">
@@ -175,6 +192,6 @@ export default function SchemePage({ schemeData }) {
         </div>
       </div>
       <Footer />
-    </>
+    </div>
   );
 }
