@@ -1,15 +1,17 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import { useTranslation } from "react-i18next";
 
 const Footer = (props) => {
   const [showFeedback, showFeedbackForm] = useState(false)
-
+  const { t, i18n } = useTranslation();
   const [visitCount, setVisitCount] = useState("Loading...")
 
 
   // Feedback modal...
   const FeedbackModal = () => {
+
     return <div class="relative z-10" aria-labelledby="modal-title" role="dialog" aria-modal="true">
       <div class="fixed inset-0 bg-gray-500 bg-opacity-75 transition-opacity"></div>
 
@@ -20,17 +22,17 @@ const Footer = (props) => {
               <div class="px-4 py-6 bg-white sm:p-6">
                 <div class="mt-3 text-center sm:mt-0 sm:text-left">
                   <h3 class="text-lg leading-6 font-medium text-gray-900" id="modal-title">
-                    Feedback
+                    {t('feedback_modal_title')}
                   </h3>
                   <div class="mt-2">
                     <p class="text-sm text-gray-500">
-                      Please provide your feedback below. We will get back to you at the earliest.
+                    {t('feedback_modal_description')}
                     </p>
                   </div>
                 </div>
                 <div class="mt-5">
                   <label for="name" class="block text-sm font-medium text-gray-700">
-                    Name
+                  {t('name_label')}
                   </label>
                   <div class="mt-1">
                     <input
@@ -44,7 +46,7 @@ const Footer = (props) => {
                 </div>
                 <div class="mt-5">
                   <label for="phone" class="block text-sm font-medium text-gray-700">
-                    Phone
+                  {t('phone_label')}
                   </label>
                   <div class="mt-1">
                     <input
@@ -58,7 +60,7 @@ const Footer = (props) => {
                 </div>
                 <div class="mt-5">
                   <label for="feedback" class="block text-sm font-medium text-gray-700">
-                    Feedback
+                  {t('feedback_label')}
                   </label>
                   <div class="mt-1">
                     <textarea
@@ -66,15 +68,15 @@ const Footer = (props) => {
                       name="feedback"
                       rows="3"
                       class="shadow-sm focus:ring-indigo-500 focus:border-indigo-500 block w-full sm:text-sm border-gray-300 rounded-md"
-                      placeholder="Enter your feedback here..."
+                      placeholder={t('feedback_placeholder')}
                     ></textarea>
                   </div>
                 </div>
               </div>
             </div>
             <div class="bg-gray-50 px-4 py-3 sm:flex sm:flex-row-reverse sm:px-6">
-              <button type="button" class="inline-flex w-full justify-center rounded-md bg-green-600 px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-green-500 sm:ml-3 sm:w-auto" onClick={() => showFeedbackForm(false)}>Submit</button>
-              <button type="button" class="mt-3 inline-flex w-full justify-center rounded-md bg-white px-3 py-2 text-sm font-semibold text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 hover:bg-gray-50 sm:mt-0 sm:w-auto" onClick={() => showFeedbackForm(false)}>Close</button>
+              <button type="button" class="inline-flex w-full justify-center rounded-md bg-green-600 px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-green-500 sm:ml-3 sm:w-auto" onClick={() => showFeedbackForm(false)}>{t('submit_button')}</button>
+              <button type="button" class="mt-3 inline-flex w-full justify-center rounded-md bg-white px-3 py-2 text-sm font-semibold text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 hover:bg-gray-50 sm:mt-0 sm:w-auto" onClick={() => showFeedbackForm(false)}>{t('close_button')}</button>
             </div>
           </div>
         </div>
@@ -92,6 +94,14 @@ const Footer = (props) => {
       })
   }, [])
 
+
+  const [fontSize, setFontSize] = useState('normal'); // normal, large, x-large
+
+  const handleFontSizeChange = (size) => {
+    setFontSize(size);
+    document.body.className = `font-${size}`;
+  };
+
   return (
     <>
       {showFeedback && <FeedbackModal />}
@@ -102,7 +112,7 @@ const Footer = (props) => {
               <img src="/delhi_gov_logo.png" className="contrast-bg contrast-text w-32 sm:w-48 lg:w-60" />
 
               <p className="contrast-bg contrast-text mt-4 text-xs sm:text-sm md:max-w-xs lg:text-base text-gray-500">
-                Empowering Delhi's citizens with diverse government schemes for a brighter future.
+                {t('footer_description')}
               </p>
 
               <ul className="contrast-bg contrast-text mt-4 flex gap-4">
@@ -113,7 +123,7 @@ const Footer = (props) => {
                     target="_blank"
                     className="contrast-bg contrast-text text-white transition opacity-75"
                   >
-                    <span className="contrast-bg contrast-text sr-only">Facebook</span>
+                    <span className="contrast-bg contrast-text sr-only">{t('facebook_label')}</span>
                     <svg
                       className="contrast-bg contrast-text h-6 w-6"
                       fill="currentColor"
@@ -136,7 +146,7 @@ const Footer = (props) => {
                     target="_blank"
                     className="contrast-bg contrast-text text-white transition opacity-75"
                   >
-                    <span className="contrast-bg contrast-text sr-only">Instagram</span>
+                    <span className="contrast-bg contrast-text sr-only">{t('instagram_label')}</span>
 
                     <svg
                       className="contrast-bg contrast-text h-6 w-6"
@@ -160,7 +170,7 @@ const Footer = (props) => {
                     target="_blank"
                     className="contrast-bg contrast-text text-white transition opacity-75"
                   >
-                    <span className="contrast-bg contrast-text sr-only">https://twitter.com/DCPCR</span>
+                    <span className="contrast-bg contrast-text sr-only">{t('twitter_label')}</span>
 
                     <svg
                       className="contrast-bg contrast-text h-6 w-6"
@@ -175,7 +185,7 @@ const Footer = (props) => {
                     target="_blank"
                     className="contrast-bg contrast-text text-white transition opacity-75"
                   >
-                    <span className="contrast-bg contrast-text sr-only">Youtube</span>
+                    <span className="contrast-bg contrast-text sr-only">{t('youtube_label')}</span>
                     <svg
                       className="contrast-bg contrast-text h-6 w-6"
                       xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 576 512" style={{ fill: "white" }}>
@@ -187,48 +197,48 @@ const Footer = (props) => {
 
             <div className="contrast-bg contrast-text grid grid-cols-1 gap-6 sm:grid-cols-2 md:grid-cols-2 lg:col-span-2 lg:grid-cols-2">
               <div>
-                <p className="contrast-bg contrast-text font-medium text-white" style={{ fontSize: '18px' }}>Quick Links</p>
+                <p className="contrast-bg contrast-text font-medium text-white" style={{ fontSize: '18px' }}>{t('quick_links_title')}</p>
 
                 <ul className="contrast-bg contrast-text mt-4 space-y-3 text-sm">
                   <li>
                     <a onClick={() => showFeedbackForm(true)} className="cursor-pointer contrast-bg contrast-text text-white transition opacity-75">
-                      Give Feedback
+                      {t('give_feedback_link')}
                     </a>
                   </li>
                   <li>
                     <a href="/about-us" className="contrast-bg contrast-text text-white transition opacity-75">
-                      About Us
+                      {t('about_us_link')}
                     </a>
                   </li>
                   <li>
                     <a href="/contact-us" className="contrast-bg contrast-text text-white transition opacity-75">
-                      Contact Us
+                    {t('contact_us_link')}
                     </a>
                   </li>
                   <li>
                     <a href="/disclaimer" className="contrast-bg contrast-text text-white transition opacity-75">
-                      Disclaimer
+                    {t('disclaimer_link')}
                     </a>
                   </li>
                   <li>
                     <a href="/privacy-policy" className="contrast-bg contrast-text text-white transition opacity-75">
-                      Privacy policy
+                    {t('privacy_policy_link')}
                     </a>
                   </li>
                   <li>
                     <a href="https://dcpcr.delhi.gov.in" target="_blank" className="contrast-bg contrast-text text-white transition opacity-75">
-                      DCPCR
+                    {t('dcpcr_link')}
                     </a>
                   </li>
                   <li>
                     <a href="https://delhi.gov.in" target="_blank" className="contrast-bg contrast-text text-white transition opacity-75">
-                      Delhi Government
+                      {t('delhi_government_link')}
                     </a>
                   </li>
                 </ul>
               </div>
               <div>
-                <h2 className="contrast-bg contrast-text font-medium text-white text-lg mb-4">Get in Touch</h2>
+                <h2 className="contrast-bg contrast-text font-medium text-white text-lg mb-4">{t('get_in_touch_title')}</h2>
                 <div className="contrast-bg contrast-text border border-gray-300 overflow-hidden">
                   <iframe
                     title="DCPCR Location"
@@ -245,23 +255,23 @@ const Footer = (props) => {
           </div>
 
           <p className="contrast-bg contrast-text text-xs text-center text-gray-500">
-            &copy; 2024. DCPCR. All rights reserved.
+            &copy; {t('copyright_text')}
           </p>
           <hr style={{ marginTop: 18, opacity: 0.2 }} />
           <div style={{ marginTop: 18 }}>
             <div className="flex items-center space-x-4">
               <div>
-                <span className="font-medium text-gray-500">Total Visitors Count:</span>
+                <span className="font-medium text-gray-500">{t('total_visitors_count_label')}</span>
                 <span className="ml-2 inline-block bg-green-200 text-green-800 text-xs font-bold px-2 rounded-full">{visitCount}</span>
               </div>
 
               <div className="flex-1 text-right">
-                <span className="text-sm text-gray-500">Last update: 08 January 2024</span>
+                <span className="text-sm text-gray-500">{t('last_update_label')}</span>
               </div>
 
               <div className="max-w-7xl mx-auto flex items-center p-2">
                 <div className="flex items-center space-x-2">
-                  <p className="text-gray-500 text-sm">Accessibility Controls: </p>
+                  <p className="text-gray-500 text-sm">{t('accessibility_controls_label')}</p>
                   <button onClick={() => handleFontSizeChange('normal')} className="contrast-bg contrast-text px-2 py-1 text-sm font-medium text-gray-700 bg-gray-200 rounded hover:bg-gray-300">A</button>
                   <button onClick={() => handleFontSizeChange('large')} className="contrast-bg contrast-text px-2 py-1 text-base font-medium text-gray-700 bg-gray-200 rounded hover:bg-gray-300">A</button>
                   <button onClick={() => handleFontSizeChange('x-large')} className="contrast-bg contrast-text px-2 py-1 text-lg font-medium text-gray-700 bg-gray-200 rounded hover:bg-gray-300">A</button>

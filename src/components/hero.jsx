@@ -5,32 +5,34 @@ import ResourceIcon from "./icons/resources";
 import CompensationIcon from "./icons/compensation";
 import DisabilityIcon from "./icons/disability";
 import EssentialDocsIcon from "./icons/essential_docs";
-
+import { useTranslation } from 'react-i18next';
 
 const Hero = (props) => {
   const [isModalOpen, setIsModalOpen] = useState(false);
+  const { t, i18n } = useTranslation();
+  
   const ctaData = [
     {
-      title: "Resources",
-      subtitle: "Contact information of Govt agencies, hospitals, schools, etc",
+      title: t('resources'),
+      subtitle: t('resources_subtitle'),
       link: "/resources",
       icon: <ResourceIcon style={{ width: 40, height: 40 }} />
     },
     {
-      title: "Compensation",
-      subtitle: "Learn about compensation schemes for child victims of crime and abuse",
+      title: t('compensation'),
+      subtitle: t('compensation_subtitle'),
       link: "/compensation",
       icon: <CompensationIcon style={{ width: 40, height: 40 }} />
     },
     {
-      title: "Essential Documents",
-      subtitle: "Information on documents, registration of events, certificates, licenses, etc",
+      title: t('essential_docs'),
+      subtitle: t('essential_docs_subtitle'),
       link: "/essential-docs",
       icon: <EssentialDocsIcon style={{ width: 40, height: 40 }} />
     },
     {
-      title: "Disability Information",
-      subtitle: "Learn about disability schemes and services for children and families.",
+      title: t('disability_information'),
+      subtitle: t('disability_information_subtitle'),
       link: "/disability-information",
       icon: <DisabilityIcon style={{ width: 40, height: 40 }} />
     }
@@ -55,10 +57,10 @@ const Hero = (props) => {
                 {/* Heading */}
                 <div>
                   <h2 className="contrast-bg contrast-text text-2xl lg:text-5xl md:text-5xl font-black text-white dark:text-white lg-leading md-leading">
-                    Social Security Schemes and Resources for Children and Families
+                    {t('hero_title')}
                   </h2>
                   <h3 className="contrast-bg contrast-text text-sm lg:text-xl md:text-xl font-medium mb-12 mt-4 leading-relaxed text-white">
-                    Your one-stop search for information on government schemes in Delhi
+                    {t('hero_subtitle')}
                   </h3>
                 </div>
                 {/* END Heading */}
@@ -69,7 +71,7 @@ const Hero = (props) => {
                     onClick={() => setIsModalOpen(true)}
                     className="contrast-bg contrast-text inline-flex w-full lg:w-auto items-center justify-center space-x-2 rounded-lg border border-iceland_poppy-500 bg-iceland_poppy-500 px-6 py-3 text-white transition hover:border-iceland_poppy-600 hover:bg-iceland_poppy-700"
                   >
-                    <span style={{ fontWeight: "bold" }}>Find Schemes for You</span>
+                    <span style={{ fontWeight: "bold" }}>{t('find_schemes_button')}</span>
                     <IconArrowRight />
                   </a>
                 </div>
@@ -95,7 +97,7 @@ const Hero = (props) => {
                         className="contrast-bg contrast-text inline-flex items-center justify-center"
                         style={{ color: "#ff9d3e" }}
                       >
-                        <span style={{ marginRight: '4px', fontSize: '14px', fontWeight: "bold" }}>Learn More</span>
+                        <span style={{ marginRight: '4px', fontSize: '14px', fontWeight: "bold" }}>{t('learn_more')}</span>
                         <IconArrowRight />
                       </a>
                     </div>

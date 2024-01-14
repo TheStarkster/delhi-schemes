@@ -2,14 +2,17 @@
 import { useEffect, useState } from "react";
 import SearchIcon from "./icons/search";
 import { useRouter, usePathname } from "next/navigation";
+import { useTranslation } from "react-i18next";
+import IconLanguage from "./icons/change_language";
 
 const Navbar = () => {
+  const { t, i18n } = useTranslation();
   const [top, setTop] = useState(true);
-  const [language, setLanguage] = useState("English"); // Default language
-  const [isSearchPage, setIsSearchPage] = useState(false); // State to track if it's the search page
-  // const [showDropdown, setShowDropdown] = useState(false);
-  const [isOpen, setIsOpen] = useState(false); // For hamburger menu
-  const router = useRouter(); // Use the useLocation hook
+  const [language, setLanguage] = useState(i18n.language);
+  const [isSearchPage, setIsSearchPage] = useState(false);
+  const [isOpen, setIsOpen] = useState(false); 
+  const [showDropdown, setShowDropdown] = useState(false);
+  const router = useRouter(); 
 
   useEffect(() => {
     const scrollHandler = () => {
@@ -31,42 +34,26 @@ const Navbar = () => {
     return () => window.removeEventListener('scroll', scrollHandler);
   }, []);
 
+  const handleLanguageChange = (languageCode) => {
+    setLanguage(languageCode);
+    i18n.changeLanguage(languageCode);
 
-  const [fontSize, setFontSize] = useState('normal'); // normal, large, x-large
-  const [contrast, setContrast] = useState('normal'); // normal, high
-
-  // Handlers for font size and contrast
-  const handleFontSizeChange = (size) => {
-    setFontSize(size);
-    // Apply the font size change to the body or a specific container
-    document.body.className = `font-${size}`;
+    setShowDropdown(false);
   };
-
-  const handleContrastChange = (contrastLevel) => {
-    if (contrastLevel === 'high') {
-      document.body.classList.add('high-contrast-mode');
-    } else {
-      document.body.classList.remove('high-contrast-mode');
-    }
-  };
-
 
   return <>
   
     <div className="contrast-bg contrast-text flex justify-end items-center space-x-2 p-2 bg-white border-b max-w-7xl mx-auto">
-      {/* Font Size Controls */}
-      
-
       <div className="contrast-bg grid grid-cols-8 contrast-texth-28 max-w-screen-xl gap-4 px-4 sm:px-6 w-full">
         <a className="contrast-bg contrast-text col-span-6 text-blue-500 flex items-center" href="/">
           <img src="/logo.jpeg" alt="logo" className="contrast-bg contrast-text object-contain xl:mr-4 lg:mr-4 md:mr-4 w-full xl:max-w-[90px] lg:max-w-[90px] md:max-w-[90px] sm:max-w-[60px] max-w-[50px]" />
           <div className="contrast-bg contrast-text ml-2">
-            <div className="contrast-bg contrast-text  font-bold xl:text-2xl lg:text-2xl md:text-xl hidden xl:block lg:block">Delhi Commission for Protection of Child Rights</div>
+            <div className="contrast-bg contrast-text  font-bold xl:text-2xl lg:text-2xl md:text-xl hidden xl:block lg:block">{t('organization_name_full')}</div>
             <div className="contrast-bg contrast-text text-[12px] font-bold block sm:text-xl md:text-xl lg:text-xl lg:hidden">
-              Delhi Commission for <br /> Protection of Child Rights
+              {t('organization_name_short_first_part')} <br /> {t('organization_name_short_second_part')}
             </div>
             <div className="contrast-bg contrast-text text-sm hidden lg:block">
-              Government of NCT of Delhi
+              {t('government_of_nct_delhi')}
             </div>
           </div>
         </a>
@@ -75,41 +62,11 @@ const Navbar = () => {
           <img src="/india-emblem.jpg" alt="logo" className="object-contain w-full max-w-[30px] xl:max-w-[50px] lg:max-w-[50px] md:max-w-[35px] sm:max-w-[35px]" />
         </div>
       </div>
-
-
-      {/* Contrast Controls */}
-      {/* <button
-        onClick={() => handleContrastChange('normal')}
-        className="contrast-bg contrast-text px-2 py-1 text-sm font-medium text-gray-700 bg-gray-200 rounded hover:bg-gray-300"
-      >
-        Normal Contrast
-      </button>
-      <button
-        onClick={() => handleContrastChange('high')}
-        className="contrast-bg contrast-text px-2 py-1 text-sm font-medium text-gray-700 bg-gray-200 rounded hover:bg-gray-300"
-      >
-        High Contrast
-      </button> */}
     </div>
     <header className={`bg-white sticky left-0 top-0 right-0 z-20 ${!top && `bg-white shadow-lg`}`}>
       <div
         className="contrast-bg contrast-text mx-auto justify-between flex h-28 max-w-screen-xl items-center gap-2 px-4 sm:px-6 lg:px-8"
       >
-        {/* <div className="contrast-bg contrast-text mx-auto justify-between flex h-28 max-w-screen-xl items-center gap-2 px-4 sm:px-6 lg:px-8">
-        <a className="contrast-bg contrast-text flex items-center text-blue-500" href="/">
-          <span className="contrast-bg contrast-text sr-only">Home</span>
-          <img src="/logo.jpeg" alt="logo" className="contrast-bg contrast-text object-contain mr-4 w-full max-w-[90px]" />
-          <div className="contrast-bg contrast-text ml-2">
-            <div className="contrast-bg contrast-text text-2xl font-bold" style={{ letterSpacing: '2px' }}>DCPCR</div>
-            <div className="contrast-bg contrast-text text-xs italic hidden md:block">
-              Delhi Commission for
-              <br />
-              Protection of Child Rights
-            </div>
-          </div>
-        </a>
-      </div> */}
-
         <div className="contrast-bg contrast-text flex items-center">
           <nav className={`${isOpen ? 'block' : 'hidden'} absolute bg-white top-full left-0 w-full lg:static lg:w-auto lg:block`}>
             <ul className="contrast-bg contrast-text flex flex-col lg:flex-row lg:items-center gap-6 lg:gap-4 p-4 lg:p-0">
@@ -119,7 +76,7 @@ const Navbar = () => {
                     <SearchIcon className="contrast-bg contrast-text text-iceland_poppy-500 ml-4" />
                     <input
                       type="text"
-                      placeholder="Search..."
+                      placeholder={t('search_placeholder')}
                       className="contrast-bg contrast-text py-2 px-4 focus:outline-none"
                       readOnly
                     />
@@ -130,48 +87,48 @@ const Navbar = () => {
 
               <li>
                 <a className="contrast-bg contrast-text text-gray-500 transition hover:bg-iceland_poppy-500 hover:text-white rounded-md px-3 py-2 text-sm font-medium" href="/">
-                  Home
+                  {t('nav_home')}
                 </a>
               </li>
               <li>
                 <a className="contrast-bg contrast-text text-gray-500 transition hover:bg-iceland_poppy-500 hover:text-white rounded-md px-3 py-2 text-sm font-medium" href="/resources">
-                  Resources
+                {t('nav_resources')}
                 </a>
               </li>
               <li>
                 <a className="contrast-bg contrast-text text-gray-500 transition hover:bg-iceland_poppy-500 hover:text-white rounded-md px-3 py-2 text-sm font-medium" href="/compensation">
-                  Compensation
+                {t('nav_compensation')}
                 </a>
               </li>
               <li>
                 <a className="contrast-bg contrast-text text-gray-500 transition hover:bg-iceland_poppy-500 hover:text-white rounded-md px-3 py-2 text-sm font-medium" href="/essential-docs">
-                  Essential Documents
+                  {t('nav_essential_docs')}
                 </a>
               </li>
               <li>
                 <a className="contrast-bg contrast-text text-gray-500 transition hover:bg-iceland_poppy-500 hover:text-white rounded-md px-3 py-2 text-sm font-medium" href="/disability-information">
-                  Disability Information
+                  {t('nav_disability_information')}
                 </a>
               </li>
-              {/* <div className="contrast-bg contrast-text relative">
+              <div className="contrast-bg contrast-text relative">
               <button style={{ color: "#e4750a" }} onClick={() => setShowDropdown(!showDropdown)} className="contrast-bg contrast-text flex items-center gap-2 text-gray-500 hover:text-blue-500">
                 <IconLanguage className="contrast-bg contrast-text h-5 w-5" />
-                <span>{language}</span>
+                <span>{language == 'en' ? "English" : "Hindi"}</span>
               </button>
               {showDropdown && (<div className="contrast-bg contrast-text absolute right-0 mt-2 w-40 bg-white border rounded shadow-xl">
                 <ul>
-                  <li className="contrast-bg contrast-text p-2 hover:bg-gray-100 cursor-pointer" onClick={() => handleLanguageChange("English")}>English</li>
-                  <li className="contrast-bg contrast-text p-2 hover:bg-gray-100 cursor-pointer" onClick={() => handleLanguageChange("Hindi")}>हिन्दी</li>
+                  <li className="contrast-bg contrast-text p-2 hover:bg-gray-100 cursor-pointer" onClick={() => handleLanguageChange("en")}>English</li>
+                  <li className="contrast-bg contrast-text p-2 hover:bg-gray-100 cursor-pointer" onClick={() => handleLanguageChange("hi")}>हिन्दी</li>
                 </ul>
               </div>)}
-            </div> */}
+            </div>
             </ul>
           </nav>
           <button
             onClick={() => setIsOpen(!isOpen)}
             className="contrast-bg contrast-text rounded bg-gray-100 p-2.5 text-gray-600 transition hover:text-gray-600/75 lg:hidden"
           >
-            <span className="contrast-bg contrast-text sr-only">Toggle menu</span>
+            <span className="contrast-bg contrast-text sr-only">{t('toggle_menu_alt_text')}</span>
             <svg
               xmlns="http://www.w3.org/2000/svg"
               className="contrast-bg contrast-text h-5 w-5"
