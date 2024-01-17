@@ -1,14 +1,16 @@
 "use client"
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import DocumentAccordion from "@/components/document_accordion";
-import { essentialDocs } from "../../lib/api";
+import { essentialDocs, essentialDocsHindi } from "../../lib/api";
 import CrossFilledRight from '@/components/icons/cross_filled';
 import IconSearch from '@/components/icons/search';
+import { useTranslation } from 'react-i18next';
 
 
 const EssentialDocsPage = () => {
     const [searchTerm, setSearchTerm] = useState('');
     const [filteredDocs, setFilteredDocs] = useState(essentialDocs);
+    const { t, i18n } = useTranslation();
 
     const handleSearchChange = (event) => {
         const term = event.target.value;
@@ -31,6 +33,10 @@ const EssentialDocsPage = () => {
         setFilteredDocs(essentialDocs);
     };
 
+    useEffect(() => {
+        setFilteredDocs(i18n.language == 'en' ? essentialDocs : essentialDocsHindi);
+    }, [i18n.language])
+
     return (
         <>
             <div className="contrast-bg contrast-text banner relative bg-cover bg-center" style={{ backgroundImage: `url('/resources.png')`, height: '300px' }}>
@@ -40,8 +46,8 @@ const EssentialDocsPage = () => {
                 {/* Text over Overlay */}
                 <div className="contrast-bg contrast-text relative z-10 px-12">
                     <div className="contrast-bg contrast-text mx-auto max-w-7xl text-left">
-                        <h1 className="contrast-bg contrast-text text-2xl sm:text-2xl xl:text-4xl lg:text-4xl md:text-2xl font-bold text-white mb-4 pt-12">Essential Documents</h1>
-                        <p className="contrast-bg contrast-text text-white">Explore essential documents for scheme applications and learn step-by-step how to acquire any missing documents. Simplified guides for a hassle-free application process at your fingertips.</p>
+                        <h1 className="contrast-bg contrast-text text-2xl sm:text-2xl xl:text-4xl lg:text-4xl md:text-2xl font-bold text-white mb-4 pt-12">{t('essential_docs_page_title')}</h1>
+                        <p className="contrast-bg contrast-text text-white">{t('essential_docs_page_subtitle')}</p>
                     </div>
                 </div>
             </div>

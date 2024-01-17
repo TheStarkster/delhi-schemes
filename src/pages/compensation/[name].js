@@ -1,16 +1,20 @@
 // pages/assistance/[name].js
 import RootLayout from "@/app/layout";
-import { compensationData } from "@/lib/api";
+import { compensationData, compensationDataHindi, essentialDocsHindi } from "@/lib/api";
 import { useState, useEffect, useRef, createRef } from 'react';
 import LinkIcon from "../../components/icons/link";
 import Navbar from "@/components/navbar";
 import Footer from "@/components/footer";
+import { useTranslation } from "react-i18next";
+import { getCookie } from "cookies-next";
 
 export async function getServerSideProps(context) {
   const { name } = context.params;
+  const { lang } = context.query;
+  
   const decodedTitle = decodeURIComponent(name).replace(/-/g, ' ').replace(/%26/g, '&');
   // Fetch the entire dataset
-  const allData = compensationData; // Replace with your actual data fetching method
+  const allData = lang == 'hi' ? compensationDataHindi : compensationData
 
   // Find the relevant data based on the title
   const assistanceData = allData.find(item => item.title.toLowerCase() === decodedTitle.toLowerCase());
@@ -24,6 +28,7 @@ export async function getServerSideProps(context) {
 
 
 export default function AssistancePage({ assistanceData }) {
+  const { i18n, t } = useTranslation();
   const sections = ['Overview', 'Legislation', 'Required Documents', 'Other Information'];
   const [activeSection, setActiveSection] = useState(sections[0]);
   const sectionRefs = useRef(sections.map(() => createRef()));
@@ -65,6 +70,13 @@ export default function AssistancePage({ assistanceData }) {
     };
   }, [activeSection, sections]);
 
+  useEffect(() => {
+    const defaultLanguage = getCookie('defaultLanguage');
+    if (defaultLanguage == 'hi') {
+      i18n.changeLanguage('hi');
+    }
+  }, [])
+
   const handleSectionClick = (section, index) => {
     setActiveSection(section);
     const sectionElement = contentSectionRefs.current[index].current;
@@ -101,7 +113,7 @@ export default function AssistancePage({ assistanceData }) {
                 className={`p-4 cursor-pointer transition ${activeSection === section ? 'text-white' : 'text-black'}`}
                 onClick={() => handleSectionClick(section, index)}
               >
-                {section}
+                {t(section)}
               </div>
             ))}
           </div>
@@ -110,7 +122,7 @@ export default function AssistancePage({ assistanceData }) {
         <div className="contrast-bg contrast-text col-span-3 mx-0 lg:mx-14 md:mx-12 xl:mx-0 md:my-0 lg:py-0 xl:py-0 md:py-4 px-12 py-12">
           <section className="contrast-bg contrast-text mb-12" ref={contentSectionRefs.current[0]}>
             <div className="contrast-bg contrast-text flex items-center">
-              <h2 className="contrast-bg contrast-text text-2xl font-bold mb-2">Overview</h2>
+              <h2 className="contrast-bg contrast-text text-2xl font-bold mb-2">{t('Overview')}</h2>
               <LinkIcon className="contrast-bg contrast-text h-6 w-6 mb-4 ml-2 cursor-pointer hover:fill-gray-500 fill-blue-600 transition" onClick={() => copyToClipboard('Overview')} />
             </div>
             <div dangerouslySetInnerHTML={{ __html: assistanceData.description_html }} />
@@ -118,7 +130,7 @@ export default function AssistancePage({ assistanceData }) {
 
           <section className="contrast-bg contrast-text mb-12" ref={contentSectionRefs.current[1]}>
             <div className="contrast-bg contrast-text flex items-center">
-              <h2 className="contrast-bg contrast-text text-2xl font-bold mb-4">Legislation</h2>
+              <h2 className="contrast-bg contrast-text text-2xl font-bold mb-4">{t('Legislation')}</h2>
               <LinkIcon className="contrast-bg contrast-text h-6 w-6 mb-4 ml-2 cursor-pointer hover:fill-gray-500 fill-blue-600 transition" onClick={() => copyToClipboard('Legislation')} />
             </div>
             <div dangerouslySetInnerHTML={{ __html: assistanceData.legislation }} />
@@ -126,7 +138,7 @@ export default function AssistancePage({ assistanceData }) {
 
           <section className="contrast-bg contrast-text mb-12" ref={contentSectionRefs.current[2]}>
             <div className="contrast-bg contrast-text flex items-center">
-              <h2 className="contrast-bg contrast-text text-2xl font-bold mb-4">Required Documents</h2>
+              <h2 className="contrast-bg contrast-text text-2xl font-bold mb-4">{t('Required Documents')}</h2>
               <LinkIcon className="contrast-bg contrast-text h-6 w-6 mb-4 ml-2 cursor-pointer hover:fill-gray-500 fill-blue-600 transition" onClick={() => copyToClipboard('Required Documents')} />
             </div>
             <div dangerouslySetInnerHTML={{ __html: assistanceData.documents_required }} />
@@ -134,7 +146,7 @@ export default function AssistancePage({ assistanceData }) {
 
           <section className="contrast-bg contrast-text mb-12" ref={contentSectionRefs.current[3]}>
             <div className="contrast-bg contrast-text flex items-center">
-              <h2 className="contrast-bg contrast-text text-2xl font-bold mb-4">Other Information</h2>
+              <h2 className="contrast-bg contrast-text text-2xl font-bold mb-4">{t('Other Information')}</h2>
               <LinkIcon className="contrast-bg contrast-text h-6 w-6 mb-4 ml-2 cursor-pointer hover:fill-gray-500 fill-blue-600 transition" onClick={() => copyToClipboard('Other Information')} />
             </div>
             <div dangerouslySetInnerHTML={{ __html: assistanceData.other_info }} />

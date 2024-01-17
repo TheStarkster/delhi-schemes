@@ -5,6 +5,8 @@ import { useState, useRef, createRef, useEffect } from 'react';
 import LinkIcon from "../../components/icons/link";
 import Navbar from "@/components/navbar";
 import Footer from "@/components/footer";
+import { useTranslation } from "react-i18next";
+import { getCookie } from "cookies-next";
 
 export async function getServerSideProps(context) {
   // Fetch data based on the scheme name from the context params
@@ -24,7 +26,12 @@ export async function getServerSideProps(context) {
 }
 
 export default function SchemePage({ schemeData }) {
-  const sections = ['Benefits', 'Eligibility', 'Documents Required', 'Application Process', 'Grievance Redressal'];
+  
+  const { t, i18n } = useTranslation();
+  const englishSections = ['Benefits', 'Eligibility', 'Documents Required', 'Application Process', 'Grievance Redressal'];
+  const hindiSections = ['लाभ', 'योग्यता', 'आवश्यक दस्तावेज़', 'आवेदन प्रक्रिया', 'शिकायत सुलझाने'];
+  const sections = i18n.language == 'en' ? englishSections : hindiSections;
+
   const [activeSection, setActiveSection] = useState(sections[0]);
   const sectionRefs = useRef(sections.map(() => createRef()));
   const contentSectionRefs = useRef(sections.map(() => createRef())); // New refs for content sections
@@ -52,6 +59,11 @@ export default function SchemePage({ schemeData }) {
 
     // Add scroll event listener
     window.addEventListener('scroll', handleScroll);
+
+    const defaultLanguage = getCookie('defaultLanguage');
+    if (defaultLanguage == 'hi') {
+      i18n.changeLanguage('hi');
+    }
 
     return () => {
       // Clean up the event listener
@@ -133,7 +145,6 @@ export default function SchemePage({ schemeData }) {
 
   useEffect(() => {
     // Make sure the ref is current and the content has been loaded
-    console.log(contentRef.current);
     if (contentRef.current) {
       const anchors = contentRef.current.querySelectorAll('a');
       anchors.forEach(anchor => {
@@ -153,11 +164,11 @@ export default function SchemePage({ schemeData }) {
       <Navbar />
       <div className="contrast-bg contrast-text bg-gradient-to-r from-iceland_poppy-500 to-pink-500 text-white py-12">
         <div className="contrast-bg contrast-text container mx-auto px-4 lg:px-0 max-w-7xl">
-          <h1 className="contrast-bg contrast-text text-2xl md:text-3xl lg:mx-12 lg:text-4xl text-white font-bold">{schemeData.title}</h1>
+          <h1 className="contrast-bg contrast-text text-2xl md:text-3xl lg:mx-12 lg:text-4xl text-white font-bold">{i18n.language == 'en' ? schemeData.title : schemeData.title_hindi}</h1>
           <div className="contrast-bg contrast-text flex flex-wrap mt-4 items-center md:flex-row sm:flex-col">
             {schemeData.residence != null &&
               <div className="contrast-bg contrast-text bg-white lg:mx-12 text-iceland_poppy-500 rounded-full px-4 py-1 mr-2 mb-2">
-                {schemeData.residence == null ? "Applicable for people from both Delhi and Out of Delhi" : "Applicable for people from Delhi only"}
+                {schemeData.residence == null ? t("Applicable for people from both Delhi and Out of Delhi") : t("Applicable for people from Delhi only")}
               </div>}
           </div>
         </div>
@@ -186,7 +197,7 @@ export default function SchemePage({ schemeData }) {
                 <h2 className="contrast-bg contrast-text text-2xl font-bold mb-4">{section}</h2>
                 <LinkIcon className="contrast-bg contrast-text h-6 w-6 mb-4 ml-2 cursor-pointer hover:fill-gray-500 fill-blue-600 transition" onClick={() => copyToClipboard(section)} />
               </div>
-              <div dangerouslySetInnerHTML={{ __html: schemeData[`${section.toLowerCase().replace(' ', '_')}_html`] }} />
+              {i18n.language == 'en' ? <div dangerouslySetInnerHTML={{ __html: schemeData[`${section.toLowerCase().replace(' ', '_')}_html`] }} /> : <div dangerouslySetInnerHTML={{ __html: schemeData[`hindi_${englishSections[hindiSections.indexOf(section)].toLowerCase().replace(' ', '_')}_html`] }} />}
             </section>
           ))}
         </div>

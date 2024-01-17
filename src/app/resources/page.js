@@ -293,7 +293,7 @@ export default function ResourcesInformatio() {
         </div>
       </div>
       <div className="contrast-bg contrast-text grid px-12 xl:px-0 lg:px-12 md:px-12 max-w-7xl mx-auto my-12 md:grid-cols-2 lg:grid-cols-1 gap-6">
-        <Accordion data={data} />
+        <Accordion  data={data} />
       </div>
     </>
   );
