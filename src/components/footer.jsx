@@ -86,7 +86,7 @@ const Footer = (props) => {
   }
 
   useEffect(() => {
-    fetch("https://dcpcr-ews-api.grevity.in/schemes/visit-count")
+    fetch("http://localhost:3000/schemes/visit-count")
       .then((res) => res.json())
       .then((res) => {
         console.log(res);

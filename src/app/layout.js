@@ -21,7 +21,7 @@ export default function RootLayout({ children }) {
     const defaultLanguage = getCookie('defaultLanguage');
     const oneHour = 60 * 60 * 1000; // milliseconds in one hour
     if (!lastVisit || Date.now() - new Date(lastVisit).getTime() > oneHour) {
-      fetch('https://dcpcr-ews-api.grevity.in/schemes/increment-visit') // Replace with your server's endpoint
+      fetch('http://localhost:3000/schemes/increment-visit') // Replace with your server's endpoint
         .then(response => response.json())
         .then(data => {
           if (data) {

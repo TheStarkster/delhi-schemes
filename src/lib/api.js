@@ -813,7 +813,7 @@ export const essentialDocs = [
 ]
 
 async function fetchSchemeData(schemeName) {
-  const endpoint = 'https://dcpcr-ews-api.grevity.in/schemes';
+  const endpoint = 'http://localhost:3000/schemes';
 
   try {
     const response = await fetch(endpoint, {
